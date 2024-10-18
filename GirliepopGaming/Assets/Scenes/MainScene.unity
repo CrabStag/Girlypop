@@ -334,7 +334,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScreen: {fileID: 1184212556}
-  transitionSound: {fileID: 8300000, guid: 6f791f48f96a8d44fb91ebfb408fb006, type: 3}
+  transitionSoundClip: {fileID: 8300000, guid: 6f791f48f96a8d44fb91ebfb408fb006, type: 3}
+  buttonSoundSource: {fileID: 1154431589}
 --- !u!1 &348149715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,7 +1040,7 @@ GameObject:
   - component: {fileID: 1154431590}
   - component: {fileID: 1154431589}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: ButtonSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1499,7 +1500,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScreen: {fileID: 1804916268}
-  transitionSound: {fileID: 8300000, guid: 6a70b297cef47794cac0e07bb6547d77, type: 3}
+  transitionSoundClip: {fileID: 8300000, guid: 6a70b297cef47794cac0e07bb6547d77, type: 3}
+  buttonSoundSource: {fileID: 1154431589}
 --- !u!1 &1804916267
 GameObject:
   m_ObjectHideFlags: 0
