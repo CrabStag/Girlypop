@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScreen: {fileID: 1184212556}
-  transitionSoundClip: {fileID: 8300000, guid: 6f791f48f96a8d44fb91ebfb408fb006, type: 3}
+  transitionSoundClip: {fileID: 8300000, guid: 6a70b297cef47794cac0e07bb6547d77, type: 3}
   buttonSoundSource: {fileID: 1154431589}
 --- !u!1 &348149715
 GameObject:
@@ -1481,7 +1481,7 @@ Transform:
   m_GameObject: {fileID: 1669367018}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.64, y: -1.96, z: -4}
+  m_LocalPosition: {x: 0.71, y: -1.96, z: -4}
   m_LocalScale: {x: -1.2, y: -1.2, z: -1.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1500,7 +1500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScreen: {fileID: 1804916268}
-  transitionSoundClip: {fileID: 8300000, guid: 6a70b297cef47794cac0e07bb6547d77, type: 3}
+  transitionSoundClip: {fileID: 8300000, guid: 6f791f48f96a8d44fb91ebfb408fb006, type: 3}
   buttonSoundSource: {fileID: 1154431589}
 --- !u!1 &1804916267
 GameObject:
