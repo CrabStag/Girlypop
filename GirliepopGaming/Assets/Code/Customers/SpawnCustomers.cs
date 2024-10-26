@@ -6,7 +6,7 @@ public class SpawnCustomers : MonoBehaviour
 {
     public static SpawnCustomers Instance;
 
-    public List<GameObject> possibleCustomers;
+    public List<Customer> possibleCustomers;
     public List<Transform> customerLocations;
     public Transform startPos;
 
@@ -40,7 +40,8 @@ public class SpawnCustomers : MonoBehaviour
         {
             if(customerLocations.Count > 0)
             {
-                Instantiate(possibleCustomers[Random.Range(0, possibleCustomers.Count - 1)], startPos.position, Quaternion.identity);
+                Customer currentCustomer = Instantiate(possibleCustomers[Random.Range(0, possibleCustomers.Count - 1)], startPos.position, Quaternion.identity);
+                GameManager.instance.currentCustomer = currentCustomer;
             }
             currentIntervalTime = spawnInterval;
         } else
