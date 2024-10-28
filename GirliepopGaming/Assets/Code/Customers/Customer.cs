@@ -5,7 +5,7 @@ using UnityEngine;
 public class Customer : MonoBehaviour
 {
     public string CustomerName;
-    public Sprite image;
+    public SpriteRenderer image;
 
     public List<Order> possibleOrders = new List<Order>();
     public float slideSpeed = 5;
@@ -19,11 +19,13 @@ public class Customer : MonoBehaviour
     }
     private void Update()
     {
-        if(transform != targetPos)
+        if(transform.position.x != targetPos.position.x)
         {
             SlideToTarget();
-
         }
+
+
+
     }
 
     private void SlideToTarget()

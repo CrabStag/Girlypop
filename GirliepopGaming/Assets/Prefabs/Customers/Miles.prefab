@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1145381273351478463}
-  - component: {fileID: 3548982430661966963}
+  - component: {fileID: 3052525709095979029}
   m_Layer: 0
   m_Name: Miles
   m_TagString: Untagged
@@ -117,7 +117,7 @@ Transform:
   - {fileID: 3934703938447183554}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3548982430661966963
+--- !u!114 &3052525709095979029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,7 +126,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3613447315462230861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4bf9a268010e374298105add175b285, type: 3}
+  m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CustomerName: Miles
+  image: {fileID: 5883253051750095689}
+  possibleOrders:
+  - {fileID: 11400000, guid: a01f7ed511887704fbbd75e650f555b7, type: 2}
+  - {fileID: 11400000, guid: e6fe9d25f31fd6c4c8790f461e51f0b2, type: 2}
   slideSpeed: 5

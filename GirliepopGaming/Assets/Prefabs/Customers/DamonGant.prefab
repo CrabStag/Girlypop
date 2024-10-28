@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2828881458571984417}
-  - component: {fileID: 7747578301028943849}
+  - component: {fileID: -6014174405870872286}
   m_Layer: 0
   m_Name: DamonGant
   m_TagString: Untagged
@@ -117,7 +117,7 @@ Transform:
   - {fileID: 267985439703673356}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7747578301028943849
+--- !u!114 &-6014174405870872286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,7 +126,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7440329955573183973}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4bf9a268010e374298105add175b285, type: 3}
+  m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CustomerName: DamonGant
+  image: {fileID: 2839079331056449494}
+  possibleOrders:
+  - {fileID: 11400000, guid: 9300824bae33f08419f0779bfc2767d1, type: 2}
+  - {fileID: 11400000, guid: 3d24838bb33dbf14d83fd2056cf1fa42, type: 2}
   slideSpeed: 5

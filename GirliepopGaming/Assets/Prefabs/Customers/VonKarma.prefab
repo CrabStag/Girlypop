@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 288208179675182244}
-  - component: {fileID: 6206802531711238758}
+  - component: {fileID: -4268120443838342478}
   m_Layer: 0
   m_Name: VonKarma
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   - {fileID: 3754648296940979175}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6206802531711238758
+--- !u!114 &-4268120443838342478
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,9 +42,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4549338790902532904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4bf9a268010e374298105add175b285, type: 3}
+  m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CustomerName: VonKarma
+  image: {fileID: 4820880304701519580}
+  possibleOrders:
+  - {fileID: 11400000, guid: 9eb5a2e5ca89ae24bab91e1b79b41d83, type: 2}
+  - {fileID: 11400000, guid: f7af5997c10902944adafc77c7a8b7ba, type: 2}
   slideSpeed: 5
 --- !u!1 &6658697935453866971
 GameObject:

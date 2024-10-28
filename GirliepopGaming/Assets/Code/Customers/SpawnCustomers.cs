@@ -6,26 +6,27 @@ public class SpawnCustomers : MonoBehaviour
 {
     public static SpawnCustomers Instance;
 
-    public List<Customer> possibleCustomers;
+    public List<GameObject> possibleCustomers;
     public List<Transform> customerLocations;
     public Transform startPos;
 
+    public Customer currentCustomer;
+
+    public bool isCustomerActive = false;
+
     [Range(1, 100)]
     public int spawnInterval = 5;
-
-    [HideInInspector]
-    public int capacity;
 
     private float currentIntervalTime;
 
     private void Awake()
     {
         Instance = this;
+
     }
 
     private void Start()
     {
-        capacity = customerLocations.Count;
         currentIntervalTime = spawnInterval;    
     }
 
@@ -38,10 +39,11 @@ public class SpawnCustomers : MonoBehaviour
     {
         if(currentIntervalTime < 0)
         {
-            if(customerLocations.Count > 0)
+            if(isCustomerActive == false)
             {
-                Customer currentCustomer = Instantiate(possibleCustomers[Random.Range(0, possibleCustomers.Count - 1)], startPos.position, Quaternion.identity);
-                GameManager.instance.currentCustomer = currentCustomer;
+                currentCustomer = Instantiate(possibleCustomers[Random.Range(0, possibleCustomers.Count - 1)], startPos.position, Quaternion.identity).GetComponent<Customer>();
+
+                isCustomerActive = true;
             }
             currentIntervalTime = spawnInterval;
         } else
