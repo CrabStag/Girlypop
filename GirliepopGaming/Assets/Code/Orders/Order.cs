@@ -8,6 +8,8 @@ public class Order : ScriptableObject
     public Ingredient ingredient1;
     public Ingredient ingredient2;
 
+    public Sprite image;
+
 }
 
 public enum Ingredient

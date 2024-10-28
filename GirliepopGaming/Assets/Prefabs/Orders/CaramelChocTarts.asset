@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredient1: 1
   ingredient2: 5
+  image: {fileID: 0}

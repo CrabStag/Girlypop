@@ -5,6 +5,7 @@ using UnityEngine;
 public class IngredientButton : MonoBehaviour
 {
     public IngredientType ingredientType;
+    public Ingredient ingredient;
 
     private SpriteRenderer image;
 
@@ -28,8 +29,16 @@ public class IngredientButton : MonoBehaviour
         switch(ingredientType)
         {
             case IngredientType.Base:
+                print(ingredientType);
+
+                KitchenDish.instance.baseIngredient = ingredient;
+                KitchenDish.instance.baseImage.sprite = image.sprite;
                 break;
             case IngredientType.Topping:
+                print(ingredientType);
+
+                KitchenDish.instance.toppingIngredient = ingredient;
+                KitchenDish.instance.toppingImage.sprite = image.sprite;
                 break;
 
         }

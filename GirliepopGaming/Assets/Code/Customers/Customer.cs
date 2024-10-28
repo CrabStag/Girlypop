@@ -10,11 +10,13 @@ public class Customer : MonoBehaviour
     public List<Order> possibleOrders = new List<Order>();
     public float slideSpeed = 5;
 
-    private Transform targetPos;
+    [HideInInspector]
+    public Transform targetPos;
     private void Start()
     {
         targetPos = SpawnCustomers.Instance.customerLocations[Random.Range(0,
-            SpawnCustomers.Instance.customerLocations.Count - 1)];
+            SpawnCustomers.Instance.customerLocations.Count)];
+
 
     }
     private void Update()
@@ -24,8 +26,6 @@ public class Customer : MonoBehaviour
             SlideToTarget();
         }
 
-
-
     }
 
     private void SlideToTarget()
@@ -34,5 +34,14 @@ public class Customer : MonoBehaviour
         pos.x = Mathf.Lerp(transform.position.x, targetPos.position.x, slideSpeed * Time.deltaTime);
 
         transform.position = pos;
+    }
+
+    public IEnumerator KYStimer(int interval)
+    {
+        yield return new WaitForSeconds(interval);
+
+        SpawnCustomers.Instance.currentCustomer = null;
+        SpawnCustomers.Instance.isCustomerActive = false;
+        Destroy(gameObject);
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SpawnCustomers : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class SpawnCustomers : MonoBehaviour
     public Transform startPos;
 
     public Customer currentCustomer;
+    public Order currentOrder;
+    public DragDish dragDishObject;
+
+    public TextMeshPro textBox;
+
 
     public bool isCustomerActive = false;
 
@@ -35,20 +41,38 @@ public class SpawnCustomers : MonoBehaviour
         SpawnCustomer();
     }
 
+    public void JudgeOrder()
+    {
+        if(dragDishObject.order == currentOrder)
+        {
+            textBox.text = "yay yippie";
+        }
+
+        if(dragDishObject.order != currentOrder)
+        {
+            textBox.text = "kys";
+        }
+
+        currentCustomer.targetPos = startPos;
+        StartCoroutine(currentCustomer.KYStimer(spawnInterval));
+        dragDishObject.image.sprite = null;
+        dragDishObject.order = null;
+        dragDishObject.transform.position = dragDishObject.startPos;
+
+    }
+
     private void SpawnCustomer()
     {
-        if(currentIntervalTime < 0)
-        {
             if(isCustomerActive == false)
             {
-                currentCustomer = Instantiate(possibleCustomers[Random.Range(0, possibleCustomers.Count - 1)], startPos.position, Quaternion.identity).GetComponent<Customer>();
+                currentCustomer = Instantiate(possibleCustomers[Random.Range(0, possibleCustomers.Count)], startPos.position, Quaternion.identity).GetComponent<Customer>();
+                currentOrder = currentCustomer.possibleOrders[Random.Range(0, currentCustomer.possibleOrders.Count)];
+
+                textBox.text = currentOrder.name;
 
                 isCustomerActive = true;
             }
             currentIntervalTime = spawnInterval;
-        } else
-        {
-            currentIntervalTime -= Time.deltaTime;
         }
     }
-}
+
