@@ -6,6 +6,7 @@ public class IngredientButton : MonoBehaviour
 {
     public IngredientType ingredientType;
     public Ingredient ingredient;
+    public Sprite bowlImage;
 
     private SpriteRenderer image;
 
@@ -32,13 +33,13 @@ public class IngredientButton : MonoBehaviour
                 print(ingredientType);
 
                 KitchenDish.instance.baseIngredient = ingredient;
-                KitchenDish.instance.baseImage.sprite = image.sprite;
+                KitchenDish.instance.baseImage.sprite = bowlImage;
                 break;
             case IngredientType.Topping:
                 print(ingredientType);
 
                 KitchenDish.instance.toppingIngredient = ingredient;
-                KitchenDish.instance.toppingImage.sprite = image.sprite;
+                KitchenDish.instance.toppingImage.sprite = bowlImage;
                 break;
 
         }

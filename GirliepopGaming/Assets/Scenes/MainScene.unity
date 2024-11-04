@@ -273,8 +273,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1559504547}
   - {fileID: 1343263583}
+  - {fileID: 1559504547}
   - {fileID: 905289682}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -767,12 +767,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705750519}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.17, y: -0.22, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.1691394, y: -0.25538605, z: -2.2286234}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 863013644}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &705750522
 MonoBehaviour:
@@ -788,6 +788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientType: 1
   ingredient: 5
+  bowlImage: {fileID: 21300000, guid: 4f50deab8c63eb24aa5455e74187494c, type: 3}
 --- !u!61 &705750523
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1082,7 +1083,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784847871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1185,6 +1186,41 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 378656451}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &863013643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 863013644}
+  m_Layer: 0
+  m_Name: IngredientButtons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &863013644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863013643}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.0008607, y: 0.03538605, z: 1.2286234}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1051860452}
+  - {fileID: 1226049039}
+  - {fileID: 705750521}
+  - {fileID: 2008813742}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &905289681
@@ -1474,12 +1510,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051860450}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.87350273, y: 0.04886374, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.127358, y: 0.0134776905, z: -2.2286234}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 863013644}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1051860453
 MonoBehaviour:
@@ -1495,6 +1531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientType: 0
   ingredient: 0
+  bowlImage: {fileID: 21300000, guid: 978aa939fa6efdc4d91c65d6776a29c0, type: 3}
 --- !u!61 &1051860454
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1732,6 +1769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientType: 0
   ingredient: 1
+  bowlImage: {fileID: 21300000, guid: aac1f4f34d0a1cd458c18d57ae8126fd, type: 3}
 --- !u!61 &1226049037
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1837,12 +1875,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226049035}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.46, y: -0.94, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.5408607, y: -0.975386, z: -2.2286234}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 863013644}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1343089036
 GameObject:
@@ -1952,9 +1990,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343263581}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.41, y: -0.06, z: -0.01}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0040283203, y: -0.028835654, z: -0.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 144957813}
@@ -2180,8 +2218,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559504545}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.59, y: -0.02, z: -0.01}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.03597164, y: -0.068835616, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2635,6 +2673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientType: 1
   ingredient: 4
+  bowlImage: {fileID: 21300000, guid: 9a23d04c35435c7408835a9aaba87c20, type: 3}
 --- !u!61 &2008813740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2740,12 +2779,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008813738}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.49, y: -1.35, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.4891391, y: -1.3853861, z: -2.2286234}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 863013644}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -2760,11 +2799,8 @@ SceneRoots:
   - {fileID: 1811096609}
   - {fileID: 348149716}
   - {fileID: 980304125}
+  - {fileID: 863013644}
   - {fileID: 144957813}
-  - {fileID: 1051860452}
-  - {fileID: 1226049039}
-  - {fileID: 705750521}
-  - {fileID: 2008813742}
   - {fileID: 1453476533}
   - {fileID: 1797098343}
   - {fileID: 1343089037}
