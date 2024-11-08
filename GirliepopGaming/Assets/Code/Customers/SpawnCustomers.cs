@@ -11,9 +11,12 @@ public class SpawnCustomers : MonoBehaviour
     public List<Transform> customerLocations;
     public Transform startPos;
 
-    public Customer currentCustomer;
-    public Order currentOrder;
     public DragDish dragDishObject;
+
+    [HideInInspector]
+    public Customer currentCustomer;
+    [HideInInspector]
+    public Order currentOrder;
 
     public TextMeshPro textBox;
 
