@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &491086091301016686
+--- !u!1 &3808850686046108171
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3934703938447183554}
-  - component: {fileID: 5883253051750095689}
+  - component: {fileID: 6523692560556317369}
+  - component: {fileID: 3849582788098675746}
   m_Layer: 0
-  m_Name: Image
+  m_Name: hedia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3934703938447183554
+--- !u!4 &6523692560556317369
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491086091301016686}
+  m_GameObject: {fileID: 3808850686046108171}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.23, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1145381273351478463}
+  m_Father: {fileID: 2535489814659993849}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5883253051750095689
+--- !u!212 &3849582788098675746
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491086091301016686}
+  m_GameObject: {fileID: 3808850686046108171}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -73,18 +73,18 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ad881494fbee2cc47ab0e5dce79ade22, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12d23135edd88094e87d55686439a758, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.5, y: 1.88}
+  m_Size: {x: 2.53, y: 2.69}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &3613447315462230861
+--- !u!1 &5575772345811248642
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,58 +92,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1145381273351478463}
-  - component: {fileID: 3052525709095979029}
-  - component: {fileID: 4978345479638364526}
+  - component: {fileID: 2535489814659993849}
+  - component: {fileID: 4877896491619245505}
+  - component: {fileID: 1085555221625543291}
   m_Layer: 0
-  m_Name: Miles
-  m_TagString: Customer
+  m_Name: Hedia
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1145381273351478463
+--- !u!4 &2535489814659993849
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3613447315462230861}
+  m_GameObject: {fileID: 5575772345811248642}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3934703938447183554}
+  - {fileID: 6523692560556317369}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3052525709095979029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3613447315462230861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CustomerName: Miles
-  image: {fileID: 5883253051750095689}
-  possibleOrders:
-  - {fileID: 11400000, guid: 9300824bae33f08419f0779bfc2767d1, type: 2}
-  - {fileID: 11400000, guid: 43b3265b05adfb242a17fab4bd5e2e26, type: 2}
-  slideSpeed: 5
-  targetPos: {fileID: 0}
---- !u!61 &4978345479638364526
+--- !u!61 &4877896491619245505
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3613447315462230861}
+  m_GameObject: {fileID: 5575772345811248642}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -182,3 +163,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1085555221625543291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5575772345811248642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CustomerName: "Hed\xEDa"
+  image: {fileID: 3849582788098675746}
+  possibleOrders:
+  - {fileID: 11400000, guid: 3d24838bb33dbf14d83fd2056cf1fa42, type: 2}
+  slideSpeed: 5
+  targetPos: {fileID: 0}
