@@ -499,6 +499,8 @@ MonoBehaviour:
   possibleCustomers:
   - {fileID: 5095265221710866056, guid: 4212f7a1a5332b04b904d519b49b556c, type: 3}
   - {fileID: 6290772043735235985, guid: 9b2c852693f7d7946894ab2d3c533d6d, type: 3}
+  - {fileID: 5575772345811248642, guid: 91f49b06c9f135f49b39312e4423152b, type: 3}
+  - {fileID: 5020634070743321029, guid: 44ec55031ddb5744e97df401db05ab87, type: 3}
   customerLocations:
   - {fileID: 1838818097}
   startPos: {fileID: 980304125}
