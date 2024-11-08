@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 1085555221625543291}
   m_Layer: 0
   m_Name: Hedia
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

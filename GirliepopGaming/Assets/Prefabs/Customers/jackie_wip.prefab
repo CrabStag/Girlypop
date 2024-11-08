@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1107071996092874308}
   m_Layer: 0
   m_Name: jackie_wip
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
