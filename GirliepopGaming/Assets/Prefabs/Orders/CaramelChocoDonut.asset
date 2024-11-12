@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12df0b7dae5a7724a99f1d9af644dbd8, type: 3}
-  m_Name: CaramelChocTarts
+  m_Name: CaramelChocoDonut
   m_EditorClassIdentifier: 
   ingredient1: 1
   ingredient2: 5
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 9ce14b6896f74244b9eb83fdbf4384da, type: 3}
