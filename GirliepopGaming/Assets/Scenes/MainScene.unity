@@ -1872,7 +1872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientType: 1
   ingredient: 2
-  bowlImage: {fileID: 21300000, guid: ee84fdcc447528d4d8f8046d11ae11d7, type: 3}
+  bowlImage: {fileID: 21300000, guid: fe8b58b41e50d844194414ff6bea59d2, type: 3}
 --- !u!61 &1198886997
 BoxCollider2D:
   m_ObjectHideFlags: 0
