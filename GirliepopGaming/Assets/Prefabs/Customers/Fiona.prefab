@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5914398102636197329}
   m_Layer: 0
   m_Name: Fiona
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
