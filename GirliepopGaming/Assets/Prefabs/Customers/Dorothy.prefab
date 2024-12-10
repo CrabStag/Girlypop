@@ -134,6 +134,7 @@ MonoBehaviour:
   image: {fileID: 8918150596779441912}
   possibleOrders:
   - {fileID: 11400000, guid: a01f7ed511887704fbbd75e650f555b7, type: 2}
+  - {fileID: 11400000, guid: 4048026cdfe940c4c80712769097e74c, type: 2}
   slideSpeed: 6.27
   targetPos: {fileID: 0}
 --- !u!61 &8441113356526431578

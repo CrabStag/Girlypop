@@ -178,6 +178,8 @@ MonoBehaviour:
   CustomerName: "Hed\xEDa"
   image: {fileID: 3849582788098675746}
   possibleOrders:
-  - {fileID: 11400000, guid: 3d24838bb33dbf14d83fd2056cf1fa42, type: 2}
+  - {fileID: 11400000, guid: c228028715c5ff0438a5c0213f46aae5, type: 2}
+  - {fileID: 11400000, guid: 4048026cdfe940c4c80712769097e74c, type: 2}
+  - {fileID: 11400000, guid: f7af5997c10902944adafc77c7a8b7ba, type: 2}
   slideSpeed: 5
   targetPos: {fileID: 0}

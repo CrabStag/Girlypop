@@ -50,6 +50,7 @@ MonoBehaviour:
   image: {fileID: 490867652397504695}
   possibleOrders:
   - {fileID: 11400000, guid: 9eb5a2e5ca89ae24bab91e1b79b41d83, type: 2}
+  - {fileID: 11400000, guid: c228028715c5ff0438a5c0213f46aae5, type: 2}
   slideSpeed: 5
   targetPos: {fileID: 0}
 --- !u!61 &5467025803980616849
