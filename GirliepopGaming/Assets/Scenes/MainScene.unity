@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 202062733}
   - component: {fileID: 202062732}
   m_Layer: 0
-  m_Name: IMG_5070
+  m_Name: OvenBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -401,6 +401,7 @@ GameObject:
   - component: {fileID: 235043229}
   - component: {fileID: 235043228}
   - component: {fileID: 235043231}
+  - component: {fileID: 235043232}
   m_Layer: 0
   m_Name: toBakery
   m_TagString: Untagged
@@ -533,8 +534,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScreen: {fileID: 1184212556}
+--- !u!114 &235043232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235043227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   transitionSoundClip: {fileID: 8300000, guid: 6a70b297cef47794cac0e07bb6547d77, type: 3}
-  buttonSoundSource: {fileID: 1154431589}
+  volume: 100
 --- !u!1 &348149715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,7 +1383,7 @@ GameObject:
   - component: {fileID: 811249961}
   - component: {fileID: 811249960}
   m_Layer: 0
-  m_Name: Background
+  m_Name: KassaBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1847,7 +1860,7 @@ GameObject:
   - component: {fileID: 1154431590}
   - component: {fileID: 1154431589}
   m_Layer: 0
-  m_Name: ButtonSound
+  m_Name: CameraSoundSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2727,6 +2740,7 @@ GameObject:
   - component: {fileID: 1669367020}
   - component: {fileID: 1669367019}
   - component: {fileID: 1669367022}
+  - component: {fileID: 1669367023}
   m_Layer: 0
   m_Name: toShop
   m_TagString: Untagged
@@ -2859,8 +2873,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScreen: {fileID: 1804916268}
+--- !u!114 &1669367023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669367018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   transitionSoundClip: {fileID: 8300000, guid: 6f791f48f96a8d44fb91ebfb408fb006, type: 3}
-  buttonSoundSource: {fileID: 1154431589}
+  volume: 100
 --- !u!1 &1797098342
 GameObject:
   m_ObjectHideFlags: 0
@@ -3381,7 +3407,7 @@ GameObject:
   - component: {fileID: 2126126173}
   - component: {fileID: 2126126172}
   m_Layer: 0
-  m_Name: IMG_5093
+  m_Name: KitchenBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3461,6 +3487,8 @@ SceneRoots:
   - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 811249961}
+  - {fileID: 2126126173}
+  - {fileID: 202062733}
   - {fileID: 114730473}
   - {fileID: 235043230}
   - {fileID: 1669367021}
@@ -3473,5 +3501,3 @@ SceneRoots:
   - {fileID: 1797098343}
   - {fileID: 1343089037}
   - {fileID: 784847873}
-  - {fileID: 202062733}
-  - {fileID: 2126126173}
