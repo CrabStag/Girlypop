@@ -24,7 +24,6 @@ public class KitchenDish : MonoBehaviour
 
     public void BakeDish()
     {
-        //TODO: find dish based on ingredient combination
         foreach (Order order in allDishes)
         {
             if(order.ingredient1 == baseIngredient && order.ingredient2 == toppingIngredient)
@@ -35,6 +34,11 @@ public class KitchenDish : MonoBehaviour
                 print(order);
             }
         }
+        baseIngredient = Ingredient.None;
+        toppingIngredient = Ingredient.None;
+
+        baseImage.sprite = null;
+        toppingImage.sprite = null;
     }
 
 }

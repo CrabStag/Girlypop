@@ -290,8 +290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daacd3549d32c714c9024e0dd7e3a3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseIngredient: 0
-  toppingIngredient: 0
+  baseIngredient: 6
+  toppingIngredient: 6
   baseImage: {fileID: 1559504546}
   toppingImage: {fileID: 1343263582}
   counterDish: {fileID: 1797098346}

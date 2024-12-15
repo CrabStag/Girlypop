@@ -19,5 +19,6 @@ public enum Ingredient
     Sugar,
     Berry,
     Fruits,
-    Choco
+    Choco,
+    None
 }
