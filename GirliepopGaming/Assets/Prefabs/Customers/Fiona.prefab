@@ -136,6 +136,21 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e6fe9d25f31fd6c4c8790f461e51f0b2, type: 2}
   - {fileID: 11400000, guid: 43b3265b05adfb242a17fab4bd5e2e26, type: 2}
   slideSpeed: 5
+  PossibleGreetings:
+  - "Uhm\u2026. hello\u2026 Can I get"
+  - '..... '
+  milkHints: []
+  jamHints:
+  - something jammy
+  caramelHints:
+  - something sweet and sticky
+  chocolateHints: []
+  sugarHints:
+  - something sugary
+  mixedFruitHints:
+  - something with some vitamins
+  GoodFeedback: Yum!!
+  BadFeedback: ...Thanks
   targetPos: {fileID: 0}
 --- !u!61 &5914398102636197329
 BoxCollider2D:

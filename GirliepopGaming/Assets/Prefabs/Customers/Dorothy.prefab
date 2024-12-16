@@ -136,6 +136,23 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a01f7ed511887704fbbd75e650f555b7, type: 2}
   - {fileID: 11400000, guid: 4048026cdfe940c4c80712769097e74c, type: 2}
   slideSpeed: 6.27
+  PossibleGreetings:
+  - 'RAAAAAHHHH I NEED SOMETHING SWEET NOWWWW. Quick! Give me '
+  - I stole my dad's wallet, you know what time it is. Gimme
+  milkHints:
+  - the thing that comes from the moo beast
+  jamHints:
+  - that stuff that looks like blood
+  caramelHints:
+  - ' that stuff that will burn you and then stick to the wound'
+  chocolateHints:
+  - hehehehe... well... it looks like poopoo...
+  sugarHints:
+  - some a that white powder
+  mixedFruitHints:
+  - the ingredient with all the colors of the rainbow
+  GoodFeedback: YAYYYY
+  BadFeedback: 'You better watch your back. '
   targetPos: {fileID: 0}
 --- !u!61 &8441113356526431578
 BoxCollider2D:

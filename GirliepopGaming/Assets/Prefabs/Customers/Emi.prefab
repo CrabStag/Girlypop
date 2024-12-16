@@ -52,6 +52,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9eb5a2e5ca89ae24bab91e1b79b41d83, type: 2}
   - {fileID: 11400000, guid: c228028715c5ff0438a5c0213f46aae5, type: 2}
   slideSpeed: 5
+  PossibleGreetings:
+  - Wow, you really wore THAT to work... That's a choice. I'll have
+  - God, they'll let anyone work in this place. Quick, fetch me
+  milkHints: []
+  jamHints:
+  - something sweet but tangy
+  caramelHints: []
+  chocolateHints:
+  - something rich and decadent
+  sugarHints:
+  - something sweet and fluffy
+  mixedFruitHints: []
+  GoodFeedback: Yeah if you messed that up I'd be worried, lol.
+  BadFeedback: Oh my god you people can't do anything
   targetPos: {fileID: 0}
 --- !u!61 &5467025803980616849
 BoxCollider2D:

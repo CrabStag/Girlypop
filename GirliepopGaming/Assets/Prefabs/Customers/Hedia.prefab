@@ -182,4 +182,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4048026cdfe940c4c80712769097e74c, type: 2}
   - {fileID: 11400000, guid: f7af5997c10902944adafc77c7a8b7ba, type: 2}
   slideSpeed: 5
+  PossibleGreetings:
+  - Ugh, I need a pick me up. Can I get
+  - I'm in desperate need of some sugar, gimme
+  milkHints:
+  - something creamy
+  jamHints: []
+  caramelHints:
+  - something that won't mask the flavor of the chocolate
+  chocolateHints:
+  - that sweet sweet cocoa
+  sugarHints: []
+  mixedFruitHints: []
+  GoodFeedback: Thanks! I'll be back.
+  BadFeedback: What is this? Are you some sort of jokester?
   targetPos: {fileID: 0}

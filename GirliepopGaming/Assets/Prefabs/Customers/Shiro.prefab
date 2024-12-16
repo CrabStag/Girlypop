@@ -52,6 +52,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9eb5a2e5ca89ae24bab91e1b79b41d83, type: 2}
   - {fileID: 11400000, guid: f7af5997c10902944adafc77c7a8b7ba, type: 2}
   slideSpeed: 5
+  PossibleGreetings:
+  - OH my GOD I'm STARVINGGGG, please get me
+  milkHints:
+  - something milkyyyyy
+  jamHints: []
+  caramelHints: []
+  chocolateHints:
+  - COCOA IN MY SYSTEM!!!!
+  sugarHints:
+  - pure, unadulterated sugar
+  mixedFruitHints: []
+  GoodFeedback: Ugh, yessss, I've been craving this!!
+  BadFeedback: ......Wow... Ok.
   targetPos: {fileID: 0}
 --- !u!61 &3557748229068607470
 BoxCollider2D:

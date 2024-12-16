@@ -53,10 +53,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9300824bae33f08419f0779bfc2767d1, type: 2}
   - {fileID: 11400000, guid: c228028715c5ff0438a5c0213f46aae5, type: 2}
   slideSpeed: 5
-  dishDifficulty: 0
   PossibleGreetings:
-  - 'Hello, can I please have '
+  - Hehehe, I'm in the mood for
   - Hiiiiii gimme
+  - Well, hey! You look good today! Hmm I'll order
+  - Please don't mess up, I need this to go well right now. Can I please have
   milkHints:
   - something with milk
   jamHints:
@@ -69,8 +70,8 @@ MonoBehaviour:
   - something with sugar
   mixedFruitHints:
   - something fruity
-  GoodFeedback: yayayay yippie
-  BadFeedback: kys
+  GoodFeedback: Perfect! Just what I wanted
+  BadFeedback: I hope you die tbh
   targetPos: {fileID: 0}
 --- !u!61 &4107134565161593835
 BoxCollider2D:
