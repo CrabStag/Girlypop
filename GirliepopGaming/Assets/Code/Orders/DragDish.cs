@@ -7,7 +7,6 @@ public class DragDish : MonoBehaviour
 
     public SpriteRenderer image;
 
-    [HideInInspector]
     public Order order = null;
 
     private Vector3 screenPoint;

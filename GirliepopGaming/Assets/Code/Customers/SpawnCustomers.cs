@@ -26,6 +26,9 @@ public class SpawnCustomers : MonoBehaviour
     [Range(1, 100)]
     public int spawnInterval = 5;
 
+    private int ingredientDecider;
+    private int dishDifficulty;
+
     private float currentIntervalTime;
 
     private void Awake()
@@ -46,14 +49,90 @@ public class SpawnCustomers : MonoBehaviour
 
     public void JudgeOrder()
     {
-        if(dragDishObject.order == currentOrder)
+        if(dishDifficulty == 0)
         {
-            textBox.text = "yay yippie";
+            switch(ingredientDecider)
+            {
+                case 0:
+                    if(dragDishObject.order.ingredient1 == Ingredient.Milk)
+                    {
+                        textBox.text = currentCustomer.GoodFeedback;
+                    }
+
+                    if (dragDishObject.order.ingredient1 != Ingredient.Milk)
+                    {
+                        textBox.text = currentCustomer.BadFeedback;
+                    }
+                    break;
+                case 1:
+                    if (dragDishObject.order.ingredient1 == Ingredient.Caramel)
+                    {
+                        textBox.text = currentCustomer.GoodFeedback;
+                    }
+
+                    if (dragDishObject.order.ingredient1 != Ingredient.Caramel)
+                    {
+                        textBox.text = currentCustomer.BadFeedback;
+                    }
+                    break;
+                case 2:
+                    if (dragDishObject.order.ingredient1 == Ingredient.Jam)
+                    {
+                        textBox.text = currentCustomer.GoodFeedback;
+                    }
+
+                    if (dragDishObject.order.ingredient1 != Ingredient.Jam)
+                    {
+                        textBox.text = currentCustomer.BadFeedback;
+                    }
+                    break;
+                case 3:
+                    if (dragDishObject.order.ingredient2 == Ingredient.Choco)
+                    {
+                        textBox.text = currentCustomer.GoodFeedback;
+                    }
+
+                    if (dragDishObject.order.ingredient2 != Ingredient.Choco)
+                    {
+                        textBox.text = currentCustomer.BadFeedback;
+                    }
+                    break;
+                case 4:
+                    if (dragDishObject.order.ingredient2 == Ingredient.Fruits)
+                    {
+                        textBox.text = currentCustomer.GoodFeedback;
+                    }
+
+                    if (dragDishObject.order.ingredient2 != Ingredient.Fruits)
+                    {
+                        textBox.text = currentCustomer.BadFeedback;
+                    }
+                    break;
+                case 5:
+                    if (dragDishObject.order.ingredient2 == Ingredient.Sugar)
+                    {
+                        textBox.text = currentCustomer.GoodFeedback;
+                    }
+
+                    if (dragDishObject.order.ingredient2 != Ingredient.Sugar)
+                    {
+                        textBox.text = currentCustomer.BadFeedback;
+                    }
+                    break;
+            }
         }
 
-        if(dragDishObject.order != currentOrder)
+        if (dishDifficulty == 1)
         {
-            textBox.text = "kys";
+            if (dragDishObject.order == currentOrder)
+            {
+                textBox.text = currentCustomer.GoodFeedback;
+            }
+
+            if (dragDishObject.order != currentOrder)
+            {
+                textBox.text = currentCustomer.BadFeedback;
+            }
         }
 
         currentCustomer.targetPos = startPos;
@@ -66,16 +145,57 @@ public class SpawnCustomers : MonoBehaviour
 
     private void SpawnCustomer()
     {
-            if(isCustomerActive == false)
+        if (isCustomerActive == false)
+        {
+            currentCustomer = Instantiate(possibleCustomers[Random.Range(0, possibleCustomers.Count)], startPos.position, Quaternion.identity).GetComponent<Customer>();
+            dishDifficulty = Random.Range(0, 2);
+
+            switch (dishDifficulty)
             {
-                currentCustomer = Instantiate(possibleCustomers[Random.Range(0, possibleCustomers.Count)], startPos.position, Quaternion.identity).GetComponent<Customer>();
-                currentOrder = currentCustomer.possibleOrders[Random.Range(0, currentCustomer.possibleOrders.Count)];
+                case 0:
+                    ingredientDecider = Random.Range(0, 6);
 
-                textBox.text = currentOrder.name;
+                    switch(ingredientDecider)
+                    {
+                        case 0:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.milkHints[Random.Range(0, currentCustomer.milkHints.Length)];
+                            break;
+                        case 1:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.caramelHints[Random.Range(0, currentCustomer.caramelHints.Length)];
+                            break;
+                        case 2:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.jamHints[Random.Range(0, currentCustomer.jamHints.Length)];
+                            break;
+                        case 3:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.chocolateHints[Random.Range(0, currentCustomer.chocolateHints.Length)];
+                            break;
+                        case 4:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.mixedFruitHints[Random.Range(0, currentCustomer.mixedFruitHints.Length)];
+                            break;
+                        case 5:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.sugarHints[Random.Range(0, currentCustomer.sugarHints.Length)];
+                            break;
+                    }
 
-                isCustomerActive = true;
+                    break;
+                case 1:
+                    currentOrder = currentCustomer.possibleOrders[Random.Range(0, currentCustomer.possibleOrders.Count)];
+
+                    textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                        + " " + currentOrder.NameOfOrder;
+
+                    break;
             }
-            currentIntervalTime = spawnInterval;
+
+            isCustomerActive = true;
+        }
+        currentIntervalTime = spawnInterval;
         }
     }
 

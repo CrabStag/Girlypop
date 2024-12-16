@@ -10,8 +10,26 @@ public class Customer : MonoBehaviour
     public List<Order> possibleOrders = new List<Order>();
     public float slideSpeed = 5;
 
+    [Header("Dialogue")]
+    public string[] PossibleGreetings;
+
+    [Header("Easy Hints Per Ingredient")]
+    public string[] milkHints;
+    public string[] jamHints;
+    public string[] caramelHints;
+    public string[] chocolateHints;
+    public string[] sugarHints;
+    public string[] mixedFruitHints;
+    
+
+    [Header("Feedback")]
+    public string GoodFeedback;
+    public string BadFeedback;
+
     [HideInInspector]
     public Transform targetPos;
+
+
     private void Start()
     {
         targetPos = SpawnCustomers.Instance.customerLocations[Random.Range(0,
@@ -44,4 +62,6 @@ public class Customer : MonoBehaviour
         SpawnCustomers.Instance.isCustomerActive = false;
         Destroy(gameObject);
     }
+
+
 }

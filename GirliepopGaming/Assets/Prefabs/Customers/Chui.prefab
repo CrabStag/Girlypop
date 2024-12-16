@@ -53,6 +53,24 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9300824bae33f08419f0779bfc2767d1, type: 2}
   - {fileID: 11400000, guid: c228028715c5ff0438a5c0213f46aae5, type: 2}
   slideSpeed: 5
+  dishDifficulty: 0
+  PossibleGreetings:
+  - 'Hello, can I please have '
+  - Hiiiiii gimme
+  milkHints:
+  - something with milk
+  jamHints:
+  - something with jam
+  caramelHints:
+  - something with caramel
+  chocolateHints:
+  - something with chocolate
+  sugarHints:
+  - something with sugar
+  mixedFruitHints:
+  - something fruity
+  GoodFeedback: yayayay yippie
+  BadFeedback: kys
   targetPos: {fileID: 0}
 --- !u!61 &4107134565161593835
 BoxCollider2D:

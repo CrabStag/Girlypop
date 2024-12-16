@@ -803,14 +803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleCustomers:
-  - {fileID: 5095265221710866056, guid: 4212f7a1a5332b04b904d519b49b556c, type: 3}
-  - {fileID: 6290772043735235985, guid: 9b2c852693f7d7946894ab2d3c533d6d, type: 3}
-  - {fileID: 5575772345811248642, guid: 91f49b06c9f135f49b39312e4423152b, type: 3}
-  - {fileID: 5020634070743321029, guid: 44ec55031ddb5744e97df401db05ab87, type: 3}
   - {fileID: 3208718606244779723, guid: 3d3c52ce9b54d0d4fafdc92a7beda87f, type: 3}
-  - {fileID: 8200267579570923670, guid: c9814ad7536184a4bb472c6bc087ae36, type: 3}
-  - {fileID: 4175705810312544089, guid: 1036319d0ba3cb14ca21a94bd8e93b55, type: 3}
-  - {fileID: 1879605597836586160, guid: f6354a82d7a16e84d966daea987569cb, type: 3}
   customerLocations:
   - {fileID: 1838818097}
   startPos: {fileID: 980304125}
