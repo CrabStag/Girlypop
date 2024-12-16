@@ -16,8 +16,8 @@ public enum Ingredient
 {
     Milk,
     Caramel,
+    Jam,
     Sugar,
-    Berry,
     Fruits,
     Choco,
     None

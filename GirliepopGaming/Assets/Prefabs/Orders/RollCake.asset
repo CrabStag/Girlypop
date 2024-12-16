@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RollCake
   m_EditorClassIdentifier: 
   ingredient1: 0
-  ingredient2: 2
+  ingredient2: 3
   image: {fileID: 21300000, guid: de2a0fbe9642959458f1e283a84f0a20, type: 3}

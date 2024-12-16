@@ -8,24 +8,7 @@ public class IngredientButton : MonoBehaviour
     public Ingredient ingredient;
     public Sprite bowlImage;
 
-    private SpriteRenderer image;
-
-    private void Start()
-    {
-        image = gameObject.GetComponent<SpriteRenderer>();
-    }
-
-    private void OnMouseEnter()
-    {
-        image.color = Color.green;
-    }
-
-    private void OnMouseExit()
-    {
-        image.color = Color.white;
-    }
-
-    private void OnMouseUpAsButton()
+    public void PlaceIngredientInBowl()
     {
         switch(ingredientType)
         {
