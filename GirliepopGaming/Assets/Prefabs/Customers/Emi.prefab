@@ -55,15 +55,18 @@ MonoBehaviour:
   PossibleGreetings:
   - Wow, you really wore THAT to work... That's a choice. I'll have
   - God, they'll let anyone work in this place. Quick, fetch me
-  milkHints: []
+  milkHints:
+  - something creamy
   jamHints:
   - something sweet but tangy
-  caramelHints: []
+  caramelHints:
+  - something taffy-like
   chocolateHints:
   - something rich and decadent
   sugarHints:
   - something sweet and fluffy
-  mixedFruitHints: []
+  mixedFruitHints:
+  - something with fruit, if it's not too much to ask
   GoodFeedback: Yeah if you messed that up I'd be worried, lol.
   BadFeedback: Oh my god you people can't do anything
   targetPos: {fileID: 0}

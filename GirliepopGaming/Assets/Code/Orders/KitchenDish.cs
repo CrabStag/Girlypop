@@ -17,6 +17,9 @@ public class KitchenDish : MonoBehaviour
 
     public List<Order> allDishes = new List<Order>();
 
+    [HideInInspector]
+    public List<Order> discoveredDishes = new List<Order>();
+
     private void Start()
     {
         instance = this;
@@ -32,6 +35,11 @@ public class KitchenDish : MonoBehaviour
                 counterDish.image.sprite = order.image;
                 print(counterDish.order);
                 print(order);
+
+                if (!discoveredDishes.Contains(order))
+                {
+                    discoveredDishes.Add(order);
+                }
             }
         }
         baseIngredient = Ingredient.None;

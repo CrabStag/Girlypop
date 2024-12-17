@@ -11,18 +11,28 @@ public class UISwitch : MonoBehaviour
     {
         if (UiToTurnOff != null)
         {
-            foreach (GameObject element in UiToTurnOff)
-            {
-                element.SetActive(false);
-            }
+            TurnOffUI();
         }
 
         if (UiToTurnOn != null)
         {
-            foreach (GameObject element in UiToTurnOn)
-            {
-                element.SetActive(true);
-            }
+            TurnOnUI();
+        }
+    }
+
+    public void TurnOffUI()
+    {
+        foreach (GameObject element in UiToTurnOff)
+        {
+            element.SetActive(false);
+        }
+    }
+
+    public void TurnOnUI()
+    {
+        foreach (GameObject element in UiToTurnOn)
+        {
+            element.SetActive(true);
         }
     }
 }

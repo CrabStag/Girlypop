@@ -53,7 +53,24 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 43b3265b05adfb242a17fab4bd5e2e26, type: 2}
   - {fileID: 11400000, guid: c228028715c5ff0438a5c0213f46aae5, type: 2}
   - {fileID: 11400000, guid: f7af5997c10902944adafc77c7a8b7ba, type: 2}
-  slideSpeed: 5
+  slideSpeed: 2
+  PossibleGreetings:
+  - Hiiiiiiiiiiiiiii I would very much like
+  - Hello down there, could I please get
+  milkHints:
+  - anything with milk
+  jamHints:
+  - some yummy jam
+  caramelHints:
+  - something with caramel
+  chocolateHints:
+  - a flat brown yummy brick
+  sugarHints:
+  - sugar? Sugar for me? Please?
+  mixedFruitHints:
+  - something fruity? Like me perhaps?
+  GoodFeedback: YAAY thank you so much!
+  BadFeedback: UUGHH fine whatever *bumps head against the doorframe*
   targetPos: {fileID: 0}
 --- !u!61 &1107071996092874308
 BoxCollider2D:

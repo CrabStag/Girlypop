@@ -187,13 +187,16 @@ MonoBehaviour:
   - I'm in desperate need of some sugar, gimme
   milkHints:
   - something creamy
-  jamHints: []
+  jamHints:
+  - something with some sweet jam
   caramelHints:
   - something that won't mask the flavor of the chocolate
   chocolateHints:
   - that sweet sweet cocoa
-  sugarHints: []
-  mixedFruitHints: []
+  sugarHints:
+  - something with lotsa sugar
+  mixedFruitHints:
+  - a fruity dish
   GoodFeedback: Thanks! I'll be back.
   BadFeedback: What is this? Are you some sort of jokester?
   targetPos: {fileID: 0}

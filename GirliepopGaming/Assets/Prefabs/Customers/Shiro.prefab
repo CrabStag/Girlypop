@@ -56,13 +56,16 @@ MonoBehaviour:
   - OH my GOD I'm STARVINGGGG, please get me
   milkHints:
   - something milkyyyyy
-  jamHints: []
-  caramelHints: []
+  jamHints:
+  - some of that nice looking jam
+  caramelHints:
+  - caramel plzplzplz
   chocolateHints:
   - COCOA IN MY SYSTEM!!!!
   sugarHints:
   - pure, unadulterated sugar
-  mixedFruitHints: []
+  mixedFruitHints:
+  - some fruit? I Guess?
   GoodFeedback: Ugh, yessss, I've been craving this!!
   BadFeedback: ......Wow... Ok.
   targetPos: {fileID: 0}
