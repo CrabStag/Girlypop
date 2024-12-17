@@ -11,6 +11,7 @@ public class Order : ScriptableObject
     public Ingredient ingredient2;
 
     public Sprite image;
+    public Sprite popupCard;
 
 }
 
