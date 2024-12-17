@@ -11,6 +11,8 @@ public class PopoutCard : MonoBehaviour
     public RectTransform backdrop;
     public Image cardImage;
 
+    public int lingerTime = 4;
+
     public static PopoutCard instance;
     public enum SideOfScreen
     {
@@ -49,19 +51,6 @@ public class PopoutCard : MonoBehaviour
 
     }
 
-    public void MoveMenu()
-    {
-        if (isFoldedIn)
-        {
-            isFoldedIn = false;
-        }
-        else
-        {
-            isFoldedIn = true;
-        }
-
-    }
-
     public void SetupMenu()
     {
         menu = gameObject;
@@ -91,6 +80,13 @@ public class PopoutCard : MonoBehaviour
         }
 
         menu.transform.position = foldedInPos;
+    }
+
+    public IEnumerator PopUp()
+    {
+        isFoldedIn = true;
+        yield return new WaitForSeconds(lingerTime);
+        isFoldedIn = false;
     }
 
 }

@@ -7480,7 +7480,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1951451073
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7516,8 +7516,9 @@ MonoBehaviour:
   canvas: {fileID: 1760569311}
   backdrop: {fileID: 1951451073}
   cardImage: {fileID: 1951451075}
+  lingerTime: 4
   sideOfScreen: 0
-  isFoldedIn: 1
+  isFoldedIn: 0
 --- !u!114 &1951451075
 MonoBehaviour:
   m_ObjectHideFlags: 0

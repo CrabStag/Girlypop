@@ -39,6 +39,8 @@ public class KitchenDish : MonoBehaviour
                 if (!discoveredDishes.Contains(order))
                 {
                     discoveredDishes.Add(order);
+                    PopoutCard.instance.cardImage.sprite = order.popupCard;
+                    StartCoroutine(PopoutCard.instance.PopUp());
                 }
             }
         }

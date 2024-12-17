@@ -16,3 +16,4 @@ MonoBehaviour:
   ingredient1: 2
   ingredient2: 3
   image: {fileID: 21300000, guid: 4a9fe4ceeff904144a6620f3fb8f9cc6, type: 3}
+  popupCard: {fileID: 21300000, guid: 1ff9a3c4641bda8408eccce99fbee208, type: 3}
