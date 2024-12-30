@@ -137,7 +137,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4048026cdfe940c4c80712769097e74c, type: 2}
   slideSpeed: 6.27
   PossibleGreetings:
-  - 'RAAAAAHHHH I NEED SOMETHING SWEET NOWWWW. Quick! Give me '
+  - ' I NEED SOMETHING SWEET NOWWWW. Quick! Give me '
   - I stole my dad's wallet, you know what time it is. Gimme
   milkHints:
   - the thing that comes from the moo beast
