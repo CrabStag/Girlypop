@@ -721,8 +721,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundClip: {fileID: 0}
-  volume: 100
+  soundClip: {fileID: 8300000, guid: 6a70b297cef47794cac0e07bb6547d77, type: 3}
+  volume: 19.5
 --- !u!114 &235043233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1346,6 +1346,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 368555784}
+        m_TargetAssemblyTypeName: SoundEffectOnClick, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &368555781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1415,8 +1427,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundClip: {fileID: 0}
-  volume: 100
+  soundClip: {fileID: 8300000, guid: 605c9761ef6550b4abd61fc96ca5e19d, type: 3}
+  volume: 7.8
 --- !u!61 &368555785
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4403,8 +4415,9 @@ GameObject:
   - component: {fileID: 1295802336}
   - component: {fileID: 1295802338}
   - component: {fileID: 1295802339}
+  - component: {fileID: 1295802340}
   m_Layer: 5
-  m_Name: CaramelButton
+  m_Name: HoneyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4538,6 +4551,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1295802340}
+        m_TargetAssemblyTypeName: SoundEffectOnClick, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1295802340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295802333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 8300000, guid: aa2e33b5b5c33ea49b48b1a250365df0, type: 3}
+  volume: 19.5
 --- !u!1 &1326616264
 GameObject:
   m_ObjectHideFlags: 0
@@ -4821,6 +4860,7 @@ GameObject:
   - component: {fileID: 1388227996}
   - component: {fileID: 1388227995}
   - component: {fileID: 1388227998}
+  - component: {fileID: 1388227999}
   m_Layer: 5
   m_Name: JamButton
   m_TagString: Untagged
@@ -4903,6 +4943,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1388227999}
+        m_TargetAssemblyTypeName: SoundEffectOnClick, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1388227996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4956,6 +5008,20 @@ MonoBehaviour:
   ingredientType: 0
   ingredient: 2
   bowlImage: {fileID: 21300000, guid: f3d334f9fc9dc56448e8dae986c7c5b8, type: 3}
+--- !u!114 &1388227999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388227993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 8300000, guid: d5ec5ec113e4f6f499b68a26d05b55d3, type: 3}
+  volume: 21.4
 --- !u!1 &1406604910
 GameObject:
   m_ObjectHideFlags: 0
@@ -5191,8 +5257,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundClip: {fileID: 8300000, guid: c55d620435cf25d4aa0c947838f14a31, type: 3}
-  volume: 100
+  soundClip: {fileID: 8300000, guid: 1b72386756a3cb546a3ac886aa3e629f, type: 3}
+  volume: 17.5
 --- !u!1 &1432561087
 GameObject:
   m_ObjectHideFlags: 0
@@ -5872,6 +5938,7 @@ GameObject:
   - component: {fileID: 1643359968}
   - component: {fileID: 1643359967}
   - component: {fileID: 1643359966}
+  - component: {fileID: 1643359970}
   m_Layer: 5
   m_Name: FruitsButton
   m_TagString: Untagged
@@ -5969,6 +6036,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1643359970}
+        m_TargetAssemblyTypeName: SoundEffectOnClick, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1643359968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6007,6 +6086,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643359964}
   m_CullTransparentMesh: 1
+--- !u!114 &1643359970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643359964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 8300000, guid: 97939a9359858d34bb316d6e6f7b25ae, type: 3}
+  volume: 20.1
 --- !u!1 &1654436816
 GameObject:
   m_ObjectHideFlags: 0
@@ -6247,8 +6340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundClip: {fileID: 0}
-  volume: 100
+  soundClip: {fileID: 8300000, guid: 6f791f48f96a8d44fb91ebfb408fb006, type: 3}
+  volume: 21.4
 --- !u!114 &1669367024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6371,6 +6464,7 @@ GameObject:
   - component: {fileID: 1689072488}
   - component: {fileID: 1689072487}
   - component: {fileID: 1689072490}
+  - component: {fileID: 1689072491}
   m_Layer: 5
   m_Name: MilkButton
   m_TagString: Untagged
@@ -6453,6 +6547,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1689072491}
+        m_TargetAssemblyTypeName: SoundEffectOnClick, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1689072488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6506,6 +6612,20 @@ MonoBehaviour:
   ingredientType: 0
   ingredient: 0
   bowlImage: {fileID: 21300000, guid: 978aa939fa6efdc4d91c65d6776a29c0, type: 3}
+--- !u!114 &1689072491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689072485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 8300000, guid: 291085e9da2634345926efb4c76f0469, type: 3}
+  volume: 24.7
 --- !u!1 &1734765124
 GameObject:
   m_ObjectHideFlags: 0
@@ -7425,6 +7545,7 @@ GameObject:
   - component: {fileID: 1923633943}
   - component: {fileID: 1923633942}
   - component: {fileID: 1923633941}
+  - component: {fileID: 1923633945}
   m_Layer: 5
   m_Name: SugarButton
   m_TagString: Untagged
@@ -7522,6 +7643,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1923633945}
+        m_TargetAssemblyTypeName: SoundEffectOnClick, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1923633943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7560,6 +7693,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1923633939}
   m_CullTransparentMesh: 1
+--- !u!114 &1923633945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923633939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 8300000, guid: fd4c0d3983683464b8ac58a9f87d84af, type: 3}
+  volume: 26.6
 --- !u!1 &1951451072
 GameObject:
   m_ObjectHideFlags: 0
@@ -8068,6 +8215,7 @@ GameObject:
   - component: {fileID: 2013760801}
   - component: {fileID: 2013760800}
   - component: {fileID: 2013760799}
+  - component: {fileID: 2013760803}
   m_Layer: 5
   m_Name: ChocolateButton
   m_TagString: Untagged
@@ -8150,6 +8298,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2013760803}
+        m_TargetAssemblyTypeName: SoundEffectOnClick, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2013760800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8203,6 +8363,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013760797}
   m_CullTransparentMesh: 1
+--- !u!114 &2013760803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013760797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 8300000, guid: fd491ef00ec6e134e8e41fe9872da28d, type: 3}
+  volume: 19.5
 --- !u!1 &2025597501
 GameObject:
   m_ObjectHideFlags: 0
