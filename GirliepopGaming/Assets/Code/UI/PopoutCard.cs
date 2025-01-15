@@ -24,6 +24,8 @@ public class PopoutCard : MonoBehaviour
 
     public SideOfScreen sideOfScreen;
 
+    public IEnumerator currentCoroutine;
+
     private GameObject menu;
 
     private Vector3 foldedInPos;
@@ -35,16 +37,20 @@ public class PopoutCard : MonoBehaviour
     {
         instance = this;
         SetupMenu();
+        currentCoroutine = PopUp();
 
     }
 
     private void Update()
     {
-        if (isFoldedIn)
+
+        print(foldedInPos);
+        if (!isFoldedIn)
         {
             menu.transform.position = Vector3.Lerp(menu.transform.position, foldedOutPos, Time.deltaTime * foldOutSpeed);
         }
-        else
+
+        if(isFoldedIn)
         {
             menu.transform.position = Vector3.Lerp(menu.transform.position, foldedInPos, Time.deltaTime * foldOutSpeed);
         }
@@ -82,11 +88,19 @@ public class PopoutCard : MonoBehaviour
         menu.transform.position = foldedInPos;
     }
 
+
+    public void CancelLinger()
+    {
+        StopCoroutine(currentCoroutine);
+        isFoldedIn = true;
+        currentCoroutine = PopUp();
+    }
+
     public IEnumerator PopUp()
     {
-        isFoldedIn = true;
-        yield return new WaitForSeconds(lingerTime);
         isFoldedIn = false;
+        yield return new WaitForSeconds(lingerTime);
+        isFoldedIn = true;
     }
 
 }

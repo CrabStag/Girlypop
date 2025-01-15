@@ -36,12 +36,20 @@ public class KitchenDish : MonoBehaviour
                 print(counterDish.order);
                 print(order);
 
+                if(discoveredDishes.Contains(order))
+                {
+                    PopoutCard.instance.cardImage.sprite = order.regularPopupCard;
+                }
+
                 if (!discoveredDishes.Contains(order))
                 {
                     discoveredDishes.Add(order);
-                    PopoutCard.instance.cardImage.sprite = order.popupCard;
-                    StartCoroutine(PopoutCard.instance.PopUp());
+                    PopoutCard.instance.cardImage.sprite = order.newPopupCard;
                 }
+                PopoutCard.instance.cardImage.SetNativeSize();
+                PopoutCard.instance.currentCoroutine = PopoutCard.instance.PopUp();
+                StartCoroutine(PopoutCard.instance.currentCoroutine);
+
             }
         }
         baseIngredient = Ingredient.None;

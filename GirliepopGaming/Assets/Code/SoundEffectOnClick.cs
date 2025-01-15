@@ -18,6 +18,11 @@ public class SoundEffectOnClick : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
+        PlaySound();
+    }
+
+    public void PlaySound()
+    {
         buttonSoundSource.clip = transitionSoundClip;
         buttonSoundSource.volume = volume / 100;
         buttonSoundSource.Play();
