@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundEffectOnClick : MonoBehaviour
 {
-    public AudioClip transitionSoundClip;
+    public AudioClip soundClip;
 
     [Range(0, 100)]
     public float volume = 100f;
@@ -23,7 +23,7 @@ public class SoundEffectOnClick : MonoBehaviour
 
     public void PlaySound()
     {
-        buttonSoundSource.clip = transitionSoundClip;
+        buttonSoundSource.clip = soundClip;
         buttonSoundSource.volume = volume / 100;
         buttonSoundSource.Play();
     }

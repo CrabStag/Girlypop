@@ -536,7 +536,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4ce3903039de93040ae428b7b82d74f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 32e0627bc85cb934898aa7ab41a0823b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -721,7 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionSoundClip: {fileID: 8300000, guid: 6a70b297cef47794cac0e07bb6547d77, type: 3}
+  soundClip: {fileID: 0}
   volume: 100
 --- !u!114 &235043233
 MonoBehaviour:
@@ -1415,7 +1415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionSoundClip: {fileID: 8300000, guid: 605c9761ef6550b4abd61fc96ca5e19d, type: 3}
+  soundClip: {fileID: 0}
   volume: 100
 --- !u!61 &368555785
 BoxCollider2D:
@@ -5084,6 +5084,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1406604917}
+        m_TargetAssemblyTypeName: SoundEffectOnClick, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1406604914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5179,7 +5191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionSoundClip: {fileID: 8300000, guid: 1b72386756a3cb546a3ac886aa3e629f, type: 3}
+  soundClip: {fileID: 8300000, guid: c55d620435cf25d4aa0c947838f14a31, type: 3}
   volume: 100
 --- !u!1 &1432561087
 GameObject:
@@ -6235,7 +6247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionSoundClip: {fileID: 8300000, guid: 6f791f48f96a8d44fb91ebfb408fb006, type: 3}
+  soundClip: {fileID: 0}
   volume: 100
 --- !u!114 &1669367024
 MonoBehaviour:
@@ -7563,6 +7575,7 @@ GameObject:
   - component: {fileID: 1951451079}
   - component: {fileID: 1951451078}
   - component: {fileID: 1951451077}
+  - component: {fileID: 1951451080}
   m_Layer: 5
   m_Name: Popupcard
   m_TagString: Untagged
@@ -7768,6 +7781,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1951451080}
+        m_TargetAssemblyTypeName: SoundEffectOnClick, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1951451080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951451072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea134cc1cbb37e4090dfc8b610d041f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 0}
+  volume: 100
 --- !u!1 &1972710299
 GameObject:
   m_ObjectHideFlags: 0
