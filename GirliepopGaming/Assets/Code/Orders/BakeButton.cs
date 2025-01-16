@@ -35,6 +35,7 @@ public class BakeButton : MonoBehaviour
     private IEnumerator WaitForBakeFinish()
     {
         ovenAnim.SetTrigger("ToPrepare");
+
         bowlBack.enabled = false;
         bowlFront.enabled = false;
         bowlCollider.enabled = false;
@@ -43,6 +44,7 @@ public class BakeButton : MonoBehaviour
 
         yield return new WaitForSeconds(4);
 
+        secondAudio.Stop();
         secondAudio.clip = ovenDoneSound;
         secondAudio.volume = volume;
         secondAudio.Play();

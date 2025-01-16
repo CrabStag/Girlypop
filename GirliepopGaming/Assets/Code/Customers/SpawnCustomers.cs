@@ -27,9 +27,11 @@ public class SpawnCustomers : MonoBehaviour
     public int spawnInterval = 5;
 
     public AudioClip happyCustomerSound;
-    public float happyVolume;
+    [Range(0, 100)]
+    public float happyVolume = 100;
     public AudioClip angryCustomerSound;
-    public float angryVolume;
+    [Range(0, 100)]
+    public float angryVolume = 100;
 
     private AudioSource audioSource;
 
