@@ -43,8 +43,6 @@ public class PopoutCard : MonoBehaviour
 
     private void Update()
     {
-
-        print(foldedInPos);
         if (!isFoldedIn)
         {
             menu.transform.position = Vector3.Lerp(menu.transform.position, foldedOutPos, Time.deltaTime * foldOutSpeed);

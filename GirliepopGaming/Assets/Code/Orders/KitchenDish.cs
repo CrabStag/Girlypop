@@ -11,6 +11,12 @@ public class KitchenDish : MonoBehaviour
     public SpriteRenderer baseImage;
     public SpriteRenderer toppingImage;
 
+    [Header("Oven Bowl Image sprites (same as above but for the oven screen bowl)")]
+    public SpriteRenderer ovenBaseImage;
+    public SpriteRenderer ovenToppingImage;
+
+    public GameObject toOvenButton;
+
     public DragDish counterDish;
 
     public static KitchenDish instance;
@@ -25,6 +31,18 @@ public class KitchenDish : MonoBehaviour
         instance = this;
     }
 
+    private void Update()
+    {
+        if(toppingIngredient != Ingredient.None && baseIngredient != Ingredient.None)
+        {
+            toOvenButton.SetActive(true);
+        } else
+        {
+            toOvenButton.SetActive(false);
+
+        }
+    }
+
     public void BakeDish()
     {
         foreach (Order order in allDishes)
@@ -33,8 +51,6 @@ public class KitchenDish : MonoBehaviour
             {
                 counterDish.order = order;
                 counterDish.image.sprite = order.image;
-                print(counterDish.order);
-                print(order);
 
                 if(discoveredDishes.Contains(order))
                 {
