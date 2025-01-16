@@ -8,12 +8,24 @@ public class BakeButton : MonoBehaviour
 
     public Animator ovenAnim;
 
+    public AudioClip ovenDoneSound;
+    [Range(0, 100)]
+    public float volume = 100f;
+
     public SpriteRenderer bowlBack;
     public SpriteRenderer bowlFront;
     public SpriteRenderer toppingImage;
     public SpriteRenderer baseImage;
 
     public BoxCollider2D bowlCollider;
+
+    private AudioSource secondAudio;
+
+
+    private void Start()
+    {
+        secondAudio = Camera.main.gameObject.transform.GetChild(1).GetComponent<AudioSource>();
+    }
 
     private void OnMouseUpAsButton()
     {
@@ -31,7 +43,12 @@ public class BakeButton : MonoBehaviour
 
         yield return new WaitForSeconds(4);
 
+        secondAudio.clip = ovenDoneSound;
+        secondAudio.volume = volume;
+        secondAudio.Play();
+
         KitchenDish.instance.BakeDish();
+        
         bowlBack.enabled = true;
         bowlFront.enabled = true;
         bowlCollider.enabled = true;

@@ -9,11 +9,14 @@ public class SoundEffectOnClick : MonoBehaviour
     [Range(0, 100)]
     public float volume = 100f;
 
+    [Header("Index number for finding audio source. Leave at 0 for main one")]
+    public int childIndex = 0;
+
     private AudioSource buttonSoundSource;
 
     private void Start()
     {
-        buttonSoundSource = Camera.main.GetComponentInChildren<AudioSource>();
+        buttonSoundSource = Camera.main.gameObject.transform.GetChild(childIndex).GetComponent<AudioSource>();
     }
 
     private void OnMouseUpAsButton()

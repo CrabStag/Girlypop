@@ -26,6 +26,13 @@ public class SpawnCustomers : MonoBehaviour
     [Range(1, 100)]
     public int spawnInterval = 5;
 
+    public AudioClip happyCustomerSound;
+    public float happyVolume;
+    public AudioClip angryCustomerSound;
+    public float angryVolume;
+
+    private AudioSource audioSource;
+
     private int ingredientDecider;
     private int dishDifficulty;
 
@@ -40,6 +47,7 @@ public class SpawnCustomers : MonoBehaviour
     private void Start()
     {
         currentIntervalTime = spawnInterval;    
+        audioSource = Camera.main.gameObject.transform.GetChild(1).GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -57,66 +65,90 @@ public class SpawnCustomers : MonoBehaviour
                     if(dragDishObject.order.ingredient1 == Ingredient.Milk)
                     {
                         textBox.text = currentCustomer.GoodFeedback;
+                        audioSource.clip = happyCustomerSound;
+                        audioSource.volume = happyVolume;
                     }
 
                     if (dragDishObject.order.ingredient1 != Ingredient.Milk)
                     {
                         textBox.text = currentCustomer.BadFeedback;
+                        audioSource.clip = angryCustomerSound;
+                        audioSource.volume = angryVolume;
                     }
                     break;
                 case 1:
                     if (dragDishObject.order.ingredient1 == Ingredient.Caramel)
                     {
                         textBox.text = currentCustomer.GoodFeedback;
+                        audioSource.clip = happyCustomerSound;
+                        audioSource.volume = happyVolume;
                     }
 
                     if (dragDishObject.order.ingredient1 != Ingredient.Caramel)
                     {
                         textBox.text = currentCustomer.BadFeedback;
+                        audioSource.clip = angryCustomerSound;
+                        audioSource.volume = angryVolume;
                     }
                     break;
                 case 2:
                     if (dragDishObject.order.ingredient1 == Ingredient.Jam)
                     {
                         textBox.text = currentCustomer.GoodFeedback;
+                        audioSource.clip = happyCustomerSound;
+                        audioSource.volume = happyVolume;
                     }
 
                     if (dragDishObject.order.ingredient1 != Ingredient.Jam)
                     {
                         textBox.text = currentCustomer.BadFeedback;
+                        audioSource.clip = angryCustomerSound;
+                        audioSource.volume = angryVolume;
                     }
                     break;
                 case 3:
                     if (dragDishObject.order.ingredient2 == Ingredient.Choco)
                     {
                         textBox.text = currentCustomer.GoodFeedback;
+                        audioSource.clip = happyCustomerSound;
+                        audioSource.volume = happyVolume;
                     }
 
                     if (dragDishObject.order.ingredient2 != Ingredient.Choco)
                     {
                         textBox.text = currentCustomer.BadFeedback;
+                        audioSource.clip = angryCustomerSound;
+                        audioSource.volume = angryVolume;
                     }
                     break;
                 case 4:
                     if (dragDishObject.order.ingredient2 == Ingredient.Fruits)
                     {
                         textBox.text = currentCustomer.GoodFeedback;
+                        audioSource.clip = happyCustomerSound;
+                        audioSource.volume = happyVolume;
                     }
 
                     if (dragDishObject.order.ingredient2 != Ingredient.Fruits)
                     {
                         textBox.text = currentCustomer.BadFeedback;
+                        audioSource.clip = angryCustomerSound;
+                        audioSource.volume = angryVolume;
                     }
                     break;
                 case 5:
                     if (dragDishObject.order.ingredient2 == Ingredient.Sugar)
                     {
                         textBox.text = currentCustomer.GoodFeedback;
+                        audioSource.clip = happyCustomerSound;
+                        audioSource.volume = happyVolume;
                     }
 
                     if (dragDishObject.order.ingredient2 != Ingredient.Sugar)
                     {
                         textBox.text = currentCustomer.BadFeedback;
+                        audioSource.clip = angryCustomerSound;
+                        audioSource.volume = angryVolume;
                     }
                     break;
             }
@@ -127,13 +159,18 @@ public class SpawnCustomers : MonoBehaviour
             if (dragDishObject.order == currentOrder)
             {
                 textBox.text = currentCustomer.GoodFeedback;
+                audioSource.clip = happyCustomerSound;
+                audioSource.volume = happyVolume;
             }
 
             if (dragDishObject.order != currentOrder)
             {
                 textBox.text = currentCustomer.BadFeedback;
+                audioSource.clip = angryCustomerSound;
+                audioSource.volume = angryVolume;
             }
         }
+        audioSource.Play();
 
         currentCustomer.targetPos = startPos;
         StartCoroutine(currentCustomer.KYStimer(spawnInterval));
