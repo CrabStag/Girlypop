@@ -136,6 +136,23 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e6fe9d25f31fd6c4c8790f461e51f0b2, type: 2}
   - {fileID: 11400000, guid: 3d24838bb33dbf14d83fd2056cf1fa42, type: 2}
   slideSpeed: 5
+  PossibleGreetings:
+  - Hi girl!! I think I'm in the mood for
+  milkHints:
+  - something milky!
+  jamHints:
+  - something with strawberry jam!
+  caramelHints:
+  - something with that stuff that bees make.. What's it called? You know what I
+    mean!
+  chocolateHints:
+  - something with that cocoey stuff! I forgot the name...
+  sugarHints:
+  - something with sugar!
+  mixedFruitHints:
+  - something with fruit in it!
+  GoodFeedback: Yess you got it! Thank you so much girl!
+  BadFeedback: 'Are you serious... '
   targetPos: {fileID: 0}
 --- !u!61 &8670884952942007278
 BoxCollider2D:
