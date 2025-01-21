@@ -56,19 +56,19 @@ MonoBehaviour:
   slideSpeed: 2
   PossibleGreetings:
   - Hiiiiiiiiiiiiiii I would very much like
-  - Hello down there, could I please get
+  - Hello down there, could I please get something with
   milkHints:
-  - anything with milk
+  - milk
   jamHints:
   - some yummy jam
   caramelHints:
-  - something with honey
+  - honey
   chocolateHints:
   - a flat brown yummy brick
   sugarHints:
   - sugar? Sugar for me? Please?
   mixedFruitHints:
-  - something fruity? Like me perhaps?
+  - fruity ingredients? Fruity like me?
   GoodFeedback: YAAY thank you so much!
   BadFeedback: UUGHH fine whatever *bumps head against the doorframe*
   targetPos: {fileID: 0}
