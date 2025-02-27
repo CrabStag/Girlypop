@@ -56,7 +56,7 @@ MonoBehaviour:
   slideSpeed: 2
   PossibleGreetings:
   - Hiiiiiiiiiiiiiii I would very much like
-  - Hello down there, could I please get something with
+  - Hello shorty, could I please get something with
   milkHints:
   - milk
   jamHints:
@@ -70,7 +70,7 @@ MonoBehaviour:
   mixedFruitHints:
   - fruity ingredients? Fruity like me?
   GoodFeedback: YAAY thank you so much!
-  BadFeedback: UUGHH fine whatever *bumps head against the doorframe*
+  BadFeedback: 'UUGHH fine whatever '
   targetPos: {fileID: 0}
 --- !u!61 &1107071996092874308
 BoxCollider2D:

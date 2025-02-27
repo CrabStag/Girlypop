@@ -137,7 +137,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3d24838bb33dbf14d83fd2056cf1fa42, type: 2}
   slideSpeed: 5
   PossibleGreetings:
-  - Hi girl!! I think I'm in the mood for
+  - Hey you!! I think I'm in the mood for
   milkHints:
   - something milky!
   jamHints:
@@ -151,7 +151,7 @@ MonoBehaviour:
   - something with sugar!
   mixedFruitHints:
   - something with fruit in it!
-  GoodFeedback: Yess you got it! Thank you so much girl!
+  GoodFeedback: Yess you got it! Thank you so much bestie!
   BadFeedback: 'Are you serious... '
   targetPos: {fileID: 0}
 --- !u!61 &8670884952942007278
