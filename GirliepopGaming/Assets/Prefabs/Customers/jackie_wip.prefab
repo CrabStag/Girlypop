@@ -56,19 +56,21 @@ MonoBehaviour:
   slideSpeed: 2
   PossibleGreetings:
   - Hiiiiiiiiiiiiiii I would very much like
-  - Hello shorty, could I please get something with
+  - Hello shorty, could I please get
   milkHints:
-  - milk
+  - something with milk
   jamHints:
-  - some yummy jam
+  - hmmm... Well it's gotta have some yummy jam
   caramelHints:
-  - honey
+  - honey! oh, you can't just give me honey? I guess anything with honey in it will
+    do.
   chocolateHints:
-  - a flat brown yummy brick
+  - a flat brown yummy brick. if you have to bake it into a cake that's okay I just
+    need it to be present.
   sugarHints:
-  - sugar? Sugar for me? Please?
+  - something with sugar? Sugar for me? Please?
   mixedFruitHints:
-  - fruity ingredients? Fruity like me?
+  - somethign with fruity ingredients? Fruity like me?
   GoodFeedback: YAAY thank you so much!
   BadFeedback: 'UUGHH fine whatever '
   targetPos: {fileID: 0}
