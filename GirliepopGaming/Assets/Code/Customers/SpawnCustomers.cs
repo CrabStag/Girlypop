@@ -172,13 +172,15 @@ public class SpawnCustomers : MonoBehaviour
                 audioSource.volume = angryVolume;
             }
         }
-        audioSource.Play();
+        audioSource.Play(); // Play feedback sound
 
-        currentCustomer.targetPos = startPos;
-        StartCoroutine(currentCustomer.KYStimer(spawnInterval));
-        dragDishObject.image.sprite = null;
-        dragDishObject.order = null;
-        dragDishObject.transform.position = dragDishObject.startPos;
+    currentCustomer.canMove = false; // Stop immediate movement
+    StartCoroutine(WaitAndSlideOff()); // Start waiting before leaving
+
+    // Reset drag dish object
+    dragDishObject.image.sprite = null;
+    dragDishObject.order = null;
+    dragDishObject.transform.position = dragDishObject.startPos;
 
     }
 
@@ -236,4 +238,20 @@ public class SpawnCustomers : MonoBehaviour
         }
         currentIntervalTime = spawnInterval;
         }
+    private IEnumerator WaitAndSlideOff()
+{
+    yield return new WaitForSeconds(2f); // Wait before leaving
+
+    currentCustomer.targetPos = startPos; // Set target position to exit
+    currentCustomer.canMove = true; // Allow movement again
+
+    yield return new WaitUntil(() => Vector3.Distance(currentCustomer.transform.position, startPos.position) < 0.1f);
+
+    // Ensure exact position & destroy after moving
+    currentCustomer.transform.position = startPos.position;
+    StartCoroutine(currentCustomer.KYStimer(spawnInterval));
+}
+
+
     }
+
