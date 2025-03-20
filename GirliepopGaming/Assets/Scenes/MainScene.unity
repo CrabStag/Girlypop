@@ -404,6 +404,8 @@ GameObject:
   - component: {fileID: 144957813}
   - component: {fileID: 144957812}
   - component: {fileID: 144957814}
+  - component: {fileID: 144957815}
+  - component: {fileID: 144957816}
   m_Layer: 0
   m_Name: BowlKitchen
   m_TagString: Untagged
@@ -512,6 +514,97 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9eb5a2e5ca89ae24bab91e1b79b41d83, type: 2}
   - {fileID: 11400000, guid: 9300824bae33f08419f0779bfc2767d1, type: 2}
   discoveredDishes: []
+--- !u!114 &144957815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144957811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79657bb067f797f4da72acf8df87b3e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultShader: {fileID: 0}
+  hoverShader: {fileID: -6465566751694194690, guid: dd65c906e0952bb4dbc3d078b5a9c80c, type: 3}
+--- !u!60 &144957816
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144957811}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 5}
+    newSize: {x: 2.55, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.91999996, y: -0.52}
+      - {x: 1, y: -0.39999998}
+      - {x: 1.0799999, y: -0.22999999}
+      - {x: 1.13, y: -0.11}
+      - {x: 1.14, y: -0.02}
+      - {x: 1.14, y: 0.35999998}
+      - {x: 1.09, y: 0.47}
+      - {x: 1.05, y: 0.53}
+      - {x: 0.94, y: 0.65}
+      - {x: 0.82, y: 0.74}
+      - {x: 0.62, y: 0.84999996}
+      - {x: 0.42, y: 0.9}
+      - {x: 0.35999998, y: 0.91999996}
+      - {x: -0.34, y: 0.91999996}
+      - {x: -0.62, y: 0.84999996}
+      - {x: -0.82, y: 0.74}
+      - {x: -0.89, y: 0.7}
+      - {x: -1.06, y: 0.53}
+      - {x: -1.13, y: 0.38}
+      - {x: -1.14, y: 0.37}
+      - {x: -1.14, y: -0.11}
+      - {x: -1.13, y: -0.16}
+      - {x: -1.02, y: -0.41}
+      - {x: -0.90999997, y: -0.56}
+      - {x: -0.81, y: -0.68}
+      - {x: -0.64, y: -0.78999996}
+      - {x: -0.45999998, y: -0.88}
+      - {x: -0.32, y: -0.91999996}
+      - {x: 0.26, y: -0.91999996}
+      - {x: 0.42999998, y: -0.88}
+      - {x: 0.64, y: -0.78}
+      - {x: 0.79999995, y: -0.66999996}
+  m_UseDelaunayMesh: 0
 --- !u!1001 &154174413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -763,6 +856,7 @@ GameObject:
   - component: {fileID: 235043231}
   - component: {fileID: 235043232}
   - component: {fileID: 235043233}
+  - component: {fileID: 235043234}
   m_Layer: 0
   m_Name: toBakery
   m_TagString: Untagged
@@ -927,6 +1021,20 @@ MonoBehaviour:
   UiToTurnOn:
   - {fileID: 272819235}
   - {fileID: 1612634697}
+--- !u!114 &235043234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235043227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79657bb067f797f4da72acf8df87b3e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultShader: {fileID: 0}
+  hoverShader: {fileID: -6465566751694194690, guid: 5d7fa6e808a1c404ab5b2d47b9528560, type: 3}
 --- !u!1 &237619118
 GameObject:
   m_ObjectHideFlags: 0
@@ -4029,6 +4137,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1154431590}
+  - {fileID: 1995178444}
   - {fileID: 1700314761}
   - {fileID: 1716660514}
   m_Father: {fileID: 0}
@@ -5640,6 +5749,7 @@ GameObject:
   - component: {fileID: 1406604912}
   - component: {fileID: 1406604917}
   - component: {fileID: 1406604916}
+  - component: {fileID: 1406604918}
   m_Layer: 5
   m_Name: RecipeButton
   m_TagString: Untagged
@@ -5777,7 +5887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 5ada12dc79d44a0499c837aefee2e838, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -5863,6 +5973,19 @@ MonoBehaviour:
   soundClip: {fileID: 8300000, guid: 1b72386756a3cb546a3ac886aa3e629f, type: 3}
   volume: 17.5
   childIndex: 0
+--- !u!114 &1406604918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406604910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d7740f12130bc4fbbf2bd8e17602ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverShader: {fileID: -6465566751694194690, guid: dd65c906e0952bb4dbc3d078b5a9c80c, type: 3}
 --- !u!1 &1432561087
 GameObject:
   m_ObjectHideFlags: 0
@@ -6818,6 +6941,7 @@ GameObject:
   - component: {fileID: 1669367022}
   - component: {fileID: 1669367023}
   - component: {fileID: 1669367024}
+  - component: {fileID: 1669367025}
   m_Layer: 0
   m_Name: toShop
   m_TagString: Untagged
@@ -6982,6 +7106,20 @@ MonoBehaviour:
   - {fileID: 272819235}
   - {fileID: 1612634697}
   UiToTurnOn: []
+--- !u!114 &1669367025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669367018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79657bb067f797f4da72acf8df87b3e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultShader: {fileID: 0}
+  hoverShader: {fileID: -6465566751694194690, guid: 5d7fa6e808a1c404ab5b2d47b9528560, type: 3}
 --- !u!1 &1678524144
 GameObject:
   m_ObjectHideFlags: 0
@@ -8779,7 +8917,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5, y: 2.2}
+    oldSize: {x: 5, y: 5}
     newSize: {x: 2.55, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9511,6 +9649,134 @@ MonoBehaviour:
   panelDish: {fileID: 11400000, guid: c228028715c5ff0438a5c0213f46aae5, type: 2}
   CoverUp: {fileID: 1349186302}
   NameTextObject: {fileID: 2075018683}
+--- !u!1 &1995178443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1995178444}
+  - component: {fileID: 1995178445}
+  m_Layer: 0
+  m_Name: AudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1995178444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995178443}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 963194228}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1995178445
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995178443}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2013760797
 GameObject:
   m_ObjectHideFlags: 0
@@ -10204,8 +10470,8 @@ SceneRoots:
   - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 811249961}
-  - {fileID: 2126126173}
   - {fileID: 202062733}
+  - {fileID: 2126126173}
   - {fileID: 114730473}
   - {fileID: 235043230}
   - {fileID: 753204075}

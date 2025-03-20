@@ -237,4 +237,3 @@ public class SpawnCustomers : MonoBehaviour
         currentIntervalTime = spawnInterval;
         }
     }
-
