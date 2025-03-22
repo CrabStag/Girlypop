@@ -16,6 +16,7 @@ public class KitchenDish : MonoBehaviour
     public SpriteRenderer ovenToppingImage;
 
     public GameObject toOvenButton;
+    public GameObject OvenBowl;
 
     public DragDish counterDish;
 
@@ -36,15 +37,18 @@ public class KitchenDish : MonoBehaviour
         if(toppingIngredient != Ingredient.None && baseIngredient != Ingredient.None)
         {
             toOvenButton.SetActive(true);
+            OvenBowl.SetActive(true);
         } else
         {
             toOvenButton.SetActive(false);
+            OvenBowl.SetActive(false); 
 
         }
     }
 
     public void BakeDish()
     {
+
         foreach (Order order in allDishes)
         {
             if(order.ingredient1 == baseIngredient && order.ingredient2 == toppingIngredient)

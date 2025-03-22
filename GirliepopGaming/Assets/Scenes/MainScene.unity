@@ -502,6 +502,7 @@ MonoBehaviour:
   ovenBaseImage: {fileID: 183115832}
   ovenToppingImage: {fileID: 1795793363}
   toOvenButton: {fileID: 1453476531}
+  OvenBowl: {fileID: 1902397061}
   counterDish: {fileID: 1797098346}
   allDishes:
   - {fileID: 11400000, guid: a01f7ed511887704fbbd75e650f555b7, type: 2}

@@ -29,6 +29,11 @@ public class BakeButton : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
+        if(KitchenDish.instance.toppingIngredient == Ingredient.None || KitchenDish.instance.baseIngredient == Ingredient.None)
+        {
+            return;
+        }
+
         StartCoroutine(WaitForBakeFinish());
     }
 
