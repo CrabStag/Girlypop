@@ -6159,6 +6159,7 @@ GameObject:
   - component: {fileID: 1453476534}
   - component: {fileID: 1453476536}
   - component: {fileID: 1453476535}
+  - component: {fileID: 1453476537}
   m_Layer: 0
   m_Name: toOven
   m_TagString: Untagged
@@ -6308,6 +6309,20 @@ MonoBehaviour:
   - {fileID: 272819235}
   - {fileID: 1612634697}
   UiToTurnOn: []
+--- !u!114 &1453476537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453476531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79657bb067f797f4da72acf8df87b3e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultShader: {fileID: 0}
+  hoverShader: {fileID: -6465566751694194690, guid: 44d8573d438bbfa48b9c8ec001c58fab, type: 3}
 --- !u!1 &1491188927
 GameObject:
   m_ObjectHideFlags: 0
