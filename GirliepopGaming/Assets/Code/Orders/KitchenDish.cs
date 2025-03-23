@@ -24,6 +24,8 @@ public class KitchenDish : MonoBehaviour
 
     public List<Order> allDishes = new List<Order>();
 
+    public bool isTutorial = false;
+
     [HideInInspector]
     public List<Order> discoveredDishes = new List<Order>();
 
@@ -36,11 +38,13 @@ public class KitchenDish : MonoBehaviour
     {
         if(toppingIngredient != Ingredient.None && baseIngredient != Ingredient.None)
         {
-            toOvenButton.SetActive(true);
+            if(toOvenButton != null)
+                toOvenButton.SetActive(true);
             OvenBowl.SetActive(true);
         } else
         {
-            toOvenButton.SetActive(false);
+            if (toOvenButton != null)
+                toOvenButton.SetActive(false);
             OvenBowl.SetActive(false); 
 
         }
@@ -56,20 +60,22 @@ public class KitchenDish : MonoBehaviour
                 counterDish.order = order;
                 counterDish.image.sprite = order.image;
 
-                if(discoveredDishes.Contains(order))
+                if (isTutorial == false)
                 {
-                    PopoutCard.instance.cardImage.sprite = order.regularPopupCard;
-                }
+                    if (discoveredDishes.Contains(order))
+                    {
+                        PopoutCard.instance.cardImage.sprite = order.regularPopupCard;
+                    }
 
-                if (!discoveredDishes.Contains(order))
-                {
-                    discoveredDishes.Add(order);
-                    PopoutCard.instance.cardImage.sprite = order.newPopupCard;
+                    if (!discoveredDishes.Contains(order))
+                    {
+                        discoveredDishes.Add(order);
+                        PopoutCard.instance.cardImage.sprite = order.newPopupCard;
+                    }
+                    PopoutCard.instance.cardImage.SetNativeSize();
+                    PopoutCard.instance.currentCoroutine = PopoutCard.instance.PopUp();
+                    StartCoroutine(PopoutCard.instance.currentCoroutine);
                 }
-                PopoutCard.instance.cardImage.SetNativeSize();
-                PopoutCard.instance.currentCoroutine = PopoutCard.instance.PopUp();
-                StartCoroutine(PopoutCard.instance.currentCoroutine);
-
             }
         }
         baseIngredient = Ingredient.None;

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using System.Collections;
 
 
@@ -8,6 +9,9 @@ public class DragDish : MonoBehaviour
     public SpriteRenderer image;
 
     public Order order = null;
+
+    public bool isTutorial = false;
+    public UnityEvent executeOnDrop;
 
     private Vector3 screenPoint;
     private Vector3 offset;
@@ -23,8 +27,10 @@ public class DragDish : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
+
         if(inOtherCollider)
         {
+
             SpawnCustomers.Instance.JudgeOrder();
         }
 
@@ -57,6 +63,11 @@ public class DragDish : MonoBehaviour
         if (collision.gameObject.tag == "Customer")
         {
             print("gay person detected");
+            if (isTutorial)
+            {
+                executeOnDrop.Invoke();
+                Destroy(gameObject);
+            }
             inOtherCollider = true;
         }
     }

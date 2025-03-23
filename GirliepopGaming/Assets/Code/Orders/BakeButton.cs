@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BakeButton : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class BakeButton : MonoBehaviour
     public SpriteRenderer bowlFront;
     public SpriteRenderer toppingImage;
     public SpriteRenderer baseImage;
+
+    public bool isTutorial;
+    public UnityEvent executeInTutorial;
 
     public BoxCollider2D bowlCollider;
 
@@ -55,9 +59,18 @@ public class BakeButton : MonoBehaviour
         secondAudio.Play();
 
         KitchenDish.instance.BakeDish();
-        
-        bowlBack.enabled = true;
-        bowlFront.enabled = true;
-        bowlCollider.enabled = true;
+
+        if (isTutorial == false)
+        {
+            bowlBack.enabled = true;
+            bowlFront.enabled = true;
+            bowlCollider.enabled = true;
+
+        }
+
+        if(isTutorial)
+        {
+            executeInTutorial.Invoke();
+        }
     }
 }
