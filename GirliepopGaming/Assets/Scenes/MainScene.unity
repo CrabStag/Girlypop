@@ -514,6 +514,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3d24838bb33dbf14d83fd2056cf1fa42, type: 2}
   - {fileID: 11400000, guid: 9eb5a2e5ca89ae24bab91e1b79b41d83, type: 2}
   - {fileID: 11400000, guid: 9300824bae33f08419f0779bfc2767d1, type: 2}
+  isTutorial: 0
   discoveredDishes: []
 --- !u!114 &144957815
 MonoBehaviour:
@@ -8157,6 +8158,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 704290390}
   order: {fileID: 0}
+  isTutorial: 0
+  executeOnDrop:
+    m_PersistentCalls:
+      m_Calls: []
   startPos: {x: 0, y: 0, z: 0}
 --- !u!50 &1797098347
 Rigidbody2D:
@@ -8813,6 +8818,10 @@ MonoBehaviour:
   bowlFront: {fileID: 1714961703}
   toppingImage: {fileID: 1795793363}
   baseImage: {fileID: 183115832}
+  isTutorial: 0
+  executeInTutorial:
+    m_PersistentCalls:
+      m_Calls: []
   bowlCollider: {fileID: 1902397065}
 --- !u!61 &1902397065
 BoxCollider2D:
