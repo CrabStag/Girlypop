@@ -11,12 +11,17 @@ public class SpawnCustomers : MonoBehaviour
     public List<Transform> customerLocations;
     public Transform startPos;
 
+    public int minCustomers;
+    public int maxCustomers;
+
     public DragDish dragDishObject;
 
     [HideInInspector]
     public Customer currentCustomer;
     [HideInInspector]
     public Order currentOrder;
+    [HideInInspector]
+    public int finishedCustomers = 0;
 
     public TextMeshPro textBox;
 
@@ -48,7 +53,7 @@ public class SpawnCustomers : MonoBehaviour
 
     private void Start()
     {
-        currentIntervalTime = spawnInterval;    
+        currentIntervalTime = spawnInterval;
         audioSource = Camera.main.gameObject.transform.GetChild(1).GetComponent<AudioSource>();
     }
 
@@ -59,12 +64,12 @@ public class SpawnCustomers : MonoBehaviour
 
     public void JudgeOrder()
     {
-        if(dishDifficulty == 0)
+        if (dishDifficulty == 0)
         {
-            switch(ingredientDecider)
+            switch (ingredientDecider)
             {
                 case 0:
-                    if(dragDishObject.order.ingredient1 == Ingredient.Milk)
+                    if (dragDishObject.order.ingredient1 == Ingredient.Milk)
                     {
                         textBox.text = currentCustomer.GoodFeedback;
                         audioSource.clip = happyCustomerSound;
@@ -174,13 +179,13 @@ public class SpawnCustomers : MonoBehaviour
         }
         audioSource.Play(); // Play feedback sound
 
-    currentCustomer.canMove = false; // Stop immediate movement
-    StartCoroutine(WaitAndSlideOff()); // Start waiting before leaving
+        currentCustomer.canMove = false; // Stop immediate movement
+        StartCoroutine(WaitAndSlideOff()); // Start waiting before leaving
 
-    // Reset drag dish object
-    dragDishObject.image.sprite = null;
-    dragDishObject.order = null;
-    dragDishObject.transform.position = dragDishObject.startPos;
+        // Reset drag dish object
+        dragDishObject.image.sprite = null;
+        dragDishObject.order = null;
+        dragDishObject.transform.position = dragDishObject.startPos;
 
     }
 
@@ -196,7 +201,7 @@ public class SpawnCustomers : MonoBehaviour
                 case 0:
                     ingredientDecider = Random.Range(0, 6);
 
-                    switch(ingredientDecider)
+                    switch (ingredientDecider)
                     {
                         case 0:
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
@@ -237,21 +242,30 @@ public class SpawnCustomers : MonoBehaviour
             isCustomerActive = true;
         }
         currentIntervalTime = spawnInterval;
-        }
-    private IEnumerator WaitAndSlideOff()
-{
-    yield return new WaitForSeconds(2f); // Wait before leaving
-
-    currentCustomer.targetPos = startPos; // Set target position to exit
-    currentCustomer.canMove = true; // Allow movement again
-
-    yield return new WaitUntil(() => Vector3.Distance(currentCustomer.transform.position, startPos.position) < 0.1f);
-
-    // Ensure exact position & destroy after moving
-    currentCustomer.transform.position = startPos.position;
-    StartCoroutine(currentCustomer.KYStimer(spawnInterval));
-}
-
-
     }
+    private IEnumerator WaitAndSlideOff()
+    {
+        yield return new WaitForSeconds(2f); // Wait before leaving
+
+        currentCustomer.targetPos = startPos; // Set target position to exit
+        currentCustomer.canMove = true; // Allow movement again
+
+        yield return new WaitUntil(() => Vector3.Distance(currentCustomer.transform.position, startPos.position) < 0.1f);
+
+        MoveDayTime.instance.MoveDay();
+        finishedCustomers += 1;
+        // Ensure exact position & destroy after moving
+        currentCustomer.transform.position = startPos.position;
+        StartCoroutine(currentCustomer.KYStimer(spawnInterval));
+
+        if(finishedCustomers == MoveDayTime.instance.customerAmount)
+        {
+            print("day finished");
+            MoveDayTime.instance.FinishDay();
+            gameObject.SetActive(false);
+        }
+    }
+
+
+}
 
