@@ -3,7 +3,10 @@ guid: b109681e30659374e9258802362fca0f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - dayEndPos: {instanceID: 0}
+  - musicSource: {instanceID: 0}
+  - endOfDayMusic: {fileID: 8300000, guid: 780043980cbe8b445b7878b8de0fbca0, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
