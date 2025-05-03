@@ -28,7 +28,7 @@ public class Customer : MonoBehaviour
     [HideInInspector]
     public Transform targetPos;
 
-    public bool canMove = true; // Ensure this is inside the class
+    public bool canMove = true; 
 
     private void Start()
     {
@@ -58,4 +58,4 @@ public class Customer : MonoBehaviour
         SpawnCustomers.Instance.isCustomerActive = false;
         Destroy(gameObject);
     }
-} // <-- Ensure the class ends properly here
+} 
