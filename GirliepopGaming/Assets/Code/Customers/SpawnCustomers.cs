@@ -25,7 +25,7 @@ public class SpawnCustomers : MonoBehaviour
 
     public TextMeshPro textBox;
 
-
+    public bool IsThisActive = false;
     public bool isCustomerActive = false;
 
     [Range(1, 100)]
@@ -62,7 +62,67 @@ public class SpawnCustomers : MonoBehaviour
 
     private void Update()
     {
+        if(!IsThisActive)
+        {
+            return;
+        }
+
         SpawnCustomer();
+    }
+
+    private void SpawnCustomer()
+    {
+        if (isCustomerActive == false)
+        {
+            currentCustomer = Instantiate(possibleCustomers[Random.Range(0, possibleCustomers.Count)], startPos.position, Quaternion.identity).GetComponent<Customer>();
+            dishDifficulty = Random.Range(0, 2);
+
+            switch (dishDifficulty)
+            {
+                case 0:
+                    ingredientDecider = Random.Range(0, 6);
+
+                    switch (ingredientDecider)
+                    {
+                        case 0:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.milkHints[Random.Range(0, currentCustomer.milkHints.Length)];
+                            break;
+                        case 1:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.caramelHints[Random.Range(0, currentCustomer.caramelHints.Length)];
+                            break;
+                        case 2:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.jamHints[Random.Range(0, currentCustomer.jamHints.Length)];
+                            break;
+                        case 3:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.chocolateHints[Random.Range(0, currentCustomer.chocolateHints.Length)];
+                            break;
+                        case 4:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.mixedFruitHints[Random.Range(0, currentCustomer.mixedFruitHints.Length)];
+                            break;
+                        case 5:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.sugarHints[Random.Range(0, currentCustomer.sugarHints.Length)];
+                            break;
+                    }
+
+                    break;
+                case 1:
+                    currentOrder = currentCustomer.possibleOrders[Random.Range(0, currentCustomer.possibleOrders.Count)];
+
+                    textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                        + " " + currentOrder.NameOfOrder;
+
+                    break;
+            }
+
+            isCustomerActive = true;
+        }
+        currentIntervalTime = spawnInterval;
     }
 
     public void JudgeOrder()
@@ -217,60 +277,6 @@ public class SpawnCustomers : MonoBehaviour
 
     }
 
-    private void SpawnCustomer()
-    {
-        if (isCustomerActive == false)
-        {
-            currentCustomer = Instantiate(possibleCustomers[Random.Range(0, possibleCustomers.Count)], startPos.position, Quaternion.identity).GetComponent<Customer>();
-            dishDifficulty = Random.Range(0, 2);
-
-            switch (dishDifficulty)
-            {
-                case 0:
-                    ingredientDecider = Random.Range(0, 6);
-
-                    switch (ingredientDecider)
-                    {
-                        case 0:
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.milkHints[Random.Range(0, currentCustomer.milkHints.Length)];
-                            break;
-                        case 1:
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.caramelHints[Random.Range(0, currentCustomer.caramelHints.Length)];
-                            break;
-                        case 2:
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.jamHints[Random.Range(0, currentCustomer.jamHints.Length)];
-                            break;
-                        case 3:
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.chocolateHints[Random.Range(0, currentCustomer.chocolateHints.Length)];
-                            break;
-                        case 4:
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.mixedFruitHints[Random.Range(0, currentCustomer.mixedFruitHints.Length)];
-                            break;
-                        case 5:
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.sugarHints[Random.Range(0, currentCustomer.sugarHints.Length)];
-                            break;
-                    }
-
-                    break;
-                case 1:
-                    currentOrder = currentCustomer.possibleOrders[Random.Range(0, currentCustomer.possibleOrders.Count)];
-
-                    textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                        + " " + currentOrder.NameOfOrder;
-
-                    break;
-            }
-
-            isCustomerActive = true;
-        }
-        currentIntervalTime = spawnInterval;
-    }
     private IEnumerator WaitAndSlideOff()
     {
         yield return new WaitForSeconds(2f); // Wait before leaving

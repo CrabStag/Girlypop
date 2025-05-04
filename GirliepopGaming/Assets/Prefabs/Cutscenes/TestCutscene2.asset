@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eb8c8fdae3fe2a4ab9d35d07ea66186, type: 3}
-  m_Name: TestCutscene
+  m_Name: TestCutscene2
   m_EditorClassIdentifier: 
   cutsceneLines:
-  - Test1
-  - Test2
+  - aaah
+  - aaaaaaaaaaaaaaaah
   cutsceneSprites:
-  - {fileID: 21300000, guid: 0f6fc883058885349b9e555b1edb5b76, type: 3}
-  - {fileID: 21300000, guid: fa5d58c6a842b604395658846f830be2, type: 3}
-  goodKarmaReq: 1
-  badKarmaReq: 0
+  - {fileID: 21300000, guid: 729b87f42f3597f47873977439ffb659, type: 3}
+  - {fileID: 21300000, guid: 36c78f096f9f3574399fade2ddfee912, type: 3}
+  goodKarmaReq: 0
+  badKarmaReq: 1
