@@ -1555,8 +1555,8 @@ MonoBehaviour:
   customerLocations:
   - {fileID: 1838818097}
   startPos: {fileID: 980304125}
-  minCustomers: 1
-  maxCustomers: 1
+  minCustomers: 3
+  maxCustomers: 6
   dragDishObject: {fileID: 1797098346}
   currentCustomer: {fileID: 0}
   currentOrder: {fileID: 0}
@@ -2082,7 +2082,7 @@ Transform:
   m_GameObject: {fileID: 431296715}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.08, y: -1.9, z: 0}
+  m_LocalPosition: {x: 19.08, y: -1.9, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
