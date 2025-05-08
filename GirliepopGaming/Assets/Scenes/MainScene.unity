@@ -1603,6 +1603,7 @@ MonoBehaviour:
   allCutscenes:
   - {fileID: 11400000, guid: c93bf40e1b4780e47a24648495efac54, type: 2}
   - {fileID: 11400000, guid: fee1759127350e848bc0c27f9e14338f, type: 2}
+  - {fileID: 11400000, guid: bee95da754143b54d988345db36e6799, type: 2}
   fadeBlackground: {fileID: 1311008871}
   textbox: {fileID: 1900355035}
   characterSprite: {fileID: 779143438}

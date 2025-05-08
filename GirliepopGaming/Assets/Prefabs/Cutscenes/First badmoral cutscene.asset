@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb8c8fdae3fe2a4ab9d35d07ea66186, type: 3}
+  m_Name: First badmoral cutscene
+  m_EditorClassIdentifier: 
+  cutsceneLines:
+  - Hey! You.
+  - ' I hear you''ve been making some questionable choices.'
+  - ' Which isn''t NECESSARILY a bad thing, as long as you can amp it up and be so
+    questionable we start attracting  the evil customers'
+  - You know, like, demons, trolls, landlords, ghosts, billionaires.
+  - They got a lotta money, cause they don't mind exploiting people.
+  - But hmmm. Probably safer to just stick to our regular customer base
+  - Of good, well-adjusted citizens
+  - Anyways, I know I'm your manager, but if you mess up, I'm blaming you. Toodles!
+  cutsceneSprites:
+  - {fileID: 21300000, guid: 0f6fc883058885349b9e555b1edb5b76, type: 3}
+  - {fileID: 21300000, guid: fa5d58c6a842b604395658846f830be2, type: 3}
+  - {fileID: 21300000, guid: 0f6fc883058885349b9e555b1edb5b76, type: 3}
+  - {fileID: 21300000, guid: fa5d58c6a842b604395658846f830be2, type: 3}
+  - {fileID: 21300000, guid: 034cae1089b6c2648a789e583f47ae59, type: 3}
+  - {fileID: 21300000, guid: 0f6fc883058885349b9e555b1edb5b76, type: 3}
+  - {fileID: 21300000, guid: 0f6fc883058885349b9e555b1edb5b76, type: 3}
+  - {fileID: 21300000, guid: 034cae1089b6c2648a789e583f47ae59, type: 3}
+  goodKarmaReq: 0
+  badKarmaReq: 5
