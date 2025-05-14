@@ -24,5 +24,10 @@ public enum Ingredient
     Sugar,
     Fruits,
     Choco,
-    None
+    Mandrake,
+    LoveEssence, 
+    CrystalMethite, 
+    GraveViola, 
+    MixedNuts,
+    None,
 }
