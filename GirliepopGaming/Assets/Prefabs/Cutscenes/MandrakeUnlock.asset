@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb8c8fdae3fe2a4ab9d35d07ea66186, type: 3}
+  m_Name: MandrakeUnlock
+  m_EditorClassIdentifier: 
+  cutsceneLines:
+  - Heheheh, hey, punk. Look what I found last night
+  - These are mandrakes. They're technically illegal, but...
+  - "They\u2019re really good, that\u2019ll make you some nice herbal versions of
+    recipes"
+  - 'I gotta run, but you should try em out.  '
+  cutsceneSprites:
+  - {fileID: 21300000, guid: 034cae1089b6c2648a789e583f47ae59, type: 3}
+  - {fileID: 21300000, guid: 034cae1089b6c2648a789e583f47ae59, type: 3}
+  - {fileID: 21300000, guid: 034cae1089b6c2648a789e583f47ae59, type: 3}
+  - {fileID: 21300000, guid: 034cae1089b6c2648a789e583f47ae59, type: 3}
+  goodKarmaReq: 0
+  badKarmaReq: 2

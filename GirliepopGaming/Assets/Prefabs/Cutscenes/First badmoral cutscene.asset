@@ -32,4 +32,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0f6fc883058885349b9e555b1edb5b76, type: 3}
   - {fileID: 21300000, guid: 034cae1089b6c2648a789e583f47ae59, type: 3}
   goodKarmaReq: 0
-  badKarmaReq: 5
+  badKarmaReq: 1

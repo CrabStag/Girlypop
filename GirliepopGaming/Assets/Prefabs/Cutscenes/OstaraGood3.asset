@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb8c8fdae3fe2a4ab9d35d07ea66186, type: 3}
+  m_Name: OstaraGood3
+  m_EditorClassIdentifier: 
+  cutsceneLines:
+  - "Hey, your working here isn\u2019t\u2026. Entirely consensual is it?"
+  - 'Does that mean you were taken from your family? '
+  - How are you adjusting?
+  - "I know this place isn\u2019t like your home, but I do hope you don\u2019t feel
+    like a prisoner. "
+  - I will pray for you to our great tree.
+  cutsceneSprites:
+  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
+  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
+  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
+  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
+  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
+  goodKarmaReq: 15
+  badKarmaReq: 0

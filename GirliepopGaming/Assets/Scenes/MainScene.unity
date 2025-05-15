@@ -2412,6 +2412,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allCutscenes:
   - {fileID: 11400000, guid: bee95da754143b54d988345db36e6799, type: 2}
+  - {fileID: 11400000, guid: d1081c8538a02724281d05e2e6bdae41, type: 2}
+  - {fileID: 11400000, guid: 27cbcee9b1b8f24438fc45cd11f78816, type: 2}
+  - {fileID: 11400000, guid: 90d22745bf631f444990ba861e78d1a6, type: 2}
+  - {fileID: 11400000, guid: a8c25f822d09be340b8346c1f8d68c25, type: 2}
+  - {fileID: 11400000, guid: 2643487e4a1294f4cacbea05b5a9db36, type: 2}
+  - {fileID: 11400000, guid: 4010432cfe276bd498c957cf6dd1efe7, type: 2}
+  - {fileID: 11400000, guid: 29e37020e59fd484b8fc2207460c8ae3, type: 2}
+  - {fileID: 11400000, guid: 95b192000e890ec4abc0c38d3456fa0a, type: 2}
+  - {fileID: 11400000, guid: 5f250deb01612254ea02eacfc56d3805, type: 2}
+  - {fileID: 11400000, guid: 8cba8950fe8f8dc40b726c0328db7e1a, type: 2}
   fadeBlackground: {fileID: 1311008871}
   textbox: {fileID: 1900355035}
   characterSprite: {fileID: 779143438}

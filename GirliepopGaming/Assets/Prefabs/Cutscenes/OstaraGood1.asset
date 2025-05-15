@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb8c8fdae3fe2a4ab9d35d07ea66186, type: 3}
+  m_Name: OstaraGood1
+  m_EditorClassIdentifier: 
+  cutsceneLines:
+  - "You know, you\u2019re not like the other animalia I\u2019ve met."
+  - 'Maybe your kind can be trusted.. '
+  - "Ever since the war I\u2019ve been so scared of you people."
+  - ' This new era of peace, it irks me..'
+  - 'Ah, excuse me for rambling. I simply came to check around this territory. '
+  - You must excuse me now. And I will see you later.
+  cutsceneSprites:
+  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
+  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
+  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
+  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
+  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
+  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
+  goodKarmaReq: 5
+  badKarmaReq: 0
