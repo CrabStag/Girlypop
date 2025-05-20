@@ -154,7 +154,8 @@ MonoBehaviour:
   - Something with fruits. That's not weird. They're lesser beings.
   mandrakeHints:
   - '.. Well.. You must keep this between us.. But I want "you know what" '
-  mixedNutsHints: []
+  mixedNutsHints:
+  - Something with some mixed nuts, they're lesser lifeforms anyway.
   GoodFeedback: Thank you!
   BadFeedback: Oh my god... What is IN this??
   targetPos: {fileID: 0}

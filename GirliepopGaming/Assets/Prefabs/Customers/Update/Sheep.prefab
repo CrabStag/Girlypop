@@ -187,15 +187,18 @@ MonoBehaviour:
   - bllb
   caramelHints:
   - blblblb bllb blbl
-  loveEssenceHints: []
+  loveEssenceHints:
+  - blblb bllblb
   chocolateHints:
   - blblb blblb blblb
   sugarHints:
   - blb blbl
   mixedFruitHints:
   - blblblblb blblb
-  mandrakeHints: []
-  mixedNutsHints: []
+  mandrakeHints:
+  - blblblblb blblbbl
+  mixedNutsHints:
+  - blbl blblblb blbblblbl
   GoodFeedback: Blblb! blblblbl !
   BadFeedback: ...Blblblbb....blblbb.....
   targetPos: {fileID: 0}
