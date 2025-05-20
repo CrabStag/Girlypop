@@ -139,24 +139,15 @@ MonoBehaviour:
   PossibleGreetings:
   - "Uhm\u2026. hello\u2026 Can I get"
   - '..... '
-  milkHints:
-  - something with milk please
-  jamHints:
-  - something jammy
-  caramelHints:
-  - something sweet and sticky
-  loveEssenceHints:
-  - something with love essence
-  chocolateHints:
-  - something chocolaty
-  sugarHints:
-  - something sugary
-  mixedFruitHints:
-  - something with some vitamins
-  mandrakeHints:
-  - something with mandrake
-  mixedNutsHints:
-  - something with nuts
+  milkHints: []
+  jamHints: []
+  caramelHints: []
+  loveEssenceHints: []
+  chocolateHints: []
+  sugarHints: []
+  mixedFruitHints: []
+  mandrakeHints: []
+  mixedNutsHints: []
   GoodFeedback: Yum!!
   BadFeedback: ...Thanks
   targetPos: {fileID: 0}

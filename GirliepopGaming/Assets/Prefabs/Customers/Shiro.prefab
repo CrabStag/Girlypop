@@ -54,24 +54,15 @@ MonoBehaviour:
   slideSpeed: 5
   PossibleGreetings:
   - OH my GOD I'm STARVINGGGG, please get me
-  milkHints:
-  - something milkyyyyy
-  jamHints:
-  - some of that nice looking jam
-  caramelHints:
-  - honey plzplzplz
-  loveEssenceHints:
-  - something with love essence
-  chocolateHints:
-  - COCOA IN MY SYSTEM!!!!
-  sugarHints:
-  - pure, unadulterated sugar
-  mixedFruitHints:
-  - some fruit? I Guess?
-  mandrakeHints:
-  - something with mandrake
-  mixedNutsHints:
-  - something with nuts
+  milkHints: []
+  jamHints: []
+  caramelHints: []
+  loveEssenceHints: []
+  chocolateHints: []
+  sugarHints: []
+  mixedFruitHints: []
+  mandrakeHints: []
+  mixedNutsHints: []
   GoodFeedback: Ugh, yessss, I've been craving this!!
   BadFeedback: ......Wow... Ok.
   targetPos: {fileID: 0}

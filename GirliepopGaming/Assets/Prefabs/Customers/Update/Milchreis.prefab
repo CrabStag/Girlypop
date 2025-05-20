@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2491433357891505178}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8890104, y: -0.28149918, z: -0.2824546}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 1201870604327685839}
   m_Layer: 0
   m_Name: Milchreis
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.9435127, y: -0.37830716}
+  m_Offset: {x: 0.044270635, y: -0.0490458}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -161,7 +161,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.341045, y: 3.1462507}
+  m_Size: {x: 2.035876, y: 2.9213896}
   m_EdgeRadius: 0
 --- !u!114 &1201870604327685839
 MonoBehaviour:
@@ -177,22 +177,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CustomerName: Milchreis
   image: {fileID: 660489604193191080}
-  possibleOrders: []
+  possibleOrders:
+  - {fileID: 11400000, guid: c228028715c5ff0438a5c0213f46aae5, type: 2}
+  - {fileID: 11400000, guid: 9300824bae33f08419f0779bfc2767d1, type: 2}
   slideSpeed: 5
   PossibleGreetings:
-  - 'Salutations. I require something containing '
-  milkHints:
-  - bovine lactate suspension
-  jamHints:
-  - thermally processed fructose colloid
-  caramelHints:
-  - apis-derived fructose-glucose solution
-  chocolateHints:
-  - theobroma cacao extract matrix
-  sugarHints:
-  - "disaccharide compound C\u2081\u2082H\u2082\u2082O\u2081\u2081"
-  mixedFruitHints:
-  - botanical seed-bearing structures
+  - Salutations. I require a new test subject... Hmm. Yes, that will do. I'll have
+  milkHints: []
+  jamHints: []
+  caramelHints: []
+  loveEssenceHints: []
+  chocolateHints: []
+  sugarHints: []
+  mixedFruitHints: []
+  mandrakeHints: []
+  mixedNutsHints: []
   GoodFeedback: Hm. Yes. Most pleasing.
   BadFeedback: Interesting, though not what I asked for.
   targetPos: {fileID: 0}

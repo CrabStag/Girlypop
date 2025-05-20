@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8727634798683802152}
   m_Layer: 0
   m_Name: Layla
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,17 +48,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CustomerName: Layla
   image: {fileID: 7216653612507165098}
-  possibleOrders: []
+  possibleOrders:
+  - {fileID: 11400000, guid: 36b53ded0c3e8df4da40826ce1f5b95f, type: 2}
+  - {fileID: 11400000, guid: 5bbc9e6287fefff4487f90aa3859dc8b, type: 2}
+  - {fileID: 11400000, guid: a01f7ed511887704fbbd75e650f555b7, type: 2}
   slideSpeed: 5
-  PossibleGreetings: []
+  PossibleGreetings:
+  - 'Ahaha!! Yipeeee !! What a wonderful day!! You know what''d make it even more
+    wonderful? '
   milkHints: []
   jamHints: []
   caramelHints: []
+  loveEssenceHints: []
   chocolateHints: []
   sugarHints: []
   mixedFruitHints: []
-  GoodFeedback: 
-  BadFeedback: 
+  mandrakeHints: []
+  mixedNutsHints: []
+  GoodFeedback: Time to unhinge my jaw like a snake!! Aahhahah!!!
+  BadFeedback: I'm really gonna do it this time.
   targetPos: {fileID: 0}
   canMove: 1
 --- !u!61 &8727634798683802152
@@ -93,7 +101,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.2770909, y: 3.3720846}
+  m_Offset: {x: -0.098231316, y: 0.21942282}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -104,7 +112,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5921338, y: 2.078783}
+  m_Size: {x: 2.972992, y: 2.3750062}
   m_EdgeRadius: 0
 --- !u!1001 &4130101984171096399
 PrefabInstance:
@@ -120,15 +128,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6235903247514432105, guid: d00918c8dad4d214e95884e59f11d1de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.3402388
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6235903247514432105, guid: d00918c8dad4d214e95884e59f11d1de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5393627
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6235903247514432105, guid: d00918c8dad4d214e95884e59f11d1de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.7106452
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6235903247514432105, guid: d00918c8dad4d214e95884e59f11d1de, type: 3}
       propertyPath: m_LocalRotation.w

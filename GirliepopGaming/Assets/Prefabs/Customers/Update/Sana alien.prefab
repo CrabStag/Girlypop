@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 204155800349772594}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9857994, y: 0.4040603, z: -0.0742326}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5948157863711925391}
   m_Layer: 0
   m_Name: Sana alien
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.0549135, y: 0.37271693}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -187,12 +187,15 @@ MonoBehaviour:
   - spreecoco na vika.
   caramelHints:
   - misaaanda.
+  loveEssenceHints: []
   chocolateHints:
   - kiki tebamu?
   sugarHints:
   - sasanagara kilani?
   mixedFruitHints:
   - kanaturavi?
+  mandrakeHints: []
+  mixedNutsHints: []
   GoodFeedback: Gasnorp fidorb! masholarkido!
   BadFeedback: Kisiminanda.. Ma, gatarulakiti naga.
   targetPos: {fileID: 0}

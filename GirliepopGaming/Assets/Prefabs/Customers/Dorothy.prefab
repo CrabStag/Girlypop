@@ -139,24 +139,15 @@ MonoBehaviour:
   PossibleGreetings:
   - ' I NEED SOMETHING SWEET NOWWWW. Quick! Give me '
   - I stole my dad's wallet, you know what time it is. Gimme
-  milkHints:
-  - the thing that comes from the moo beast
-  jamHints:
-  - that stuff that looks like blood
-  caramelHints:
-  - the sticky stuff
-  loveEssenceHints:
-  - something with love essence
-  chocolateHints:
-  - hehehehe... well... it looks like poopoo...
-  sugarHints:
-  - some a that white powder
-  mixedFruitHints:
-  - the ingredient with all the colors of the rainbow
-  mandrakeHints:
-  - something with mandrake
-  mixedNutsHints:
-  - something with nuts
+  milkHints: []
+  jamHints: []
+  caramelHints: []
+  loveEssenceHints: []
+  chocolateHints: []
+  sugarHints: []
+  mixedFruitHints: []
+  mandrakeHints: []
+  mixedNutsHints: []
   GoodFeedback: YAYYYY
   BadFeedback: 'You better watch your back. '
   targetPos: {fileID: 0}

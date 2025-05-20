@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 597689537200766139}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8108722, y: -0.56817263, z: -0.927006}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4407790500423681870}
   m_Layer: 0
   m_Name: Sana
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,17 +132,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CustomerName: Sana
   image: {fileID: 1767366484685332923}
-  possibleOrders: []
+  possibleOrders:
+  - {fileID: 11400000, guid: 5bbc9e6287fefff4487f90aa3859dc8b, type: 2}
+  - {fileID: 11400000, guid: c228028715c5ff0438a5c0213f46aae5, type: 2}
   slideSpeed: 5
-  PossibleGreetings: []
+  PossibleGreetings:
+  - 'Hah, my disguise, it is flawless... Huh? My order? Oh. '
   milkHints: []
   jamHints: []
   caramelHints: []
+  loveEssenceHints: []
   chocolateHints: []
   sugarHints: []
   mixedFruitHints: []
-  GoodFeedback: 
-  BadFeedback: 
+  mandrakeHints: []
+  mixedNutsHints: []
+  GoodFeedback: THANK YOU FELLOW HOMO SAPIENS !
+  BadFeedback: This is... Earth food? Are you sure?
   targetPos: {fileID: 0}
   canMove: 1
 --- !u!61 &4407790500423681870
@@ -177,7 +183,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.7837119, y: -0.5476533}
+  m_Offset: {x: -0.007561922, y: 0.010412455}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -188,5 +194,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2145438, y: 2.7443774}
+  m_Size: {x: 1.9101448, y: 2.6273007}
   m_EdgeRadius: 0

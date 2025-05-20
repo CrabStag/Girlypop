@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 454720902761235156}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8108722, y: -0.56817263, z: -0.927006}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4485158548690184465}
   m_Layer: 0
   m_Name: Wisp
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,17 +132,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CustomerName: Wisp
   image: {fileID: 8032589144291775389}
-  possibleOrders: []
+  possibleOrders:
+  - {fileID: 11400000, guid: 42acf548ea8445c4dbb9d6ed8478bf94, type: 2}
+  - {fileID: 11400000, guid: 9eb5a2e5ca89ae24bab91e1b79b41d83, type: 2}
   slideSpeed: 5
-  PossibleGreetings: []
+  PossibleGreetings:
+  - Hi.... You look... Stressed. Sorry. Can I get
   milkHints: []
   jamHints: []
   caramelHints: []
+  loveEssenceHints: []
   chocolateHints: []
   sugarHints: []
   mixedFruitHints: []
-  GoodFeedback: 
-  BadFeedback: 
+  mandrakeHints: []
+  mixedNutsHints: []
+  GoodFeedback: Wow! I didn't think you had the brain capacity to understand !
+  BadFeedback: Yeah.. Okay.
   targetPos: {fileID: 0}
   canMove: 1
 --- !u!61 &4485158548690184465
@@ -177,7 +183,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.9336892, y: -0.62202585}
+  m_Offset: {x: 0.12855685, y: -0.047665536}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -188,5 +194,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.9201667, y: 3.4069703}
+  m_Size: {x: 2.963927, y: 3.5054321}
   m_EdgeRadius: 0

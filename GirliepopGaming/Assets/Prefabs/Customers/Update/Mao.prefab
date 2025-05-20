@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8446196620843833616}
   m_Layer: 0
   m_Name: Mao
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,17 +48,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CustomerName: Mao
   image: {fileID: 2813486876896967413}
-  possibleOrders: []
+  possibleOrders:
+  - {fileID: 11400000, guid: 49b972fe8382c864aa115b324c704b26, type: 2}
+  - {fileID: 11400000, guid: bc2080dc55fbb824db646adee512eecd, type: 2}
   slideSpeed: 5
-  PossibleGreetings: []
+  PossibleGreetings:
+  - 'Did anyone follow me in here? No? Ok good... What, I gotta order? Uhh, okay..
+    Give me '
   milkHints: []
   jamHints: []
   caramelHints: []
+  loveEssenceHints: []
   chocolateHints: []
   sugarHints: []
   mixedFruitHints: []
-  GoodFeedback: 
-  BadFeedback: 
+  mandrakeHints: []
+  mixedNutsHints: []
+  GoodFeedback: DON'T TELL ANYONE I WAS HERE
+  BadFeedback: OH MY GOD YOU'RE WITH THEM AREN'T YOU
   targetPos: {fileID: 0}
   canMove: 1
 --- !u!61 &8446196620843833616
@@ -93,7 +100,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.68819, y: -0.34799153}
+  m_Offset: {x: 0.17715293, y: -0.023487926}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -104,7 +111,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3763795, y: 3.2658744}
+  m_Size: {x: 1.8937844, y: 2.9829738}
   m_EdgeRadius: 0
 --- !u!1 &5515920031919529650
 GameObject:
@@ -132,7 +139,7 @@ Transform:
   m_GameObject: {fileID: 5515920031919529650}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8890104, y: -0.28149918, z: -0.2824546}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2795914881500362904}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8108722, y: 0.43, z: -0.927006}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4943681487769773412}
   m_Layer: 0
   m_Name: Sheep
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.6970491, y: -0.56117535}
+  m_Offset: {x: -0.057007313, y: -0.027810276}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -161,7 +161,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.2582245, y: 3.0689125}
+  m_Size: {x: 3.2472267, y: 3.0139265}
   m_EdgeRadius: 0
 --- !u!114 &4943681487769773412
 MonoBehaviour:
@@ -187,12 +187,15 @@ MonoBehaviour:
   - bllb
   caramelHints:
   - blblblb bllb blbl
+  loveEssenceHints: []
   chocolateHints:
   - blblb blblb blblb
   sugarHints:
   - blb blbl
   mixedFruitHints:
   - blblblblb blblb
+  mandrakeHints: []
+  mixedNutsHints: []
   GoodFeedback: Blblb! blblblbl !
   BadFeedback: ...Blblblbb....blblbb.....
   targetPos: {fileID: 0}

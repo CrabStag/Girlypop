@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 6628414381939915015}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8890104, y: -0.28149918, z: -0.2824546}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 681031880582294092}
   m_Layer: 0
   m_Name: Ostara
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,17 +132,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CustomerName: Ostara
   image: {fileID: 6268284330769610490}
-  possibleOrders: []
+  possibleOrders:
+  - {fileID: 11400000, guid: e6fe9d25f31fd6c4c8790f461e51f0b2, type: 2}
+  - {fileID: 11400000, guid: 3d24838bb33dbf14d83fd2056cf1fa42, type: 2}
   slideSpeed: 5
-  PossibleGreetings: []
+  PossibleGreetings:
+  - I DON'T want to eat any sentient plantlife. So give me a
   milkHints: []
   jamHints: []
   caramelHints: []
+  loveEssenceHints: []
   chocolateHints: []
   sugarHints: []
   mixedFruitHints: []
-  GoodFeedback: 
-  BadFeedback: 
+  mandrakeHints: []
+  mixedNutsHints: []
+  GoodFeedback: Thank you!
+  BadFeedback: Oh my god... What is IN this??
   targetPos: {fileID: 0}
   canMove: 1
 --- !u!61 &681031880582294092
@@ -177,7 +183,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.055656, y: -0.37965465}
+  m_Offset: {x: -0.09359193, y: -0.20473409}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -188,5 +194,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5969906, y: 4.4062157}
+  m_Size: {x: 3.7719126, y: 4.7560573}
   m_EdgeRadius: 0

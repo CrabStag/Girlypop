@@ -185,24 +185,15 @@ MonoBehaviour:
   PossibleGreetings:
   - Ugh, I need a pick me up. Can I get
   - I'm in desperate need of a pick-me-up, gimme
-  milkHints:
-  - something creamy
-  jamHints:
-  - something with some sweet jam
-  caramelHints:
-  - something that won't mask the flavor of the chocolate
-  loveEssenceHints:
-  - something with love essence
-  chocolateHints:
-  - that sweet sweet cocoa
-  sugarHints:
-  - something with lotsa sugar
-  mixedFruitHints:
-  - a fruity dish
-  mandrakeHints:
-  - something with mandrake
-  mixedNutsHints:
-  - something with nuts
+  milkHints: []
+  jamHints: []
+  caramelHints: []
+  loveEssenceHints: []
+  chocolateHints: []
+  sugarHints: []
+  mixedFruitHints: []
+  mandrakeHints: []
+  mixedNutsHints: []
   GoodFeedback: Thanks! I'll be back.
   BadFeedback: What is this? Are you some sort of jokester?
   targetPos: {fileID: 0}

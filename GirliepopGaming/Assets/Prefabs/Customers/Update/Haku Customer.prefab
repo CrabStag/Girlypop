@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 520809388237535831}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9857994, y: 0.4040603, z: -0.0742326}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 1163725366703110549}
   m_Layer: 0
   m_Name: Haku Customer
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.016432047, y: -0.053404093}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -161,7 +161,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.7394435, y: 2.8979053}
   m_EdgeRadius: 0
 --- !u!114 &1163725366703110549
 MonoBehaviour:
@@ -177,23 +177,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CustomerName: Haku
   image: {fileID: 5812762543689287804}
-  possibleOrders: []
+  possibleOrders:
+  - {fileID: 11400000, guid: a14cf4d746abd544d980cbbcdbaf8c80, type: 2}
+  - {fileID: 11400000, guid: 9eb5a2e5ca89ae24bab91e1b79b41d83, type: 2}
   slideSpeed: 5
   PossibleGreetings:
   - "Ooooh what a lovely establishment!! So you serve \u2018prepared food\u2019,
     right?? Then I\u2019d like to order"
-  milkHints:
-  - ' something that has milk.'
-  jamHints:
-  - ' something that has jam.'
-  caramelHints:
-  - ' something that has honey.'
-  chocolateHints:
-  - ' something that has chocolate.'
-  sugarHints:
-  - ' something that has sugar.'
-  mixedFruitHints:
-  - ' something that has fruits.'
+  milkHints: []
+  jamHints: []
+  caramelHints: []
+  loveEssenceHints: []
+  chocolateHints: []
+  sugarHints: []
+  mixedFruitHints: []
+  mandrakeHints: []
+  mixedNutsHints: []
   GoodFeedback: ' Ooh this looks good!!~ Thank you so much! Here is your payment~'
   BadFeedback: "Hmmm this is not exactly what I had in mind\u2026 but whatever."
   targetPos: {fileID: 0}
