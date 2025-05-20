@@ -18,11 +18,27 @@ public class CutsceneLoader : MonoBehaviour
 
     private SpawnCustomers spawnCustomers;
 
+    private void Awake()
+    {
+    }
+
     private void Start()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            allCutscenes = instance.allCutscenes;
+            Destroy(instance.gameObject);
+            instance = this;
+        }
+        DontDestroyOnLoad(gameObject);
+
         spawnCustomers = SpawnCustomers.Instance;
         CheckCutsceneReqs();
+        print("hiiii hewooooo");
     }
 
     public void CheckCutsceneReqs()

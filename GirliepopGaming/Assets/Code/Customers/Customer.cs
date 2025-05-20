@@ -17,9 +17,15 @@ public class Customer : MonoBehaviour
     public string[] milkHints;
     public string[] jamHints;
     public string[] caramelHints;
+    public string[] loveEssenceHints;
+    public string[] methiteHints;
+
     public string[] chocolateHints;
     public string[] sugarHints;
     public string[] mixedFruitHints;
+    public string[] violaHints;
+    public string[] mandrakeHints;
+    public string[] mixedNutsHints;
 
     [Header("Feedback")]
     public string GoodFeedback;

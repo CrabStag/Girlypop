@@ -23,6 +23,7 @@ public class KitchenDish : MonoBehaviour
     public static KitchenDish instance;
 
     public List<Order> allDishes = new List<Order>();
+    public Order slopOrder;
 
     public bool isTutorial = false;
 
@@ -52,11 +53,12 @@ public class KitchenDish : MonoBehaviour
 
     public void BakeDish()
     {
-
+        bool foundOrder = false;
         foreach (Order order in allDishes)
         {
             if(order.ingredient1 == baseIngredient && order.ingredient2 == toppingIngredient)
             {
+                foundOrder = true;
                 counterDish.order = order;
                 counterDish.image.sprite = order.image;
 
@@ -78,6 +80,27 @@ public class KitchenDish : MonoBehaviour
                 }
             }
         }
+
+        if (foundOrder == false)
+        {
+            counterDish.order = slopOrder;
+            counterDish.image.sprite = slopOrder.image;
+
+            if (discoveredDishes.Contains(slopOrder))
+            {
+                PopoutCard.instance.cardImage.sprite = slopOrder.regularPopupCard;
+            }
+
+            if (!discoveredDishes.Contains(slopOrder))
+            {
+                discoveredDishes.Add(slopOrder);
+                PopoutCard.instance.cardImage.sprite = slopOrder.newPopupCard;
+            }
+            PopoutCard.instance.cardImage.SetNativeSize();
+            PopoutCard.instance.currentCoroutine = PopoutCard.instance.PopUp();
+            StartCoroutine(PopoutCard.instance.currentCoroutine);
+        }
+
         baseIngredient = Ingredient.None;
         toppingIngredient = Ingredient.None;
 

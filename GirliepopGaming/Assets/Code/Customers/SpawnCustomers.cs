@@ -50,8 +50,18 @@ public class SpawnCustomers : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
-
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            goodKarma = Instance.goodKarma;
+            badKarma = Instance.badKarma;
+            Destroy(Instance.gameObject);
+            Instance = this;
+        }
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
@@ -80,7 +90,7 @@ public class SpawnCustomers : MonoBehaviour
             switch (dishDifficulty)
             {
                 case 0:
-                    ingredientDecider = Random.Range(0, 6);
+                    ingredientDecider = Random.Range(0, 11);
 
                     switch (ingredientDecider)
                     {
@@ -98,15 +108,36 @@ public class SpawnCustomers : MonoBehaviour
                             break;
                         case 3:
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.chocolateHints[Random.Range(0, currentCustomer.chocolateHints.Length)];
+                            + " " + currentCustomer.jamHints[Random.Range(0, currentCustomer.jamHints.Length)];
                             break;
                         case 4:
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.mixedFruitHints[Random.Range(0, currentCustomer.mixedFruitHints.Length)];
+                            + " " + currentCustomer.jamHints[Random.Range(0, currentCustomer.jamHints.Length)];
                             break;
+
                         case 5:
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.chocolateHints[Random.Range(0, currentCustomer.chocolateHints.Length)];
+                            break;
+                        case 6:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.mixedFruitHints[Random.Range(0, currentCustomer.mixedFruitHints.Length)];
+                            break;
+                        case 7:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
                             + " " + currentCustomer.sugarHints[Random.Range(0, currentCustomer.sugarHints.Length)];
+                            break;
+                        case 8:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.jamHints[Random.Range(0, currentCustomer.jamHints.Length)];
+                            break;
+                        case 9:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.jamHints[Random.Range(0, currentCustomer.jamHints.Length)];
+                            break;
+                        case 10:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.jamHints[Random.Range(0, currentCustomer.jamHints.Length)];
                             break;
                     }
 
@@ -296,6 +327,7 @@ public class SpawnCustomers : MonoBehaviour
         {
             print("day finished");
             MoveDayTime.instance.FinishDay();
+            IsThisActive = false;
             gameObject.SetActive(false);
         }
     }

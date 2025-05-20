@@ -981,8 +981,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daacd3549d32c714c9024e0dd7e3a3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseIngredient: 6
-  toppingIngredient: 6
+  baseIngredient: 11
+  toppingIngredient: 11
   baseImage: {fileID: 1559504546}
   toppingImage: {fileID: 1343263582}
   ovenBaseImage: {fileID: 183115832}
@@ -992,14 +992,25 @@ MonoBehaviour:
   counterDish: {fileID: 1797098346}
   allDishes:
   - {fileID: 11400000, guid: a01f7ed511887704fbbd75e650f555b7, type: 2}
-  - {fileID: 11400000, guid: 4048026cdfe940c4c80712769097e74c, type: 2}
   - {fileID: 11400000, guid: c228028715c5ff0438a5c0213f46aae5, type: 2}
-  - {fileID: 11400000, guid: e6fe9d25f31fd6c4c8790f461e51f0b2, type: 2}
-  - {fileID: 11400000, guid: 43b3265b05adfb242a17fab4bd5e2e26, type: 2}
   - {fileID: 11400000, guid: f7af5997c10902944adafc77c7a8b7ba, type: 2}
+  - {fileID: 11400000, guid: 9ee235835b4890448ba2fbdce97ec5b0, type: 2}
+  - {fileID: 11400000, guid: d4927cfa758cbae4c9d2684ad61cdb91, type: 2}
+  - {fileID: 11400000, guid: 2aeb60a2bd30c33469f6437241004aeb, type: 2}
+  - {fileID: 11400000, guid: a14cf4d746abd544d980cbbcdbaf8c80, type: 2}
+  - {fileID: 11400000, guid: e6fe9d25f31fd6c4c8790f461e51f0b2, type: 2}
+  - {fileID: 11400000, guid: 49b972fe8382c864aa115b324c704b26, type: 2}
+  - {fileID: 11400000, guid: 36b53ded0c3e8df4da40826ce1f5b95f, type: 2}
+  - {fileID: 11400000, guid: bc2080dc55fbb824db646adee512eecd, type: 2}
+  - {fileID: 11400000, guid: 42acf548ea8445c4dbb9d6ed8478bf94, type: 2}
+  - {fileID: 11400000, guid: 43b3265b05adfb242a17fab4bd5e2e26, type: 2}
+  - {fileID: 11400000, guid: 3884d2e087fc54f48ad92671e564b8fd, type: 2}
+  - {fileID: 11400000, guid: 5bbc9e6287fefff4487f90aa3859dc8b, type: 2}
   - {fileID: 11400000, guid: 3d24838bb33dbf14d83fd2056cf1fa42, type: 2}
   - {fileID: 11400000, guid: 9eb5a2e5ca89ae24bab91e1b79b41d83, type: 2}
   - {fileID: 11400000, guid: 9300824bae33f08419f0779bfc2767d1, type: 2}
+  - {fileID: 11400000, guid: 4048026cdfe940c4c80712769097e74c, type: 2}
+  slopOrder: {fileID: 11400000, guid: c0c5608dc9242e54491e40f824f2189d, type: 2}
   isTutorial: 0
   discoveredDishes: []
 --- !u!114 &144957815
@@ -2365,8 +2376,8 @@ MonoBehaviour:
   customerLocations:
   - {fileID: 1838818097}
   startPos: {fileID: 980304125}
-  minCustomers: 3
-  maxCustomers: 6
+  minCustomers: 1
+  maxCustomers: 1
   dragDishObject: {fileID: 1797098346}
   currentCustomer: {fileID: 0}
   currentOrder: {fileID: 0}
@@ -2379,8 +2390,8 @@ MonoBehaviour:
   happyVolume: 0.1
   angryCustomerSound: {fileID: 8300000, guid: cdc9d5774f0c79a4196ae7dc9f92e21d, type: 3}
   angryVolume: 0.15
-  goodKarma: 1
-  badKarma: 1
+  goodKarma: 0
+  badKarma: 0
 --- !u!1 &349023543
 GameObject:
   m_ObjectHideFlags: 0

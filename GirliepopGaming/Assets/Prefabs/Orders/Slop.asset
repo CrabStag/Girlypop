@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Slop
   m_EditorClassIdentifier: 
   NameOfOrder: Slop
-  ingredient1: 2
-  ingredient2: 9
+  ingredient1: 11
+  ingredient2: 11
   image: {fileID: 21300000, guid: f6f8cc1076755ab4daad5e8c2006d77a, type: 3}
   newPopupCard: {fileID: 21300000, guid: e36502b2df744d04fab38c3e788b8efb, type: 3}
   regularPopupCard: {fileID: 21300000, guid: b350f95547af44646901cb021d3d47b6, type: 3}
