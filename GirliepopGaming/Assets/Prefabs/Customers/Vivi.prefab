@@ -145,15 +145,22 @@ MonoBehaviour:
   caramelHints:
   - something with that stuff that bees make.. What's it called? You know what I
     mean!
+  loveEssenceHints:
+  - something with love essence
   chocolateHints:
   - something with that cocoey stuff! I forgot the name...
   sugarHints:
   - something with sugar!
   mixedFruitHints:
   - something with fruit in it!
+  mandrakeHints:
+  - something with mandrake
+  mixedNutsHints:
+  - something with nuts
   GoodFeedback: Yess you got it! Thank you so much bestie!
   BadFeedback: 'Are you serious... '
   targetPos: {fileID: 0}
+  canMove: 1
 --- !u!61 &8670884952942007278
 BoxCollider2D:
   m_ObjectHideFlags: 0

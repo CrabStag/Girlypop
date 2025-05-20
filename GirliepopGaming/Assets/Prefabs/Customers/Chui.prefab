@@ -64,15 +64,22 @@ MonoBehaviour:
   - something with jam
   caramelHints:
   - something with honey
+  loveEssenceHints:
+  - something with love essence
   chocolateHints:
   - something with chocolate
   sugarHints:
   - something with sugar
   mixedFruitHints:
   - something fruity
+  mandrakeHints:
+  - something with mandrake
+  mixedNutsHints:
+  - something with nuts
   GoodFeedback: Perfect! Just what I wanted
   BadFeedback: I hope you die tbh
   targetPos: {fileID: 0}
+  canMove: 1
 --- !u!61 &4107134565161593835
 BoxCollider2D:
   m_ObjectHideFlags: 0

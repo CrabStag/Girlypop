@@ -64,6 +64,8 @@ MonoBehaviour:
   caramelHints:
   - honey! oh, you can't just give me honey? I guess anything with honey in it will
     do.
+  loveEssenceHints:
+  - something with love essence
   chocolateHints:
   - a flat brown yummy brick. if you have to bake it into a cake that's okay I just
     need it to be present.
@@ -71,9 +73,14 @@ MonoBehaviour:
   - something with sugar? Sugar for me? Please?
   mixedFruitHints:
   - somethign with fruity ingredients? Fruity like me?
+  mandrakeHints:
+  - something with mandrake
+  mixedNutsHints:
+  - something with nuts
   GoodFeedback: YAAY thank you so much!
   BadFeedback: 'UUGHH fine whatever '
   targetPos: {fileID: 0}
+  canMove: 1
 --- !u!61 &1107071996092874308
 BoxCollider2D:
   m_ObjectHideFlags: 0

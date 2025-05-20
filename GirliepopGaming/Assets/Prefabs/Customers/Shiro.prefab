@@ -60,15 +60,22 @@ MonoBehaviour:
   - some of that nice looking jam
   caramelHints:
   - honey plzplzplz
+  loveEssenceHints:
+  - something with love essence
   chocolateHints:
   - COCOA IN MY SYSTEM!!!!
   sugarHints:
   - pure, unadulterated sugar
   mixedFruitHints:
   - some fruit? I Guess?
+  mandrakeHints:
+  - something with mandrake
+  mixedNutsHints:
+  - something with nuts
   GoodFeedback: Ugh, yessss, I've been craving this!!
   BadFeedback: ......Wow... Ok.
   targetPos: {fileID: 0}
+  canMove: 1
 --- !u!61 &3557748229068607470
 BoxCollider2D:
   m_ObjectHideFlags: 0

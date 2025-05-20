@@ -90,7 +90,7 @@ public class SpawnCustomers : MonoBehaviour
             switch (dishDifficulty)
             {
                 case 0:
-                    ingredientDecider = Random.Range(0, 11);
+                    ingredientDecider = Random.Range(0, 9);
 
                     switch (ingredientDecider)
                     {
@@ -108,36 +108,28 @@ public class SpawnCustomers : MonoBehaviour
                             break;
                         case 3:
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.jamHints[Random.Range(0, currentCustomer.jamHints.Length)];
-                            break;
-                        case 4:
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.jamHints[Random.Range(0, currentCustomer.jamHints.Length)];
+                            + " " + currentCustomer.loveEssenceHints[Random.Range(0, currentCustomer.loveEssenceHints.Length)];
                             break;
 
-                        case 5:
+                        case 4:
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
                             + " " + currentCustomer.chocolateHints[Random.Range(0, currentCustomer.chocolateHints.Length)];
                             break;
-                        case 6:
+                        case 5:
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
                             + " " + currentCustomer.mixedFruitHints[Random.Range(0, currentCustomer.mixedFruitHints.Length)];
                             break;
-                        case 7:
+                        case 6:
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
                             + " " + currentCustomer.sugarHints[Random.Range(0, currentCustomer.sugarHints.Length)];
                             break;
+                        case 7:
+                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentCustomer.mandrakeHints[Random.Range(0, currentCustomer.mandrakeHints.Length)];
+                            break;
                         case 8:
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.jamHints[Random.Range(0, currentCustomer.jamHints.Length)];
-                            break;
-                        case 9:
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.jamHints[Random.Range(0, currentCustomer.jamHints.Length)];
-                            break;
-                        case 10:
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.jamHints[Random.Range(0, currentCustomer.jamHints.Length)];
+                            + " " + currentCustomer.mixedNutsHints[Random.Range(0, currentCustomer.mixedNutsHints.Length)];
                             break;
                     }
 
@@ -218,6 +210,27 @@ public class SpawnCustomers : MonoBehaviour
                     }
                     break;
                 case 3:
+                    if (dragDishObject.order.ingredient2 == Ingredient.LoveEssence)
+                    {
+                        textBox.text = currentCustomer.GoodFeedback;
+                        audioSource.clip = happyCustomerSound;
+                        audioSource.volume = happyVolume;
+                        goodKarma += 1;
+
+                    }
+
+                    if (dragDishObject.order.ingredient2 != Ingredient.LoveEssence)
+                    {
+                        textBox.text = currentCustomer.BadFeedback;
+                        audioSource.clip = angryCustomerSound;
+                        audioSource.volume = angryVolume;
+                        badKarma += 1;
+
+                    }
+                    break;
+
+
+                case 4:
                     if (dragDishObject.order.ingredient2 == Ingredient.Choco)
                     {
                         textBox.text = currentCustomer.GoodFeedback;
@@ -236,7 +249,7 @@ public class SpawnCustomers : MonoBehaviour
 
                     }
                     break;
-                case 4:
+                case 5:
                     if (dragDishObject.order.ingredient2 == Ingredient.Fruits)
                     {
                         textBox.text = currentCustomer.GoodFeedback;
@@ -255,7 +268,7 @@ public class SpawnCustomers : MonoBehaviour
 
                     }
                     break;
-                case 5:
+                case 6:
                     if (dragDishObject.order.ingredient2 == Ingredient.Sugar)
                     {
                         textBox.text = currentCustomer.GoodFeedback;
@@ -266,6 +279,44 @@ public class SpawnCustomers : MonoBehaviour
                     }
 
                     if (dragDishObject.order.ingredient2 != Ingredient.Sugar)
+                    {
+                        textBox.text = currentCustomer.BadFeedback;
+                        audioSource.clip = angryCustomerSound;
+                        audioSource.volume = angryVolume;
+                        badKarma += 1;
+
+                    }
+                    break;
+                case 7:
+                    if (dragDishObject.order.ingredient2 == Ingredient.Mandrake)
+                    {
+                        textBox.text = currentCustomer.GoodFeedback;
+                        audioSource.clip = happyCustomerSound;
+                        audioSource.volume = happyVolume;
+                        goodKarma += 1;
+
+                    }
+
+                    if (dragDishObject.order.ingredient2 != Ingredient.Mandrake)
+                    {
+                        textBox.text = currentCustomer.BadFeedback;
+                        audioSource.clip = angryCustomerSound;
+                        audioSource.volume = angryVolume;
+                        badKarma += 1;
+
+                    }
+                    break;
+                case 8:
+                    if (dragDishObject.order.ingredient2 == Ingredient.MixedNuts)
+                    {
+                        textBox.text = currentCustomer.GoodFeedback;
+                        audioSource.clip = happyCustomerSound;
+                        audioSource.volume = happyVolume;
+                        goodKarma += 1;
+
+                    }
+
+                    if (dragDishObject.order.ingredient2 != Ingredient.MixedNuts)
                     {
                         textBox.text = currentCustomer.BadFeedback;
                         audioSource.clip = angryCustomerSound;

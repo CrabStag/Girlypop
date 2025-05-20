@@ -130,8 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pleasedVoiceClip: {fileID: 8300000, guid: eeff8ed3e2933974f99bb160c54b8ea0, type: 3}
-  displeasedVoiceClip: {fileID: 8300000, guid: 0043889a0e647e244a618e11264dfbe5, type: 3}
   CustomerName: Dorothy
   image: {fileID: 8918150596779441912}
   possibleOrders:
@@ -147,15 +145,22 @@ MonoBehaviour:
   - that stuff that looks like blood
   caramelHints:
   - the sticky stuff
+  loveEssenceHints:
+  - something with love essence
   chocolateHints:
   - hehehehe... well... it looks like poopoo...
   sugarHints:
   - some a that white powder
   mixedFruitHints:
   - the ingredient with all the colors of the rainbow
+  mandrakeHints:
+  - something with mandrake
+  mixedNutsHints:
+  - something with nuts
   GoodFeedback: YAYYYY
   BadFeedback: 'You better watch your back. '
   targetPos: {fileID: 0}
+  canMove: 1
 --- !u!61 &8441113356526431578
 BoxCollider2D:
   m_ObjectHideFlags: 0

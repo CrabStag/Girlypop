@@ -61,15 +61,22 @@ MonoBehaviour:
   - something sweet but tangy
   caramelHints:
   - something golden colored
+  loveEssenceHints:
+  - something with love essence
   chocolateHints:
   - something rich and decadent
   sugarHints:
   - something sweet and fluffy
   mixedFruitHints:
   - something with fruit, if it's not too much to ask
+  mandrakeHints:
+  - something with mandrake
+  mixedNutsHints:
+  - something with nuts
   GoodFeedback: Yeah if you messed that up I'd be worried, lol.
   BadFeedback: Oh my god you people can't do anything
   targetPos: {fileID: 0}
+  canMove: 1
 --- !u!61 &5467025803980616849
 BoxCollider2D:
   m_ObjectHideFlags: 0

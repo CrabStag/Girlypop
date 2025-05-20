@@ -145,15 +145,22 @@ MonoBehaviour:
   - something jammy
   caramelHints:
   - something sweet and sticky
+  loveEssenceHints:
+  - something with love essence
   chocolateHints:
   - something chocolaty
   sugarHints:
   - something sugary
   mixedFruitHints:
   - something with some vitamins
+  mandrakeHints:
+  - something with mandrake
+  mixedNutsHints:
+  - something with nuts
   GoodFeedback: Yum!!
   BadFeedback: ...Thanks
   targetPos: {fileID: 0}
+  canMove: 1
 --- !u!61 &5914398102636197329
 BoxCollider2D:
   m_ObjectHideFlags: 0
