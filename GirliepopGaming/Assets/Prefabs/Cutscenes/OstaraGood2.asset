@@ -22,9 +22,9 @@ MonoBehaviour:
   cutsceneSprites:
   - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
   - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
-  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
-  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
-  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
-  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
+  - {fileID: 21300000, guid: 3311fb6964a96a1458acdc306ff60e15, type: 3}
+  - {fileID: 21300000, guid: 558e18f8b9716d942a5deb2ac2499b62, type: 3}
+  - {fileID: 21300000, guid: 3311fb6964a96a1458acdc306ff60e15, type: 3}
+  - {fileID: 21300000, guid: 558e18f8b9716d942a5deb2ac2499b62, type: 3}
   goodKarmaReq: 10
   badKarmaReq: 0
