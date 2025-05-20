@@ -23,13 +23,13 @@ MonoBehaviour:
   - Of good, well-adjusted citizens
   - Anyways, I know I'm your manager, but if you mess up, I'm blaming you. Toodles!
   cutsceneSprites:
-  - {fileID: 21300000, guid: 0f6fc883058885349b9e555b1edb5b76, type: 3}
-  - {fileID: 21300000, guid: fa5d58c6a842b604395658846f830be2, type: 3}
-  - {fileID: 21300000, guid: 0f6fc883058885349b9e555b1edb5b76, type: 3}
-  - {fileID: 21300000, guid: fa5d58c6a842b604395658846f830be2, type: 3}
-  - {fileID: 21300000, guid: 034cae1089b6c2648a789e583f47ae59, type: 3}
-  - {fileID: 21300000, guid: 0f6fc883058885349b9e555b1edb5b76, type: 3}
-  - {fileID: 21300000, guid: 0f6fc883058885349b9e555b1edb5b76, type: 3}
-  - {fileID: 21300000, guid: 034cae1089b6c2648a789e583f47ae59, type: 3}
+  - {fileID: 21300000, guid: 05267a27882fa23448fb4c54cd7c457b, type: 3}
+  - {fileID: 21300000, guid: 8b870cc5617ffd04986f3fe0c010b3a0, type: 3}
+  - {fileID: 21300000, guid: 05267a27882fa23448fb4c54cd7c457b, type: 3}
+  - {fileID: 21300000, guid: 8b870cc5617ffd04986f3fe0c010b3a0, type: 3}
+  - {fileID: 21300000, guid: 4474e5edfcb897d47af424dae534f1dc, type: 3}
+  - {fileID: 21300000, guid: 05267a27882fa23448fb4c54cd7c457b, type: 3}
+  - {fileID: 21300000, guid: 05267a27882fa23448fb4c54cd7c457b, type: 3}
+  - {fileID: 21300000, guid: 4474e5edfcb897d47af424dae534f1dc, type: 3}
   goodKarmaReq: 0
   badKarmaReq: 1
