@@ -32,7 +32,17 @@ public class KitchenDish : MonoBehaviour
 
     private void Start()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            discoveredDishes = instance.discoveredDishes;
+            Destroy(instance.gameObject);
+            instance = this;
+        }
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Update()

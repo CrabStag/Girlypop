@@ -4215,7 +4215,7 @@ Transform:
   m_GameObject: {fileID: 1160648029}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.223672, y: 0.022305787, z: 0}
+  m_LocalPosition: {x: 7.223672, y: 0.022305787, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4361,8 +4361,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daacd3549d32c714c9024e0dd7e3a3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseIngredient: 6
-  toppingIngredient: 6
+  baseIngredient: 11
+  toppingIngredient: 11
   baseImage: {fileID: 977564395}
   toppingImage: {fileID: 40510325}
   ovenBaseImage: {fileID: 1754534127}
@@ -4380,6 +4380,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3d24838bb33dbf14d83fd2056cf1fa42, type: 2}
   - {fileID: 11400000, guid: 9eb5a2e5ca89ae24bab91e1b79b41d83, type: 2}
   - {fileID: 11400000, guid: 9300824bae33f08419f0779bfc2767d1, type: 2}
+  slopOrder: {fileID: 0}
   isTutorial: 1
   discoveredDishes: []
 --- !u!212 &1199940133
