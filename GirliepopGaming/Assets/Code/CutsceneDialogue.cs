@@ -67,7 +67,6 @@ public class CutsceneDialogue : MonoBehaviour
             index++;
             textObject.text = string.Empty;
             cutsceneLoader.characterSprite.sprite = sprites[index];
-            cutsceneLoader.characterSprite.SetNativeSize();
             StartCoroutine(TypeLine());
         }
         else

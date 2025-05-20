@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CutsceneLoader : MonoBehaviour
 {
@@ -11,9 +10,7 @@ public class CutsceneLoader : MonoBehaviour
 
     [Space(20)]
 
-    public GameObject fadeBlackground;
-    public GameObject textbox;
-    public Image characterSprite;
+    public SpriteRenderer characterSprite;
     public CutsceneDialogue text;
 
     private SpawnCustomers spawnCustomers;
@@ -78,14 +75,10 @@ public class CutsceneLoader : MonoBehaviour
 
     public void PlayCutscene(Cutscene cutscene)
     {
-        fadeBlackground.SetActive(true);
-        textbox.SetActive(true);
-
         if(cutscene.cutsceneSprites.Length != 0)
         {
             characterSprite.gameObject.SetActive(true);
             characterSprite.sprite = cutscene.cutsceneSprites[0];
-            characterSprite.SetNativeSize();
         }
 
         text.gameObject.SetActive(true);
@@ -97,8 +90,6 @@ public class CutsceneLoader : MonoBehaviour
     public void CloseCutscene()
     {
         print("end of cutscene");
-        fadeBlackground.SetActive(false);
-        textbox.SetActive(false);
         characterSprite.gameObject.SetActive(false);
         text.gameObject.SetActive(false);
 
