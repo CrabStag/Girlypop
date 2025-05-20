@@ -139,15 +139,24 @@ MonoBehaviour:
   PossibleGreetings:
   - ' I NEED SOMETHING SWEET NOWWWW. Quick! Give me '
   - I stole my dad's wallet, you know what time it is. Gimme
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
-  mixedNutsHints: []
+  milkHints:
+  - THAT SWEET MOOBEAST JUICE
+  jamHints:
+  - THE MOST JAMMY THING YOU GOT!
+  caramelHints:
+  - SOMETHING WITH HONEYY
+  loveEssenceHints:
+  - SOMETHING WITH LOVE ESSENCE
+  chocolateHints:
+  - SOMET
+  sugarHints:
+  - THE MOST SUGARY THING YOU GOT
+  mixedFruitHints:
+  - THE MOST FRUITY THING YOU GOT
+  mandrakeHints:
+  - THE MOST FUCKED UP THING YOU GOT
+  mixedNutsHints:
+  - THE MOST NUTTY THING YOU GOT
   GoodFeedback: YAYYYY
   BadFeedback: 'You better watch your back. '
   targetPos: {fileID: 0}

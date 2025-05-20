@@ -138,15 +138,24 @@ MonoBehaviour:
   slideSpeed: 5
   PossibleGreetings:
   - 'Hah, my disguise, it is flawless... Huh? My order? Oh. '
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
-  mixedNutsHints: []
+  milkHints:
+  - Something with the stuff from that beast we took in the UFO!
+  jamHints:
+  - Something with that red sour liquid stuff
+  caramelHints:
+  - Something with that good ol' bee vomit
+  loveEssenceHints:
+  - Something that'll ummm... Might make someone like me more..
+  chocolateHints:
+  - Something CHOCOLATEY
+  sugarHints:
+  - Something with LOOOTS of sugar
+  mixedFruitHints:
+  - Something with fruits
+  mandrakeHints:
+  - Something with that weird-looking baby
+  mixedNutsHints:
+  - Something that could kill a person with a nut allergy
   GoodFeedback: THANK YOU FELLOW HOMO SAPIENS !
   BadFeedback: This is... Earth food? Are you sure?
   targetPos: {fileID: 0}

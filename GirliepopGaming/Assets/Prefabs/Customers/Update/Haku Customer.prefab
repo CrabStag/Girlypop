@@ -184,15 +184,24 @@ MonoBehaviour:
   PossibleGreetings:
   - "Ooooh what a lovely establishment!! So you serve \u2018prepared food\u2019,
     right?? Then I\u2019d like to order"
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
-  mixedNutsHints: []
+  milkHints:
+  - something milky?
+  jamHints:
+  - something jammy?
+  caramelHints:
+  - something with honey?
+  loveEssenceHints:
+  - something with love essence?
+  chocolateHints:
+  - something with chocolate?
+  sugarHints:
+  - something sugary?
+  mixedFruitHints:
+  - something fruity?
+  mandrakeHints:
+  - something with mandrake flesh?
+  mixedNutsHints:
+  - something with mixed nuts?
   GoodFeedback: ' Ooh this looks good!!~ Thank you so much! Here is your payment~'
   BadFeedback: "Hmmm this is not exactly what I had in mind\u2026 but whatever."
   targetPos: {fileID: 0}

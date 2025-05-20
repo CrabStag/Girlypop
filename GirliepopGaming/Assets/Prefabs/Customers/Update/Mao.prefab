@@ -53,17 +53,26 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bc2080dc55fbb824db646adee512eecd, type: 2}
   slideSpeed: 5
   PossibleGreetings:
-  - 'Did anyone follow me in here? No? Ok good... What, I gotta order? Uhh, okay..
-    Give me '
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
-  mixedNutsHints: []
+  - Did anyone follow me in here? No? Ok good... What, I gotta order? Uhh, okay..
+    what have you got?
+  milkHints:
+  - Milk? yeah, add that in there.
+  jamHints:
+  - Jam? yeah, add that in there.
+  caramelHints:
+  - Honey? yeah, add that in there.
+  loveEssenceHints:
+  - Love essence?? Okay fine you freak
+  chocolateHints:
+  - Chocolate? yeah, add that in there.
+  sugarHints:
+  - Sugar? yeah, add that in there.
+  mixedFruitHints:
+  - Mixed fruits? yeah, add that in there.
+  mandrakeHints:
+  - Mandrake? yeah, add that in there.
+  mixedNutsHints:
+  - Mixed nuts? yeah, add that in there.
   GoodFeedback: DON'T TELL ANYONE I WAS HERE
   BadFeedback: OH MY GOD YOU'RE WITH THEM AREN'T YOU
   targetPos: {fileID: 0}

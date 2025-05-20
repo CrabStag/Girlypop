@@ -54,15 +54,25 @@ MonoBehaviour:
   slideSpeed: 5
   PossibleGreetings:
   - Hehhehehhh.. Heyyy.. Hmm.. You got any
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
-  mixedNutsHints: []
+  - Immm baked soo, bake me
+  milkHints:
+  - lactose including items?
+  jamHints:
+  - stuff with jam?
+  caramelHints:
+  - stuff with honey?
+  loveEssenceHints:
+  - stuff with love essence?
+  chocolateHints:
+  - stuff with chocolate?
+  sugarHints:
+  - stuff with sugar?
+  mixedFruitHints:
+  - stuff with mixed fruits?
+  mandrakeHints:
+  - stuff with mandrake?
+  mixedNutsHints:
+  - stuff with mixed nuts?
   GoodFeedback: Alright, thanks.
   BadFeedback: Wow......... you sure made.... something...
   targetPos: {fileID: 0}

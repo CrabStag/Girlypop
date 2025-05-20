@@ -54,15 +54,24 @@ MonoBehaviour:
   slideSpeed: 5
   PossibleGreetings:
   - OH my GOD I'm STARVINGGGG, please get me
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
-  mixedNutsHints: []
+  milkHints:
+  - some MILK IN MY SYTEM. baked, that is.
+  jamHints:
+  - some JAM IN MY SYSTEM
+  caramelHints:
+  - some HONEY IN MY SYSTEM
+  loveEssenceHints:
+  - some LOVE IN MY SYSTEM
+  chocolateHints:
+  - some COCOAA IN MY SYSTEM
+  sugarHints:
+  - some SUGAR IN MY SYSTEM
+  mixedFruitHints:
+  - some FRUIT IN MY SYSTEM
+  mandrakeHints:
+  - some MANDRAAAAKEEE
+  mixedNutsHints:
+  - 'some NUTS IN ME !! '
   GoodFeedback: Ugh, yessss, I've been craving this!!
   BadFeedback: ......Wow... Ok.
   targetPos: {fileID: 0}

@@ -56,15 +56,24 @@ MonoBehaviour:
   PossibleGreetings:
   - 'Ahaha!! Yipeeee !! What a wonderful day!! You know what''d make it even more
     wonderful? '
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
-  mixedNutsHints: []
+  milkHints:
+  - Sucking on a cow's tit!
+  jamHints:
+  - Chewing on berries till they turn into mush!
+  caramelHints:
+  - Sucking on bees!
+  loveEssenceHints:
+  - Forcing people to fall in love with me!
+  chocolateHints:
+  - Chocolate!
+  sugarHints:
+  - SUGAR RUSH!!!
+  mixedFruitHints:
+  - ALL sorts of fruit!
+  mandrakeHints:
+  - Eating a baby!!!
+  mixedNutsHints:
+  - Many, MANY DIFFERENT NUTS
   GoodFeedback: Time to unhinge my jaw like a snake!! Aahhahah!!!
   BadFeedback: I'm really gonna do it this time.
   targetPos: {fileID: 0}

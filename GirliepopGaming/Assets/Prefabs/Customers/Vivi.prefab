@@ -138,15 +138,24 @@ MonoBehaviour:
   slideSpeed: 5
   PossibleGreetings:
   - Hey you!! I think I'm in the mood for
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
-  mixedNutsHints: []
+  milkHints:
+  - something with milk
+  jamHints:
+  - something with jam
+  caramelHints:
+  - something with honey
+  loveEssenceHints:
+  - something with love essence
+  chocolateHints:
+  - something with chocolate
+  sugarHints:
+  - something with sugar
+  mixedFruitHints:
+  - something with fruit
+  mandrakeHints:
+  - something with mandrake
+  mixedNutsHints:
+  - something with nuts
   GoodFeedback: Yess you got it! Thank you so much bestie!
   BadFeedback: 'Are you serious... '
   targetPos: {fileID: 0}

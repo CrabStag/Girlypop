@@ -98,16 +98,25 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 49b972fe8382c864aa115b324c704b26, type: 2}
   slideSpeed: 5
   PossibleGreetings:
-  - I LOVE HATRED AND CHAOS! GIMME THAT SWEET
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
-  mixedNutsHints: []
+  - 'I LOVE HATRED AND CHAOS! GIMME '
+  milkHints:
+  - SOMETHING WITH FOOD STOLEN FROM BABY COWS
+  jamHints:
+  - SOMETHING WITH PULVERISED FRUIT
+  caramelHints:
+  - SOMETHING WITH BLENDED BEE JUICE
+  loveEssenceHints:
+  - SOMETHING WITH LIQUID VIAGRA
+  chocolateHints:
+  - SOMETHING WITH SLAVE LABOR CHOCOLATE
+  sugarHints:
+  - SOMETHING WITH SUGAR! I'M AIMING FOR DIABETES!
+  mixedFruitHints:
+  - SOMETHING WITH ALL THOSE BERRIES
+  mandrakeHints:
+  - SOMETHING WITH THAT BABY PLANTKIN THAT YOU CUT UP ALL NICE
+  mixedNutsHints:
+  - SOMETHING WITH SAD SEEDS THAT NEVER GOT TO BE TREES
   GoodFeedback: Hell yeah... Vengeance...
   BadFeedback: Aw man, you're no fun
   targetPos: {fileID: 0}

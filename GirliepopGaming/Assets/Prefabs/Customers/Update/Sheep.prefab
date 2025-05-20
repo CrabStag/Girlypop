@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomerName: Sea Sheep
-  image: {fileID: 0}
+  image: {fileID: 9188763100127209034}
   possibleOrders: []
   slideSpeed: 5
   PossibleGreetings:

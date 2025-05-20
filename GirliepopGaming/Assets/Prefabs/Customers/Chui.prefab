@@ -50,8 +50,6 @@ MonoBehaviour:
   image: {fileID: 8550773615290423250}
   possibleOrders:
   - {fileID: 11400000, guid: a01f7ed511887704fbbd75e650f555b7, type: 2}
-  - {fileID: 11400000, guid: 9300824bae33f08419f0779bfc2767d1, type: 2}
-  - {fileID: 11400000, guid: c228028715c5ff0438a5c0213f46aae5, type: 2}
   - {fileID: 11400000, guid: 36b53ded0c3e8df4da40826ce1f5b95f, type: 2}
   slideSpeed: 5
   PossibleGreetings:
@@ -59,15 +57,24 @@ MonoBehaviour:
   - Hiiiiii gimme
   - Well, hey! You look good today! Hmm I'll order
   - Please don't mess up, I need this to go well right now. Can I please have
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
-  mixedNutsHints: []
+  milkHints:
+  - something milky?
+  jamHints:
+  - something jammy?
+  caramelHints:
+  - something with honey?
+  loveEssenceHints:
+  - something that'll spice things up with my boyfriend
+  chocolateHints:
+  - something chocolatey?
+  sugarHints:
+  - something sugary?
+  mixedFruitHints:
+  - something fruity?
+  mandrakeHints:
+  - something i can shock my houseplants with?
+  mixedNutsHints:
+  - something with mixed nuts?
   GoodFeedback: Perfect! Just what I wanted
   BadFeedback: I hope you die tbh
   targetPos: {fileID: 0}

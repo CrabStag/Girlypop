@@ -183,15 +183,24 @@ MonoBehaviour:
   slideSpeed: 5
   PossibleGreetings:
   - Salutations. I require a new test subject... Hmm. Yes, that will do. I'll have
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
-  mixedNutsHints: []
+  milkHints:
+  - something including bovine lactate suspension
+  jamHints:
+  - something including pectin-stabilized fruit preserve
+  caramelHints:
+  - something including an apis-derived fructose-glucose solution
+  loveEssenceHints:
+  - something with a synthetic affection compound
+  chocolateHints:
+  - something including theobroma cacao extract matrix
+  sugarHints:
+  - something including disaccharide compound C12H22O11
+  mixedFruitHints:
+  - something including botanical seed-bearing structures
+  mandrakeHints:
+  - something including mandragora officinarum root biomass
+  mixedNutsHints:
+  - something including polyvarietal seed aggregate
   GoodFeedback: Hm. Yes. Most pleasing.
   BadFeedback: Interesting, though not what I asked for.
   targetPos: {fileID: 0}

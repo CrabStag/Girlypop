@@ -55,15 +55,24 @@ MonoBehaviour:
   PossibleGreetings:
   - Wow, you really wore THAT to work... That's a choice. I'll have
   - God, they'll let anyone work in this place. Quick, fetch me
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
-  mixedNutsHints: []
+  milkHints:
+  - something with milk
+  jamHints:
+  - something drizzled in jam!
+  caramelHints:
+  - something drizzled in honey!
+  loveEssenceHints:
+  - something drizzled in love essence!
+  chocolateHints:
+  - something infused with chocolate
+  sugarHints:
+  - something infused with sugar
+  mixedFruitHints:
+  - something infused with fruit
+  mandrakeHints:
+  - something with traces of plantpeople
+  mixedNutsHints:
+  - something covered in nuts
   GoodFeedback: Yeah if you messed that up I'd be worried, lol.
   BadFeedback: Oh my god you people can't do anything
   targetPos: {fileID: 0}

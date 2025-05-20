@@ -138,15 +138,24 @@ MonoBehaviour:
   slideSpeed: 5
   PossibleGreetings:
   - Hi.... You look... Stressed. Sorry. Can I get
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
-  mixedNutsHints: []
+  milkHints:
+  - something with white elixir of the mother-beast
+  jamHints:
+  - something with that crimson fruitpaste
+  caramelHints:
+  - something with golden nectar of the sun-blessed hive
+  loveEssenceHints:
+  - something with a love elixir... Don't ask why
+  chocolateHints:
+  - something with that dark and mysterious brown thing
+  sugarHints:
+  - something with the human ingredient "sugar"
+  mixedFruitHints:
+  - something with the sweet fruits of our lands
+  mandrakeHints:
+  - something with that murmuring root
+  mixedNutsHints:
+  - something with the many nuts of the forest
   GoodFeedback: Wow! I didn't think you had the brain capacity to understand !
   BadFeedback: Yeah.. Okay.
   targetPos: {fileID: 0}

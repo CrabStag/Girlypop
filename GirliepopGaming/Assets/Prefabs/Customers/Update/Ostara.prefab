@@ -137,15 +137,23 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3d24838bb33dbf14d83fd2056cf1fa42, type: 2}
   slideSpeed: 5
   PossibleGreetings:
-  - I DON'T want to eat any sentient plantlife. So give me a
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
+  - 'I DON''T want to eat any sentient plantlife. So give me '
+  milkHints:
+  - That ingredient obtained from the "cow"
+  jamHints:
+  - ... Hm.. I suppose "Jam" is made with lesser fruits. You can use that.
+  caramelHints:
+  - Something with honey
+  loveEssenceHints:
+  - Something with love essence
+  chocolateHints:
+  - Something with chocolate. ONLY ethically sourced.
+  sugarHints:
+  - Something with sugar. Sourced from fairies! Not cane or beet!
+  mixedFruitHints:
+  - Something with fruits. That's not weird. They're lesser beings.
+  mandrakeHints:
+  - '.. Well.. You must keep this between us.. But I want "you know what" '
   mixedNutsHints: []
   GoodFeedback: Thank you!
   BadFeedback: Oh my god... What is IN this??

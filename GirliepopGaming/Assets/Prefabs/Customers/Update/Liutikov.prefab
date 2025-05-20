@@ -99,15 +99,24 @@ MonoBehaviour:
   slideSpeed: 5
   PossibleGreetings:
   - Salutations! What a fine establishment you have here... I'm interested in the
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
-  mixedNutsHints: []
+  milkHints:
+  - Milky items on your menu
+  jamHints:
+  - Jammy items on your menu
+  caramelHints:
+  - sweets made with locally sourced honey
+  loveEssenceHints:
+  - '"Lovely" items on your menu'
+  chocolateHints:
+  - chocolatey items on your menu
+  sugarHints:
+  - sugary items on your menu
+  mixedFruitHints:
+  - fruity items on your menu
+  mandrakeHints:
+  - babies you've trafficked. Use them however you please.
+  mixedNutsHints:
+  - nutty items on your menu
   GoodFeedback: Hmm, yes... I can work with this.
   BadFeedback: You don't know who you're messing with.
   targetPos: {fileID: 0}

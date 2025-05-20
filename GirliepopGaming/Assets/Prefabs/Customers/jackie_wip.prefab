@@ -57,15 +57,24 @@ MonoBehaviour:
   PossibleGreetings:
   - Hiiiiiiiiiiiiiii I would very much like
   - Hello shorty, could I please get
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
-  mixedNutsHints: []
+  milkHints:
+  - mm... moomoo juice dish
+  jamHints:
+  - a treat with some jam
+  caramelHints:
+  - a treat with some honey
+  loveEssenceHints:
+  - a treat with some LOVE!
+  chocolateHints:
+  - a treat with some COCOA!
+  sugarHints:
+  - a treat with some sugar
+  mixedFruitHints:
+  - a treat with some fruit
+  mandrakeHints:
+  - a treat with some mandrake slices
+  mixedNutsHints:
+  - a treat with some nuts
   GoodFeedback: YAAY thank you so much!
   BadFeedback: 'UUGHH fine whatever '
   targetPos: {fileID: 0}

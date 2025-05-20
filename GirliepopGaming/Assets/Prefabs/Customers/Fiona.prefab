@@ -139,15 +139,24 @@ MonoBehaviour:
   PossibleGreetings:
   - "Uhm\u2026. hello\u2026 Can I get"
   - '..... '
-  milkHints: []
-  jamHints: []
-  caramelHints: []
-  loveEssenceHints: []
-  chocolateHints: []
-  sugarHints: []
-  mixedFruitHints: []
-  mandrakeHints: []
-  mixedNutsHints: []
+  milkHints:
+  - ... um, milk is my favorite ingredient... so
+  jamHints:
+  - ... um, jam is my favorite ingredient... so
+  caramelHints:
+  - ... um, honey is my favorite ingredient... so
+  loveEssenceHints:
+  - ... um, love essence is my favorite ingredient... so
+  chocolateHints:
+  - ... um, chocolate is my favorite ingredient... so
+  sugarHints:
+  - ... um, sugar is my favorite ingredient... so
+  mixedFruitHints:
+  - ... um, fruit is my favorite ingredient... so
+  mandrakeHints:
+  - ... um, mandrakes are my favorite ingredient... so
+  mixedNutsHints:
+  - ... um, nuts are my favorite ingredient... so
   GoodFeedback: Yum!!
   BadFeedback: ...Thanks
   targetPos: {fileID: 0}
