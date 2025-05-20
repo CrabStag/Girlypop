@@ -187,15 +187,18 @@ MonoBehaviour:
   - spreecoco na vika.
   caramelHints:
   - misaaanda.
-  loveEssenceHints: []
+  loveEssenceHints:
+  - bibi tabumbu.
   chocolateHints:
   - kiki tebamu?
   sugarHints:
   - sasanagara kilani?
   mixedFruitHints:
   - kanaturavi?
-  mandrakeHints: []
-  mixedNutsHints: []
+  mandrakeHints:
+  - kriski nanaka
+  mixedNutsHints:
+  - hegika mala
   GoodFeedback: Gasnorp fidorb! masholarkido!
   BadFeedback: Kisiminanda.. Ma, gatarulakiti naga.
   targetPos: {fileID: 0}
