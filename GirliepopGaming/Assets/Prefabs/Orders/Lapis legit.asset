@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12df0b7dae5a7724a99f1d9af644dbd8, type: 3}
   m_Name: Lapis legit
   m_EditorClassIdentifier: 
-  NameOfOrder: Lapis legit
+  NameOfOrder: Spekkoek
   ingredient1: 0
   ingredient2: 6
   image: {fileID: 21300000, guid: b7d6678d32e5b7445b0b791b5d5db571, type: 3}

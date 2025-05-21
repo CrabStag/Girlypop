@@ -20,9 +20,9 @@ MonoBehaviour:
   - I consider you my friend, and it would pain me to see you live in these conditions
     indefinitely.
   cutsceneSprites:
-  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
-  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
-  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
-  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
+  - {fileID: 21300000, guid: 9b6e3913fb7d0d44f8fb9c7a6a9ed848, type: 3}
+  - {fileID: 21300000, guid: 9b6e3913fb7d0d44f8fb9c7a6a9ed848, type: 3}
+  - {fileID: 21300000, guid: 9b6e3913fb7d0d44f8fb9c7a6a9ed848, type: 3}
+  - {fileID: 21300000, guid: 9b6e3913fb7d0d44f8fb9c7a6a9ed848, type: 3}
   goodKarmaReq: 20
   badKarmaReq: 0

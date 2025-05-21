@@ -20,8 +20,8 @@ MonoBehaviour:
   - 'You must have a lowered sense of empathy or something. '
   - Please do mind your morals. And that of that manager of yours too.
   cutsceneSprites:
-  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
-  - {fileID: 21300000, guid: 209f1d8304d5a754ea1de94b87c69085, type: 3}
+  - {fileID: 21300000, guid: 9b6e3913fb7d0d44f8fb9c7a6a9ed848, type: 3}
+  - {fileID: 21300000, guid: 9b6e3913fb7d0d44f8fb9c7a6a9ed848, type: 3}
   - {fileID: 21300000, guid: 3311fb6964a96a1458acdc306ff60e15, type: 3}
   - {fileID: 21300000, guid: 558e18f8b9716d942a5deb2ac2499b62, type: 3}
   - {fileID: 21300000, guid: 3311fb6964a96a1458acdc306ff60e15, type: 3}

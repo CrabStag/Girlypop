@@ -2488,8 +2488,8 @@ MonoBehaviour:
   customerLocations:
   - {fileID: 1838818097}
   startPos: {fileID: 980304125}
-  minCustomers: 1
-  maxCustomers: 1
+  minCustomers: 5
+  maxCustomers: 7
   dragDishObject: {fileID: 1797098346}
   currentCustomer: {fileID: 0}
   currentOrder: {fileID: 0}
@@ -9697,7 +9697,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Lapis legit
+  m_Text: Spekkoek
 --- !u!222 &1412830364
 CanvasRenderer:
   m_ObjectHideFlags: 0
