@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12df0b7dae5a7724a99f1d9af644dbd8, type: 3}
   m_Name: Financier
   m_EditorClassIdentifier: 
-  NameOfOrder: Financier cake
+  NameOfOrder: Ice cream sandwich
   ingredient1: 1
   ingredient2: 10
   image: {fileID: 21300000, guid: a52cb04da7ede174ea19c9533317eaa0, type: 3}

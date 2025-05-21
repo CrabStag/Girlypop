@@ -5829,7 +5829,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Financier Cake
+  m_Text: "Ice cream \nsandwich"
 --- !u!222 &847420158
 CanvasRenderer:
   m_ObjectHideFlags: 0
