@@ -29,7 +29,7 @@ public class SpawnCustomers : MonoBehaviour
     public bool isCustomerActive = false;
 
     [Range(1, 100)]
-    public int spawnInterval = 5;
+    public int spawnInterval = 1;
 
     public AudioClip happyCustomerSound;
     [Range(0, 100)]
@@ -372,7 +372,7 @@ public class SpawnCustomers : MonoBehaviour
         finishedCustomers += 1;
         // Ensure exact position & destroy after moving
         currentCustomer.transform.position = startPos.position;
-        StartCoroutine(currentCustomer.KYStimer(spawnInterval));
+        StartCoroutine(currentCustomer.KYStimer(3));
 
         if(finishedCustomers == MoveDayTime.instance.customerAmount)
         {

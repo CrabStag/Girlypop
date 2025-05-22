@@ -18,8 +18,8 @@ MonoBehaviour:
     our young!'
   - ' You must promptly cease these operations or there WILL be a war! '
   cutsceneSprites:
-  - {fileID: 21300000, guid: 558e18f8b9716d942a5deb2ac2499b62, type: 3}
-  - {fileID: 21300000, guid: 3311fb6964a96a1458acdc306ff60e15, type: 3}
-  - {fileID: 21300000, guid: 558e18f8b9716d942a5deb2ac2499b62, type: 3}
+  - {fileID: 21300000, guid: a389cf44e784b794c9e3ea93a5f15169, type: 3}
+  - {fileID: 21300000, guid: 3c556868a1ff9a241ada3677bdae28d0, type: 3}
+  - {fileID: 21300000, guid: a389cf44e784b794c9e3ea93a5f15169, type: 3}
   goodKarmaReq: 0
   badKarmaReq: 15

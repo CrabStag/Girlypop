@@ -13545,6 +13545,7 @@ GameObject:
   - component: {fileID: 1902397064}
   - component: {fileID: 1902397065}
   - component: {fileID: 1902397066}
+  - component: {fileID: 1902397067}
   m_Layer: 0
   m_Name: BowlOven
   m_TagString: Untagged
@@ -13707,6 +13708,20 @@ MonoBehaviour:
   soundClip: {fileID: 8300000, guid: f471e5e54841c9a469ffa28010e1af29, type: 3}
   volume: 40.9
   childIndex: 1
+--- !u!114 &1902397067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902397061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79657bb067f797f4da72acf8df87b3e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultShader: {fileID: 0}
+  hoverShader: {fileID: -6465566751694194690, guid: dd65c906e0952bb4dbc3d078b5a9c80c, type: 3}
 --- !u!1 &1916493925
 GameObject:
   m_ObjectHideFlags: 0
