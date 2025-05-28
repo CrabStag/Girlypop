@@ -18,5 +18,10 @@ public class AchievementPopup : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+    public void OnClick()
+    {
+        AchievementUI.Instance.OpenMenu();  // Make sure you have a singleton AchievementUI
+        Destroy(gameObject);  // Close the popup after clicking
+    }
 }
 
