@@ -5,8 +5,10 @@ using UnityEngine;
 public class Achievement
 {
     public string id;            // unique key for the achievement
+    [TextArea]
     public string title;         // display title
-    public string description;   // description text
+    [TextArea]
+    public string description;  // description text
     public bool unlocked = false;
 }
 
