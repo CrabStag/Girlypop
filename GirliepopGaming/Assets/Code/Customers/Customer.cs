@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class Customer : MonoBehaviour
 {
-    public string CustomerName;
+    public TextMeshPro customerNameText;
     public SpriteRenderer image;
 
     public List<Order> possibleOrders = new List<Order>();
@@ -12,6 +14,7 @@ public class Customer : MonoBehaviour
 
     [Header("Dialogue")]
     public string[] PossibleGreetings;
+    public string CustomerName;
 
     [Header("Easy Hints Per Ingredient")]
     public string[] milkHints;
@@ -38,6 +41,7 @@ public class Customer : MonoBehaviour
     {
         targetPos = SpawnCustomers.Instance.customerLocations[Random.Range(0,
             SpawnCustomers.Instance.customerLocations.Count)];
+     
     }
 
     private void Update()

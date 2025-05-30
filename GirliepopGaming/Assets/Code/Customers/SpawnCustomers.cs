@@ -11,6 +11,7 @@ public class SpawnCustomers : MonoBehaviour
     public List<Transform> customerLocations;
     public Transform startPos;
 
+
     public int minCustomers;
     public int maxCustomers;
 
@@ -24,6 +25,8 @@ public class SpawnCustomers : MonoBehaviour
     public int finishedCustomers = 0;
 
     public TextMeshPro textBox;
+    public TextMeshPro customerNameText;
+    public GameObject textBoxImage;
 
     public bool IsThisActive = false;
     public bool isCustomerActive = false;
@@ -84,8 +87,10 @@ public class SpawnCustomers : MonoBehaviour
     {
         if (isCustomerActive == false)
         {
+            customerNameText.text = ""; // Clear old name BEFORE spawning new customer
             currentCustomer = Instantiate(possibleCustomers[Random.Range(0, possibleCustomers.Count)], startPos.position, Quaternion.identity).GetComponent<Customer>();
             dishDifficulty = Random.Range(0, 2);
+            customerNameText.text = currentCustomer.CustomerName;  // Set name immediately after spawn
 
             switch (dishDifficulty)
             {
@@ -95,39 +100,48 @@ public class SpawnCustomers : MonoBehaviour
                     switch (ingredientDecider)
                     {
                         case 0:
+                            customerNameText.text = currentCustomer.CustomerName;
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
                             + " " + currentCustomer.milkHints[Random.Range(0, currentCustomer.milkHints.Length)];
                             break;
                         case 1:
+                            customerNameText.text = currentCustomer.CustomerName;
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
                             + " " + currentCustomer.caramelHints[Random.Range(0, currentCustomer.caramelHints.Length)];
                             break;
                         case 2:
+                            customerNameText.text = currentCustomer.CustomerName;
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
                             + " " + currentCustomer.jamHints[Random.Range(0, currentCustomer.jamHints.Length)];
                             break;
                         case 3:
+                            customerNameText.text = currentCustomer.CustomerName;
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
                             + " " + currentCustomer.loveEssenceHints[Random.Range(0, currentCustomer.loveEssenceHints.Length)];
                             break;
 
                         case 4:
+                            customerNameText.text = currentCustomer.CustomerName;
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
                             + " " + currentCustomer.chocolateHints[Random.Range(0, currentCustomer.chocolateHints.Length)];
                             break;
                         case 5:
+                            customerNameText.text = currentCustomer.CustomerName;
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
                             + " " + currentCustomer.mixedFruitHints[Random.Range(0, currentCustomer.mixedFruitHints.Length)];
                             break;
                         case 6:
+                            customerNameText.text = currentCustomer.CustomerName;
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
                             + " " + currentCustomer.sugarHints[Random.Range(0, currentCustomer.sugarHints.Length)];
                             break;
                         case 7:
+                            customerNameText.text = currentCustomer.CustomerName;
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
                             + " " + currentCustomer.mandrakeHints[Random.Range(0, currentCustomer.mandrakeHints.Length)];
                             break;
                         case 8:
+                            customerNameText.text = currentCustomer.CustomerName;
                             textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
                             + " " + currentCustomer.mixedNutsHints[Random.Range(0, currentCustomer.mixedNutsHints.Length)];
                             break;
@@ -144,6 +158,7 @@ public class SpawnCustomers : MonoBehaviour
             }
 
             isCustomerActive = true;
+            textBoxImage.SetActive(true);
         }
         currentIntervalTime = spawnInterval;
     }
@@ -372,6 +387,10 @@ public class SpawnCustomers : MonoBehaviour
         finishedCustomers += 1;
         // Ensure exact position & destroy after moving
         currentCustomer.transform.position = startPos.position;
+        // CLEAR TEXTBOXES HERE
+        textBox.text = "";
+        customerNameText.text = "";
+        textBoxImage.SetActive(false);
         StartCoroutine(currentCustomer.KYStimer(3));
 
         if(finishedCustomers == MoveDayTime.instance.customerAmount)
