@@ -12,6 +12,5 @@ public class Cutscene : ScriptableObject
 
     [Header("Set karma requirements for cutscene to pop up. Keep at 0 if not used for this cutscene")]
 
-    public int goodKarmaReq = 0;
-    public int badKarmaReq = 0;
+    public int moralityRequirement;
 }

@@ -46,8 +46,17 @@ public class SpawnCustomers : MonoBehaviour
     private int ingredientDecider;
     private int dishDifficulty;
 
-    public int goodKarma = 0;
-    public int badKarma = 0;
+    private int _moralityScore;
+
+    public int MoralityScore
+    {
+        get { return _moralityScore; }
+        set
+        {
+            _moralityScore = value;
+            MoralityUI.Instance.UpdateMoralityDisplay(_moralityScore);
+        }
+    }
 
     private float currentIntervalTime;
 
@@ -59,8 +68,7 @@ public class SpawnCustomers : MonoBehaviour
         }
         else if (Instance != this)
         {
-            goodKarma = Instance.goodKarma;
-            badKarma = Instance.badKarma;
+            MoralityScore = Instance.MoralityScore;
             Destroy(Instance.gameObject);
             Instance = this;
         }
@@ -175,7 +183,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.GoodFeedback;
                         audioSource.clip = happyCustomerSound;
                         audioSource.volume = happyVolume;
-                        goodKarma += 1;
+                        MoralityScore += 1;
                     }
 
                     if (dragDishObject.order.ingredient1 != Ingredient.Milk)
@@ -183,7 +191,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.BadFeedback;
                         audioSource.clip = angryCustomerSound;
                         audioSource.volume = angryVolume;
-                        badKarma += 1;
+                        MoralityScore -= 1;
                     }
                     break;
                 case 1:
@@ -192,7 +200,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.GoodFeedback;
                         audioSource.clip = happyCustomerSound;
                         audioSource.volume = happyVolume;
-                        goodKarma += 1;
+                        MoralityScore += 1;
 
                     }
 
@@ -201,7 +209,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.BadFeedback;
                         audioSource.clip = angryCustomerSound;
                         audioSource.volume = angryVolume;
-                        badKarma += 1;
+                        MoralityScore -= 1;
 
                     }
                     break;
@@ -211,7 +219,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.GoodFeedback;
                         audioSource.clip = happyCustomerSound;
                         audioSource.volume = happyVolume;
-                        goodKarma += 1;
+                        MoralityScore += 1;
 
                     }
 
@@ -220,7 +228,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.BadFeedback;
                         audioSource.clip = angryCustomerSound;
                         audioSource.volume = angryVolume;
-                        badKarma += 1;
+                        MoralityScore -= 1;
 
                     }
                     break;
@@ -230,7 +238,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.GoodFeedback;
                         audioSource.clip = happyCustomerSound;
                         audioSource.volume = happyVolume;
-                        goodKarma += 1;
+                        MoralityScore += 1;
 
                     }
 
@@ -239,7 +247,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.BadFeedback;
                         audioSource.clip = angryCustomerSound;
                         audioSource.volume = angryVolume;
-                        badKarma += 1;
+                        MoralityScore -= 1;
 
                     }
                     break;
@@ -251,7 +259,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.GoodFeedback;
                         audioSource.clip = happyCustomerSound;
                         audioSource.volume = happyVolume;
-                        goodKarma += 1;
+                        MoralityScore += 1;
 
                     }
 
@@ -260,7 +268,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.BadFeedback;
                         audioSource.clip = angryCustomerSound;
                         audioSource.volume = angryVolume;
-                        badKarma += 1;
+                        MoralityScore -= 1;
 
                     }
                     break;
@@ -270,7 +278,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.GoodFeedback;
                         audioSource.clip = happyCustomerSound;
                         audioSource.volume = happyVolume;
-                        goodKarma += 1;
+                        MoralityScore += 1;
 
                     }
 
@@ -279,7 +287,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.BadFeedback;
                         audioSource.clip = angryCustomerSound;
                         audioSource.volume = angryVolume;
-                        badKarma += 1;
+                        MoralityScore -= 1;
 
                     }
                     break;
@@ -289,7 +297,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.GoodFeedback;
                         audioSource.clip = happyCustomerSound;
                         audioSource.volume = happyVolume;
-                        goodKarma += 1;
+                        MoralityScore += 1;
 
                     }
 
@@ -298,7 +306,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.BadFeedback;
                         audioSource.clip = angryCustomerSound;
                         audioSource.volume = angryVolume;
-                        badKarma += 1;
+                        MoralityScore -= 1;
 
                     }
                     break;
@@ -308,7 +316,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.GoodFeedback;
                         audioSource.clip = happyCustomerSound;
                         audioSource.volume = happyVolume;
-                        goodKarma += 1;
+                        MoralityScore += 1;
 
                     }
 
@@ -317,7 +325,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.BadFeedback;
                         audioSource.clip = angryCustomerSound;
                         audioSource.volume = angryVolume;
-                        badKarma += 1;
+                        MoralityScore += 1;
 
                     }
                     break;
@@ -327,7 +335,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.GoodFeedback;
                         audioSource.clip = happyCustomerSound;
                         audioSource.volume = happyVolume;
-                        goodKarma += 1;
+                        MoralityScore += 1;
 
                     }
 
@@ -336,7 +344,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.BadFeedback;
                         audioSource.clip = angryCustomerSound;
                         audioSource.volume = angryVolume;
-                        badKarma += 1;
+                        MoralityScore -= 1;
 
                     }
                     break;
@@ -350,7 +358,7 @@ public class SpawnCustomers : MonoBehaviour
                 textBox.text = currentCustomer.GoodFeedback;
                 audioSource.clip = happyCustomerSound;
                 audioSource.volume = happyVolume;
-                goodKarma += 1;
+                MoralityScore += 1;
 
             }
 
@@ -359,7 +367,7 @@ public class SpawnCustomers : MonoBehaviour
                 textBox.text = currentCustomer.BadFeedback;
                 audioSource.clip = angryCustomerSound;
                 audioSource.volume = angryVolume;
-                badKarma += 1;
+                MoralityScore -= 1;
 
             }
         }

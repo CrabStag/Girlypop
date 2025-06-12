@@ -42,37 +42,21 @@ public class CutsceneLoader : MonoBehaviour
     {
         foreach (Cutscene scene in allCutscenes)
         {
-            if(spawnCustomers.goodKarma >= scene.goodKarmaReq && scene.goodKarmaReq != 0)
+            if (scene.moralityRequirement != 0)
             {
-                if(scene.badKarmaReq != 0)
+                if ((scene.moralityRequirement > 0 && spawnCustomers.MoralityScore >= scene.moralityRequirement) ||
+                    (scene.moralityRequirement < 0 && spawnCustomers.MoralityScore <= scene.moralityRequirement))
                 {
-                    if(spawnCustomers.badKarma >= scene.badKarmaReq)
-                    {
-                        PlayCutscene(scene);
-                        allCutscenes.Remove(scene);
-                        print("cutscene found:" + " " + scene.name);
-                        return;
-                    }
-                    continue;
+                    PlayCutscene(scene);
+                    allCutscenes.Remove(scene);
+                    print("cutscene found: " + scene.name);
+                    return;
                 }
-
-                PlayCutscene(scene);
-                allCutscenes.Remove(scene);
-                print("cutscene found:" + " " + scene.name);
-                return;
-            }
-
-            if(spawnCustomers.badKarma >= scene.badKarmaReq && scene.badKarmaReq != 0)
-            {
-                PlayCutscene(scene);
-                allCutscenes.Remove(scene);
-                print("cutscene found:" + " " + scene.name);
-                return;
             }
         }
+
         spawnCustomers.IsThisActive = true;
     }
-
     public void PlayCutscene(Cutscene cutscene)
     {
         if(cutscene.cutsceneSprites.Length != 0)

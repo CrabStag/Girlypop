@@ -26,5 +26,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a389cf44e784b794c9e3ea93a5f15169, type: 3}
   - {fileID: 21300000, guid: 3c556868a1ff9a241ada3677bdae28d0, type: 3}
   - {fileID: 21300000, guid: a389cf44e784b794c9e3ea93a5f15169, type: 3}
-  goodKarmaReq: 10
-  badKarmaReq: 0
+  moralityRequirement: 10
