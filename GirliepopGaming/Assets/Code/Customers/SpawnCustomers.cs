@@ -371,6 +371,11 @@ public class SpawnCustomers : MonoBehaviour
 
             }
         }
+        if (currentCustomer.CustomerName == "Ostara" &&
+       (dragDishObject.order.ingredient1 == Ingredient.Mandrake || dragDishObject.order.ingredient2 == Ingredient.Mandrake))
+        {
+            AchievementManager.Instance.Unlock("Ostara_mandrake");
+        }
         audioSource.Play(); 
 
         currentCustomer.canMove = false; 

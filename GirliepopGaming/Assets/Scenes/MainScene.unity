@@ -3960,6 +3960,10 @@ MonoBehaviour:
     title: 
     description: 
     unlocked: 0
+  - id: Ostara_mandrake
+    title: 
+    description: 
+    unlocked: 0
   achievementPopupPrefab: {fileID: 1104004177442634795, guid: 2763bd76a9f913a4ebb7d196a6083727, type: 3}
   popupParent: {fileID: 1760569311}
 --- !u!4 &591753673
