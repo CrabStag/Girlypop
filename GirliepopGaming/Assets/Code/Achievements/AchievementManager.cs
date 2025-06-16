@@ -40,12 +40,15 @@ public class AchievementManager : MonoBehaviour
         {
             achievement.unlocked = true;
 
-            ShowAchievementPopup(achievement);
+            Debug.Log("Achievement unlocked: " + achievementId); //  Log this
 
-            // Optionally save unlocked achievement here
+            ShowAchievementPopup(achievement);
+        }
+        else
+        {
+            Debug.LogWarning("Achievement not found or already unlocked: " + achievementId); //  Log this
         }
     }
-
     void ShowAchievementPopup(Achievement achievement)
     {
         if (achievementPopupPrefab == null || popupParent == null)
@@ -59,7 +62,7 @@ public class AchievementManager : MonoBehaviour
 
         if (popup != null)
         {
-            popup.Setup(achievement.title, achievement.description);
+            popup.Setup();  // <-- call parameterless Setup
         }
     }
 }

@@ -130,14 +130,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustomerName: Sana
+  customerNameText: {fileID: 0}
   image: {fileID: 1767366484685332923}
   possibleOrders:
   - {fileID: 11400000, guid: 5bbc9e6287fefff4487f90aa3859dc8b, type: 2}
-  - {fileID: 11400000, guid: c228028715c5ff0438a5c0213f46aae5, type: 2}
   slideSpeed: 5
   PossibleGreetings:
   - 'Hah, my disguise, it is flawless... Huh? My order? Oh. '
+  CustomerName: Sana
   milkHints:
   - Something with the stuff from that beast we took in the UFO!
   jamHints:

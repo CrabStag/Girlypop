@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustomerName: Puddle Fun
+  customerNameText: {fileID: 0}
   image: {fileID: 2235224000832358107}
   possibleOrders:
   - {fileID: 11400000, guid: a14cf4d746abd544d980cbbcdbaf8c80, type: 2}
@@ -99,6 +99,7 @@ MonoBehaviour:
   slideSpeed: 5
   PossibleGreetings:
   - 'I LOVE HATRED AND CHAOS! GIMME '
+  CustomerName: PuddleFun
   milkHints:
   - SOMETHING WITH FOOD STOLEN FROM BABY COWS
   jamHints:

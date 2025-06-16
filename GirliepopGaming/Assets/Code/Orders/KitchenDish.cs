@@ -94,6 +94,8 @@ public class KitchenDish : MonoBehaviour
         if (foundOrder == false)
         {
             counterDish.order = slopOrder;
+            SpawnCustomers.Instance.currentOrder = slopOrder; // <== Add this!
+
             counterDish.image.sprite = slopOrder.image;
 
             if (discoveredDishes.Contains(slopOrder))
@@ -106,11 +108,11 @@ public class KitchenDish : MonoBehaviour
                 discoveredDishes.Add(slopOrder);
                 PopoutCard.instance.cardImage.sprite = slopOrder.newPopupCard;
             }
+
             PopoutCard.instance.cardImage.SetNativeSize();
             PopoutCard.instance.currentCoroutine = PopoutCard.instance.PopUp();
             StartCoroutine(PopoutCard.instance.currentCoroutine);
         }
-
         baseIngredient = Ingredient.None;
         toppingIngredient = Ingredient.None;
 

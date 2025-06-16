@@ -175,12 +175,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustomerName: Sea Sheep
+  customerNameText: {fileID: 0}
   image: {fileID: 9188763100127209034}
-  possibleOrders: []
+  possibleOrders:
+  - {fileID: 11400000, guid: c0c5608dc9242e54491e40f824f2189d, type: 2}
   slideSpeed: 5
   PossibleGreetings:
   - Blblblblblblbl! bllblbl blblblb... blblbbl
+  CustomerName: Sheep
   milkHints:
   - blblb !
   jamHints:

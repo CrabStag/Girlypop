@@ -5,6 +5,9 @@ using TMPro;
 
 public class SpawnCustomers : MonoBehaviour
 {
+
+    public Order Slop;  
+
     public static SpawnCustomers Instance;
 
     public List<GameObject> possibleCustomers;
@@ -325,7 +328,7 @@ public class SpawnCustomers : MonoBehaviour
                         textBox.text = currentCustomer.BadFeedback;
                         audioSource.clip = angryCustomerSound;
                         audioSource.volume = angryVolume;
-                        MoralityScore += 1;
+                        MoralityScore -= 1;
 
                     }
                     break;
@@ -376,6 +379,24 @@ public class SpawnCustomers : MonoBehaviour
         {
             AchievementManager.Instance.Unlock("Ostara_mandrake");
         }
+            
+         if (currentCustomer.CustomerName == "Alien Sana")
+            {
+                AchievementManager.Instance.Unlock("Sana_Alien");
+            }
+
+        //   if (currentCustomer.CustomerName == "Puddle Fun" &&
+        // (dragDishObject.order.ingredient1 == Ingredient.UnicornMarrow || dragDishObject.order.ingredient2 == Ingredient.UnicornMarrow))
+        //    {
+        //     AchievementManager.Instance.Unlock("Pony_Racism");
+        //          }
+
+        if (currentCustomer.CustomerName == "Sheep" && currentOrder.NameOfOrder == "Slop")
+        {
+            Debug.Log("Slop Gobbler achievement unlocked!");
+            AchievementManager.Instance.Unlock("Slop_gobbler");
+        }
+
         audioSource.Play(); 
 
         currentCustomer.canMove = false; 

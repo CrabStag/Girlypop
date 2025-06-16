@@ -6,12 +6,10 @@ public class AchievementPopup : MonoBehaviour
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI descText;
 
-    public void Setup(string title, string description)
+    public void Setup()
     {
-        titleText.text = title;
-        descText.text = description;
         gameObject.SetActive(true);
-        Invoke("Hide", 3f); // Hide after 3 seconds
+        Invoke("Hide", 3f);
     }
 
     private void Hide()

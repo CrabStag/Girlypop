@@ -2952,19 +2952,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e94b9b22b4c78c4aa88956c64f4cd4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Slop: {fileID: 11400000, guid: c0c5608dc9242e54491e40f824f2189d, type: 2}
   possibleCustomers:
-  - {fileID: 6840495378475711555, guid: 3acb6ae7b17dc62429c73ed486954e04, type: 3}
-  - {fileID: 3374851895300965477, guid: d711f6cd131f1e840897bf0f2f6e38c7, type: 3}
-  - {fileID: 3208718606244779723, guid: 3d3c52ce9b54d0d4fafdc92a7beda87f, type: 3}
-  - {fileID: 6290772043735235985, guid: 9b2c852693f7d7946894ab2d3c533d6d, type: 3}
-  - {fileID: 4175705810312544089, guid: 1036319d0ba3cb14ca21a94bd8e93b55, type: 3}
-  - {fileID: 8200267579570923670, guid: c9814ad7536184a4bb472c6bc087ae36, type: 3}
-  - {fileID: 5575772345811248642, guid: 91f49b06c9f135f49b39312e4423152b, type: 3}
-  - {fileID: 3873833713208976842, guid: 8549967fcfeb92c4d852e12c7597d172, type: 3}
-  - {fileID: 3508803118633368617, guid: 1d49aa8cddd82a149bc66bb6b53d5960, type: 3}
+  - {fileID: 6961865301247357514, guid: 0e62e384eafa5ba4c86b85f78d9766e2, type: 3}
   - {fileID: 7299751825278060254, guid: 791384c1871228a4481a7915d7dcee1e, type: 3}
-  - {fileID: 5020634070743321029, guid: 44ec55031ddb5744e97df401db05ab87, type: 3}
-  - {fileID: 7195645017706960323, guid: a1c3c3a308172954db7aa916aae23263, type: 3}
   customerLocations:
   - {fileID: 1838818097}
   startPos: {fileID: 980304125}
@@ -3961,6 +3952,18 @@ MonoBehaviour:
     description: 
     unlocked: 0
   - id: Ostara_mandrake
+    title: 
+    description: 
+    unlocked: 0
+  - id: Sana_Alien
+    title: 
+    description: 
+    unlocked: 0
+  - id: Slop_gobbler
+    title: 
+    description: 
+    unlocked: 0
+  - id: Pony_Racism
     title: 
     description: 
     unlocked: 0
