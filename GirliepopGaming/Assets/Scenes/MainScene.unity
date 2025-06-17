@@ -4125,58 +4125,86 @@ MonoBehaviour:
     title: 
     description: 
     unlocked: 0
+    ingredientToTrack: 
+    recipesRequired: 0
   - id: Sana_Alien
     title: 
     description: 
     unlocked: 0
+    ingredientToTrack: 
+    recipesRequired: 0
   - id: all_recipes
     title: 
     description: 
     unlocked: 0
+    ingredientToTrack: 
+    recipesRequired: 0
   - id: morality_100
     title: 
     description: 
     unlocked: 0
+    ingredientToTrack: 
+    recipesRequired: 0
   - id: Methite_recipes
     title: 
     description: 
     unlocked: 0
+    ingredientToTrack: 
+    recipesRequired: 0
   - id: morality_-100
     title: 
     description: 
     unlocked: 0
+    ingredientToTrack: 
+    recipesRequired: 0
   - id: Fruits_recipes
     title: 
     description: 
     unlocked: 0
+    ingredientToTrack: 
+    recipesRequired: 0
   - id: honey_recipes
     title: 
     description: 
     unlocked: 0
+    ingredientToTrack: 
+    recipesRequired: 0
   - id: Love_recipes
     title: 
     description: 
     unlocked: 0
+    ingredientToTrack: 
+    recipesRequired: 0
   - id: Pony_Racism
     title: 
     description: 
     unlocked: 0
+    ingredientToTrack: 
+    recipesRequired: 0
   - id: Slop_gobbler
     title: 
     description: 
     unlocked: 0
+    ingredientToTrack: 
+    recipesRequired: 0
   - id: Sugar_recipes
     title: 
     description: 
     unlocked: 0
+    ingredientToTrack: 
+    recipesRequired: 0
   - id: Viola_recipes
     title: 
     description: 
     unlocked: 0
+    ingredientToTrack: 
+    recipesRequired: 0
   - id: first_dish
     title: 
     description: 
     unlocked: 0
+    ingredientToTrack: 
+    recipesRequired: 0
   achievementPopupPrefab: {fileID: 1104004177442634795, guid: 2763bd76a9f913a4ebb7d196a6083727, type: 3}
   popupParent: {fileID: 1760569311}
 --- !u!4 &591753673
@@ -7985,6 +8013,69 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966989189}
   m_CullTransparentMesh: 1
+--- !u!1 &968507490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 968507492}
+  - component: {fileID: 968507491}
+  m_Layer: 0
+  m_Name: RecipeAchievementTracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &968507491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968507490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 711254229f5f707408fd8e6d660c9efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievementsToTrack:
+  - achievementId: Methite_recipes
+    ingredientToTrack: 8
+    requiredCount: 1
+  - achievementId: Fruits_recipes
+    ingredientToTrack: 4
+    requiredCount: 5
+  - achievementId: honey_recipes
+    ingredientToTrack: 1
+    requiredCount: 6
+  - achievementId: Love_recipes
+    ingredientToTrack: 7
+    requiredCount: 3
+  - achievementId: Sugar_recipes
+    ingredientToTrack: 7
+    requiredCount: 4
+  - achievementId: Viola_recipes
+    ingredientToTrack: 9
+    requiredCount: 2
+--- !u!4 &968507492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968507490}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16.87, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &980304124
 GameObject:
   m_ObjectHideFlags: 0
@@ -18379,6 +18470,7 @@ SceneRoots:
   - {fileID: 784847873}
   - {fileID: 287689197}
   - {fileID: 591753673}
+  - {fileID: 968507492}
   - {fileID: 1760569311}
   - {fileID: 237619120}
   - {fileID: 154174413}
