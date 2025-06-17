@@ -65,4 +65,14 @@ public class AchievementManager : MonoBehaviour
             popup.Setup();  // <-- call parameterless Setup
         }
     }
+    public bool IsAchievementUnlocked(string achievementId)
+    {
+        Achievement achievement = achievements.Find(a => a.id == achievementId);
+        if (achievement != null)
+        {
+            return achievement.unlocked;
+        }
+        return false;
+    }
 }
+
