@@ -29,5 +29,7 @@ public enum Ingredient
     CrystalMethite, 
     GraveViola, 
     MixedNuts,
+    UnicornMarrow,
+    Poison,
     None,
 }
