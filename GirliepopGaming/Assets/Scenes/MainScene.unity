@@ -3593,7 +3593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fd2ec3b9decd8a41a321c356714c9fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelDish: {fileID: 11400000, guid: c0c5608dc9242e54491e40f824f2189d, type: 2}
+  panelDish: {fileID: 11400000, guid: 5b189e9c8da0f6e4394503d3827175a4, type: 2}
   CoverUp: {fileID: 647854796}
   NameTextObject: {fileID: 1396886510}
 --- !u!114 &373148738
