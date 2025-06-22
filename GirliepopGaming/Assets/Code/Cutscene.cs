@@ -13,4 +13,7 @@ public class Cutscene : ScriptableObject
     [Header("Set karma requirements for cutscene to pop up. Keep at 0 if not used for this cutscene")]
 
     public int moralityRequirement;
+
+    [Header("Optional ingredients to unlock at the end of the cutscene")]
+    public List<Ingredient> ingredientsToUnlock;
 }

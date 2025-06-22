@@ -2820,6 +2820,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272819235}
   m_CullTransparentMesh: 1
+--- !u!1 &279878630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 279878632}
+  - component: {fileID: 279878631}
+  m_Layer: 0
+  m_Name: PlayerInventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &279878631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279878630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d206c7cfa2f5004d96327f2119a341a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &279878632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279878630}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.02, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &287689195
 GameObject:
   m_ObjectHideFlags: 0
@@ -3224,8 +3268,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Slop: {fileID: 11400000, guid: c0c5608dc9242e54491e40f824f2189d, type: 2}
   possibleCustomers:
-  - {fileID: 6961865301247357514, guid: 0e62e384eafa5ba4c86b85f78d9766e2, type: 3}
   - {fileID: 7299751825278060254, guid: 791384c1871228a4481a7915d7dcee1e, type: 3}
+  - {fileID: 8200267579570923670, guid: c9814ad7536184a4bb472c6bc087ae36, type: 3}
   customerLocations:
   - {fileID: 1838818097}
   startPos: {fileID: 980304125}
@@ -3288,6 +3332,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8cba8950fe8f8dc40b726c0328db7e1a, type: 2}
   characterSprite: {fileID: 1838818100}
   text: {fileID: 830932223}
+  currentCutscene: {fileID: 0}
 --- !u!4 &349023545
 Transform:
   m_ObjectHideFlags: 0
@@ -19733,6 +19778,7 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 811249961}
   - {fileID: 202062733}
+  - {fileID: 279878632}
   - {fileID: 2126126173}
   - {fileID: 114730473}
   - {fileID: 235043230}

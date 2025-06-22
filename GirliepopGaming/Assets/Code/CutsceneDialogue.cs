@@ -74,7 +74,13 @@ public class CutsceneDialogue : MonoBehaviour
             textObject.text = string.Empty;
             index = 0;
             executeOnFinish.Invoke();
-            //gameObject.SetActive(false);
+            if (CutsceneLoader.instance.currentCutscene != null)
+            {
+                foreach (Ingredient ingredient in CutsceneLoader.instance.currentCutscene.ingredientsToUnlock)
+                {
+                    PlayerInventory.Instance.AddIngredient(ingredient);
+                }
+            }
 
 
 

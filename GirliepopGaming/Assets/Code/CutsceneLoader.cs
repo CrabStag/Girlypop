@@ -12,6 +12,7 @@ public class CutsceneLoader : MonoBehaviour
 
     public SpriteRenderer characterSprite;
     public CutsceneDialogue text;
+    public Cutscene currentCutscene;
 
     private SpawnCustomers spawnCustomers;
 
@@ -59,7 +60,9 @@ public class CutsceneLoader : MonoBehaviour
     }
     public void PlayCutscene(Cutscene cutscene)
     {
-        if(cutscene.cutsceneSprites.Length != 0)
+        currentCutscene = cutscene;
+
+        if (cutscene.cutsceneSprites.Length != 0)
         {
             characterSprite.gameObject.SetActive(true);
             characterSprite.sprite = cutscene.cutsceneSprites[0];
@@ -68,7 +71,6 @@ public class CutsceneLoader : MonoBehaviour
         text.gameObject.SetActive(true);
         text.lines = cutscene.cutsceneLines;
         text.sprites = cutscene.cutsceneSprites;
-
     }
 
     public void CloseCutscene()
