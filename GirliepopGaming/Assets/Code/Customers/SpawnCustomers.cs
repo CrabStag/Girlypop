@@ -5,7 +5,6 @@ using TMPro;
 
 public class SpawnCustomers : MonoBehaviour
 {
-
     public Order Slop;  
 
     public static SpawnCustomers Instance;
@@ -20,6 +19,8 @@ public class SpawnCustomers : MonoBehaviour
 
     public DragDish dragDishObject;
 
+    [HideInInspector]
+    public Ingredient chosenHintIngredient;
     [HideInInspector]
     public Customer currentCustomer;
     [HideInInspector]
@@ -96,7 +97,17 @@ public class SpawnCustomers : MonoBehaviour
 
     private void SpawnCustomer()
     {
-        if (isCustomerActive == false)
+            if (isCustomerActive) return;
+
+            // Clean up previous customer if any
+            if (currentCustomer != null)
+            {
+                Destroy(currentCustomer.gameObject);
+                currentCustomer = null;
+                isCustomerActive = false;
+            }
+
+            if (isCustomerActive == false)
         {
             customerNameText.text = ""; // Clear old name BEFORE spawning new customer
             currentCustomer = Instantiate(possibleCustomers[Random.Range(0, possibleCustomers.Count)], startPos.position, Quaternion.identity).GetComponent<Customer>();
@@ -106,66 +117,122 @@ public class SpawnCustomers : MonoBehaviour
             switch (dishDifficulty)
             {
                 case 0:
-                    ingredientDecider = Random.Range(0, 9);
+                    // Get unlocked ingredients
+                    List<Ingredient> unlockedIngredients = GetUnlockedIngredients();
 
-                    switch (ingredientDecider)
+                    // Build a list of hintable ingredients the player actually has
+                    List<Ingredient> availableHintIngredients = new List<Ingredient>();
+
+                    // Define which ingredients are eligible for hint orders
+                    List<Ingredient> hintableIngredients = new List<Ingredient>
+{
+    Ingredient.Milk,
+    Ingredient.Caramel,
+    Ingredient.Jam,
+    Ingredient.LoveEssence,
+    Ingredient.Choco,
+    Ingredient.Fruits,
+    Ingredient.Sugar,
+    Ingredient.Mandrake,
+    Ingredient.MixedNuts
+};
+
+                    // Only keep the hintable ingredients the player has unlocked
+                    foreach (Ingredient ingr in hintableIngredients)
                     {
-                        case 0:
-                            customerNameText.text = currentCustomer.CustomerName;
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.milkHints[Random.Range(0, currentCustomer.milkHints.Length)];
-                            break;
-                        case 1:
-                            customerNameText.text = currentCustomer.CustomerName;
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.caramelHints[Random.Range(0, currentCustomer.caramelHints.Length)];
-                            break;
-                        case 2:
-                            customerNameText.text = currentCustomer.CustomerName;
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.jamHints[Random.Range(0, currentCustomer.jamHints.Length)];
-                            break;
-                        case 3:
-                            customerNameText.text = currentCustomer.CustomerName;
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.loveEssenceHints[Random.Range(0, currentCustomer.loveEssenceHints.Length)];
-                            break;
-
-                        case 4:
-                            customerNameText.text = currentCustomer.CustomerName;
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.chocolateHints[Random.Range(0, currentCustomer.chocolateHints.Length)];
-                            break;
-                        case 5:
-                            customerNameText.text = currentCustomer.CustomerName;
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.mixedFruitHints[Random.Range(0, currentCustomer.mixedFruitHints.Length)];
-                            break;
-                        case 6:
-                            customerNameText.text = currentCustomer.CustomerName;
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.sugarHints[Random.Range(0, currentCustomer.sugarHints.Length)];
-                            break;
-                        case 7:
-                            customerNameText.text = currentCustomer.CustomerName;
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.mandrakeHints[Random.Range(0, currentCustomer.mandrakeHints.Length)];
-                            break;
-                        case 8:
-                            customerNameText.text = currentCustomer.CustomerName;
-                            textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                            + " " + currentCustomer.mixedNutsHints[Random.Range(0, currentCustomer.mixedNutsHints.Length)];
-                            break;
+                        if (unlockedIngredients.Contains(ingr))
+                        {
+                            availableHintIngredients.Add(ingr);
+                        }
                     }
 
-                    break;
+                    if (availableHintIngredients.Count == 0)
+                    {
+                        dishDifficulty = 1;
+                    }
+                    if (dishDifficulty == 1)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Ingredient chosenIngredient = availableHintIngredients[Random.Range(0, availableHintIngredients.Count)];
+                        chosenHintIngredient = chosenIngredient;
+
+
+                        switch (chosenIngredient)
+                        {
+                            case Ingredient.Milk:
+                                customerNameText.text = currentCustomer.CustomerName;
+                                textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                                + " " + currentCustomer.milkHints[Random.Range(0, currentCustomer.milkHints.Length)];
+                                break;
+                            case Ingredient.Caramel:
+                                customerNameText.text = currentCustomer.CustomerName;
+                                textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                                + " " + currentCustomer.caramelHints[Random.Range(0, currentCustomer.caramelHints.Length)];
+                                break;
+                            case Ingredient.Jam:
+                                customerNameText.text = currentCustomer.CustomerName;
+                                textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                                + " " + currentCustomer.jamHints[Random.Range(0, currentCustomer.jamHints.Length)];
+                                break;
+                            case Ingredient.LoveEssence:
+                                customerNameText.text = currentCustomer.CustomerName;
+                                textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                                + " " + currentCustomer.loveEssenceHints[Random.Range(0, currentCustomer.loveEssenceHints.Length)];
+                                break;
+
+                            case Ingredient.Choco:
+                                customerNameText.text = currentCustomer.CustomerName;
+                                textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                                + " " + currentCustomer.chocolateHints[Random.Range(0, currentCustomer.chocolateHints.Length)];
+                                break;
+                            case Ingredient.Fruits:
+                                customerNameText.text = currentCustomer.CustomerName;
+                                textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                                + " " + currentCustomer.mixedFruitHints[Random.Range(0, currentCustomer.mixedFruitHints.Length)];
+                                break;
+                            case Ingredient.Sugar:
+                                customerNameText.text = currentCustomer.CustomerName;
+                                textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                                + " " + currentCustomer.sugarHints[Random.Range(0, currentCustomer.sugarHints.Length)];
+                                break;
+                            case Ingredient.Mandrake:
+                                customerNameText.text = currentCustomer.CustomerName;
+                                textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                                + " " + currentCustomer.mandrakeHints[Random.Range(0, currentCustomer.mandrakeHints.Length)];
+                                break;
+                            case Ingredient.MixedNuts:
+                                customerNameText.text = currentCustomer.CustomerName;
+                                textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                                + " " + currentCustomer.mixedNutsHints[Random.Range(0, currentCustomer.mixedNutsHints.Length)];
+                                break;
+                        }
+
+                        break;
+                    }
                 case 1:
-                    currentOrder = currentCustomer.possibleOrders[Random.Range(0, currentCustomer.possibleOrders.Count)];
+                    List<Order> availableOrders = GetOrdersWithUnlockedIngredients(currentCustomer);
 
-                    textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
-                        + " " + currentOrder.NameOfOrder;
+                    if (availableOrders.Count == 0)
+                    {
+                        // No full orders with unlocked ingredients, fallback to hint order
+                        dishDifficulty = 0;
+                        // You can either call SpawnCustomer() again here or just return and let the next frame handle it
+                        return;
+                    }
+                    else
+                    {
+                        currentOrder = availableOrders[Random.Range(0, availableOrders.Count)];
 
+                        textBox.text = currentCustomer.PossibleGreetings[Random.Range(0, currentCustomer.PossibleGreetings.Length)]
+                            + " " + currentOrder.NameOfOrder;
+                    }
                     break;
+
+
+                
             }
 
             isCustomerActive = true;
@@ -178,179 +245,22 @@ public class SpawnCustomers : MonoBehaviour
     {
         if (dishDifficulty == 0)
         {
-            switch (ingredientDecider)
+            bool isCorrect = dragDishObject.order.ingredient1 == chosenHintIngredient ||
+                             dragDishObject.order.ingredient2 == chosenHintIngredient;
+
+            if (isCorrect)
             {
-                case 0:
-                    if (dragDishObject.order.ingredient1 == Ingredient.Milk)
-                    {
-                        textBox.text = currentCustomer.GoodFeedback;
-                        audioSource.clip = happyCustomerSound;
-                        audioSource.volume = happyVolume;
-                        MoralityScore += 1;
-                    }
-
-                    if (dragDishObject.order.ingredient1 != Ingredient.Milk)
-                    {
-                        textBox.text = currentCustomer.BadFeedback;
-                        audioSource.clip = angryCustomerSound;
-                        audioSource.volume = angryVolume;
-                        MoralityScore -= 1;
-                    }
-                    break;
-                case 1:
-                    if (dragDishObject.order.ingredient1 == Ingredient.Caramel)
-                    {
-                        textBox.text = currentCustomer.GoodFeedback;
-                        audioSource.clip = happyCustomerSound;
-                        audioSource.volume = happyVolume;
-                        MoralityScore += 1;
-
-                    }
-
-                    if (dragDishObject.order.ingredient1 != Ingredient.Caramel)
-                    {
-                        textBox.text = currentCustomer.BadFeedback;
-                        audioSource.clip = angryCustomerSound;
-                        audioSource.volume = angryVolume;
-                        MoralityScore -= 1;
-
-                    }
-                    break;
-                case 2:
-                    if (dragDishObject.order.ingredient1 == Ingredient.Jam)
-                    {
-                        textBox.text = currentCustomer.GoodFeedback;
-                        audioSource.clip = happyCustomerSound;
-                        audioSource.volume = happyVolume;
-                        MoralityScore += 1;
-
-                    }
-
-                    if (dragDishObject.order.ingredient1 != Ingredient.Jam)
-                    {
-                        textBox.text = currentCustomer.BadFeedback;
-                        audioSource.clip = angryCustomerSound;
-                        audioSource.volume = angryVolume;
-                        MoralityScore -= 1;
-
-                    }
-                    break;
-                case 3:
-                    if (dragDishObject.order.ingredient2 == Ingredient.LoveEssence)
-                    {
-                        textBox.text = currentCustomer.GoodFeedback;
-                        audioSource.clip = happyCustomerSound;
-                        audioSource.volume = happyVolume;
-                        MoralityScore += 1;
-
-                    }
-
-                    if (dragDishObject.order.ingredient2 != Ingredient.LoveEssence)
-                    {
-                        textBox.text = currentCustomer.BadFeedback;
-                        audioSource.clip = angryCustomerSound;
-                        audioSource.volume = angryVolume;
-                        MoralityScore -= 1;
-
-                    }
-                    break;
-
-
-                case 4:
-                    if (dragDishObject.order.ingredient2 == Ingredient.Choco)
-                    {
-                        textBox.text = currentCustomer.GoodFeedback;
-                        audioSource.clip = happyCustomerSound;
-                        audioSource.volume = happyVolume;
-                        MoralityScore += 1;
-
-                    }
-
-                    if (dragDishObject.order.ingredient2 != Ingredient.Choco)
-                    {
-                        textBox.text = currentCustomer.BadFeedback;
-                        audioSource.clip = angryCustomerSound;
-                        audioSource.volume = angryVolume;
-                        MoralityScore -= 1;
-
-                    }
-                    break;
-                case 5:
-                    if (dragDishObject.order.ingredient2 == Ingredient.Fruits)
-                    {
-                        textBox.text = currentCustomer.GoodFeedback;
-                        audioSource.clip = happyCustomerSound;
-                        audioSource.volume = happyVolume;
-                        MoralityScore += 1;
-
-                    }
-
-                    if (dragDishObject.order.ingredient2 != Ingredient.Fruits)
-                    {
-                        textBox.text = currentCustomer.BadFeedback;
-                        audioSource.clip = angryCustomerSound;
-                        audioSource.volume = angryVolume;
-                        MoralityScore -= 1;
-
-                    }
-                    break;
-                case 6:
-                    if (dragDishObject.order.ingredient2 == Ingredient.Sugar)
-                    {
-                        textBox.text = currentCustomer.GoodFeedback;
-                        audioSource.clip = happyCustomerSound;
-                        audioSource.volume = happyVolume;
-                        MoralityScore += 1;
-
-                    }
-
-                    if (dragDishObject.order.ingredient2 != Ingredient.Sugar)
-                    {
-                        textBox.text = currentCustomer.BadFeedback;
-                        audioSource.clip = angryCustomerSound;
-                        audioSource.volume = angryVolume;
-                        MoralityScore -= 1;
-
-                    }
-                    break;
-                case 7:
-                    if (dragDishObject.order.ingredient2 == Ingredient.Mandrake)
-                    {
-                        textBox.text = currentCustomer.GoodFeedback;
-                        audioSource.clip = happyCustomerSound;
-                        audioSource.volume = happyVolume;
-                        MoralityScore += 1;
-
-                    }
-
-                    if (dragDishObject.order.ingredient2 != Ingredient.Mandrake)
-                    {
-                        textBox.text = currentCustomer.BadFeedback;
-                        audioSource.clip = angryCustomerSound;
-                        audioSource.volume = angryVolume;
-                        MoralityScore -= 1;
-
-                    }
-                    break;
-                case 8:
-                    if (dragDishObject.order.ingredient2 == Ingredient.MixedNuts)
-                    {
-                        textBox.text = currentCustomer.GoodFeedback;
-                        audioSource.clip = happyCustomerSound;
-                        audioSource.volume = happyVolume;
-                        MoralityScore += 1;
-
-                    }
-
-                    if (dragDishObject.order.ingredient2 != Ingredient.MixedNuts)
-                    {
-                        textBox.text = currentCustomer.BadFeedback;
-                        audioSource.clip = angryCustomerSound;
-                        audioSource.volume = angryVolume;
-                        MoralityScore -= 1;
-
-                    }
-                    break;
+                textBox.text = currentCustomer.GoodFeedback;
+                audioSource.clip = happyCustomerSound;
+                audioSource.volume = happyVolume;
+                MoralityScore += 1;
+            }
+            else
+            {
+                textBox.text = currentCustomer.BadFeedback;
+                audioSource.clip = angryCustomerSound;
+                audioSource.volume = angryVolume;
+                MoralityScore -= 1;
             }
         }
 
@@ -408,6 +318,11 @@ public class SpawnCustomers : MonoBehaviour
 
     }
 
+    private List<Ingredient> GetUnlockedIngredients()
+    {
+        return PlayerInventory.Instance.GetUnlockedIngredients();
+    }
+
     private IEnumerator WaitAndSlideOff()
     {
         yield return new WaitForSeconds(2f); // Wait before leaving
@@ -435,6 +350,27 @@ public class SpawnCustomers : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+    private List<Order> GetOrdersWithUnlockedIngredients(Customer customer)
+    {
+        List<Ingredient> unlockedIngredients = GetUnlockedIngredients();
+        List<Order> validOrders = new List<Order>();
+
+        foreach (Order order in customer.possibleOrders)
+        {
+            // Check if both ingredients are unlocked
+            bool ingredient1Unlocked = unlockedIngredients.Contains(order.ingredient1);
+            bool ingredient2Unlocked = unlockedIngredients.Contains(order.ingredient2);
+
+            if (ingredient1Unlocked && ingredient2Unlocked)
+            {
+                validOrders.Add(order);
+            }
+        }
+
+        return validOrders;
+    }
+
+
 
 
 }

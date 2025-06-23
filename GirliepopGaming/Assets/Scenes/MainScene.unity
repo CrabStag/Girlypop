@@ -3268,14 +3268,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Slop: {fileID: 11400000, guid: c0c5608dc9242e54491e40f824f2189d, type: 2}
   possibleCustomers:
-  - {fileID: 7299751825278060254, guid: 791384c1871228a4481a7915d7dcee1e, type: 3}
-  - {fileID: 8200267579570923670, guid: c9814ad7536184a4bb472c6bc087ae36, type: 3}
+  - {fileID: 1038314485669522967, guid: 6c08e05918e0dc74d87b5bcca9d42bd9, type: 3}
   customerLocations:
   - {fileID: 1838818097}
   startPos: {fileID: 980304125}
   minCustomers: 5
   maxCustomers: 7
   dragDishObject: {fileID: 1797098346}
+  chosenHintIngredient: 0
   currentCustomer: {fileID: 0}
   currentOrder: {fileID: 0}
   finishedCustomers: 0
@@ -3284,7 +3284,7 @@ MonoBehaviour:
   textBoxImage: {fileID: 784847871}
   IsThisActive: 0
   isCustomerActive: 0
-  spawnInterval: 5
+  spawnInterval: 68
   happyCustomerSound: {fileID: 8300000, guid: fa9e9d392eb6c2f4cbb063599e92f824, type: 3}
   happyVolume: 0.1
   angryCustomerSound: {fileID: 8300000, guid: cdc9d5774f0c79a4196ae7dc9f92e21d, type: 3}
