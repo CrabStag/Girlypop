@@ -97,6 +97,9 @@ public class SpawnCustomers : MonoBehaviour
 
     private void SpawnCustomer()
     {
+
+       
+
         if (isCustomerActive) return;
 
         // Clean up previous customer if any
@@ -217,7 +220,7 @@ public class SpawnCustomers : MonoBehaviour
 
                     if (availableOrders.Count == 0)
                     {
-                        // No full orders with unlocked ingredients, fallback to hint order
+                        Debug.LogWarning("No available orders for current customer. Skipping spawn.");
                         dishDifficulty = 0;
                         // You can either call SpawnCustomer() again here or just return and let the next frame handle it
                         return;
@@ -295,16 +298,23 @@ public class SpawnCustomers : MonoBehaviour
             AchievementManager.Instance.Unlock("Sana_Alien");
         }
 
-        //   if (currentCustomer.CustomerName == "Puddle Fun" &&
-        // (dragDishObject.order.ingredient1 == Ingredient.UnicornMarrow || dragDishObject.order.ingredient2 == Ingredient.UnicornMarrow))
-        //    {
-        //     AchievementManager.Instance.Unlock("Pony_Racism");
-        //          }
+          if (currentCustomer.CustomerName == "PuddleFun" &&
+         (dragDishObject.order.ingredient1 == Ingredient.UnicornMarrow || dragDishObject.order.ingredient2 == Ingredient.UnicornMarrow))
+           {
+             AchievementManager.Instance.Unlock("Pony_Racism");
+                  }
 
-        if (currentCustomer.CustomerName == "Sheep" && currentOrder.NameOfOrder == "Slop")
+        if (currentCustomer != null && currentOrder != null)
         {
-            Debug.Log("Slop Gobbler achievement unlocked!");
-            AchievementManager.Instance.Unlock("Slop_gobbler");
+            if (currentCustomer.CustomerName == "Sheep" && currentOrder.NameOfOrder == "Slop")
+            {
+                Debug.Log("Slop Gobbler achievement unlocked!");
+                AchievementManager.Instance.Unlock("Slop_gobbler");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("JudgeOrder: currentCustomer or currentOrder is null!");
         }
 
         audioSource.Play();
