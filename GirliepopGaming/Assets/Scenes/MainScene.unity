@@ -735,8 +735,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2
-  m_fontSizeBase: 2
+  m_fontSize: 1.7
+  m_fontSizeBase: 1.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3268,7 +3268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Slop: {fileID: 11400000, guid: c0c5608dc9242e54491e40f824f2189d, type: 2}
   possibleCustomers:
-  - {fileID: 6961865301247357514, guid: 0e62e384eafa5ba4c86b85f78d9766e2, type: 3}
+  - {fileID: 1038314485669522967, guid: 6c08e05918e0dc74d87b5bcca9d42bd9, type: 3}
   customerLocations:
   - {fileID: 1838818097}
   startPos: {fileID: 980304125}
