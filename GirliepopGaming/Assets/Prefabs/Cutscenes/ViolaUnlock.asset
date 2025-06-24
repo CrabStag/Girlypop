@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb8c8fdae3fe2a4ab9d35d07ea66186, type: 3}
+  m_Name: ViolaUnlock
+  m_EditorClassIdentifier: 
+  cutsceneLines:
+  - Omg! guess who went grave robbing!
+  - Me!
+  - They didn't have any good bones this time, but I found these strange flowers
+  - They probably feed off of human remains in the ground
+  - They're pretty though, and I don't want my endeavors to be fruitless
+  - SO USE THEM IN RECIPES!
+  cutsceneSprites:
+  - {fileID: 21300000, guid: 9f453cd7df81f804a8c2e0faa37e9eb5, type: 3}
+  - {fileID: 21300000, guid: 9f453cd7df81f804a8c2e0faa37e9eb5, type: 3}
+  - {fileID: 21300000, guid: 9f453cd7df81f804a8c2e0faa37e9eb5, type: 3}
+  - {fileID: 21300000, guid: 9f453cd7df81f804a8c2e0faa37e9eb5, type: 3}
+  - {fileID: 21300000, guid: 9f453cd7df81f804a8c2e0faa37e9eb5, type: 3}
+  - {fileID: 21300000, guid: 9f453cd7df81f804a8c2e0faa37e9eb5, type: 3}
+  moralityRequirement: -15
+  ingredientsToUnlock: 09000000

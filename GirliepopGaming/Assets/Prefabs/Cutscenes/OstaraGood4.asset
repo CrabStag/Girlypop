@@ -24,4 +24,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9b6e3913fb7d0d44f8fb9c7a6a9ed848, type: 3}
   - {fileID: 21300000, guid: 9b6e3913fb7d0d44f8fb9c7a6a9ed848, type: 3}
   - {fileID: 21300000, guid: 9b6e3913fb7d0d44f8fb9c7a6a9ed848, type: 3}
-  moralityRequirement: 20
+  moralityRequirement: 40
+  ingredientsToUnlock: 
