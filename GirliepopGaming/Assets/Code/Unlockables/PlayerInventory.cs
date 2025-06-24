@@ -17,6 +17,7 @@ public class PlayerInventory : MonoBehaviour
     {
 
         Debug.Log("PlayerInventory Awake called");
+        PlayerPrefs.DeleteAll();
         if (Instance == null)
         {
             Instance = this;

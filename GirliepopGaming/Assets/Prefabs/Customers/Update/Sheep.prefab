@@ -184,23 +184,23 @@ MonoBehaviour:
   - Blblblblblblbl! bllblbl blblblb... blblbbl
   CustomerName: Sheep
   milkHints:
-  - blblb !
+  - blblb ! milk
   jamHints:
-  - bllb
+  - bllb jam
   caramelHints:
-  - blblblb bllb blbl
+  - blblblb bllb blbl caramel
   loveEssenceHints:
-  - blblb bllblb
+  - blblb  love essence
   chocolateHints:
-  - blblb blblb blblb
+  - blblb blblb blblb choco
   sugarHints:
-  - blb blbl
+  - blb blbl sugar
   mixedFruitHints:
-  - blblblblb blblb
+  - blblblblb blblb mixed fruit
   mandrakeHints:
-  - blblblblb blblbbl
+  - 'blblblblb blblbbl mandrake '
   mixedNutsHints:
-  - blbl blblblb blbblblbl
+  - blbl blblblb blbblblbl nuts
   GoodFeedback: Blblb! blblblbl !
   BadFeedback: ...Blblblbb....blblbb.....
   targetPos: {fileID: 0}

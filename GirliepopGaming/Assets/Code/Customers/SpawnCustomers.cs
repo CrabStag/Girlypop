@@ -5,7 +5,7 @@ using TMPro;
 
 public class SpawnCustomers : MonoBehaviour
 {
-    public Order Slop;  
+    public Order Slop;
 
     public static SpawnCustomers Instance;
 
@@ -87,7 +87,7 @@ public class SpawnCustomers : MonoBehaviour
 
     private void Update()
     {
-        if(!IsThisActive)
+        if (!IsThisActive)
         {
             return;
         }
@@ -97,17 +97,17 @@ public class SpawnCustomers : MonoBehaviour
 
     private void SpawnCustomer()
     {
-            if (isCustomerActive) return;
+        if (isCustomerActive) return;
 
-            // Clean up previous customer if any
-            if (currentCustomer != null)
-            {
-                Destroy(currentCustomer.gameObject);
-                currentCustomer = null;
-                isCustomerActive = false;
-            }
+        // Clean up previous customer if any
+        if (currentCustomer != null)
+        {
+            Destroy(currentCustomer.gameObject);
+            currentCustomer = null;
+            isCustomerActive = false;
+        }
 
-            if (isCustomerActive == false)
+        if (isCustomerActive == false)
         {
             customerNameText.text = ""; // Clear old name BEFORE spawning new customer
             currentCustomer = Instantiate(possibleCustomers[Random.Range(0, possibleCustomers.Count)], startPos.position, Quaternion.identity).GetComponent<Customer>();
@@ -232,7 +232,7 @@ public class SpawnCustomers : MonoBehaviour
                     break;
 
 
-                
+
             }
 
             isCustomerActive = true;
@@ -289,11 +289,11 @@ public class SpawnCustomers : MonoBehaviour
         {
             AchievementManager.Instance.Unlock("Ostara_mandrake");
         }
-            
-         if (currentCustomer.CustomerName == "Alien Sana")
-            {
-                AchievementManager.Instance.Unlock("Sana_Alien");
-            }
+
+        if (currentCustomer.CustomerName == "Alien Sana")
+        {
+            AchievementManager.Instance.Unlock("Sana_Alien");
+        }
 
         //   if (currentCustomer.CustomerName == "Puddle Fun" &&
         // (dragDishObject.order.ingredient1 == Ingredient.UnicornMarrow || dragDishObject.order.ingredient2 == Ingredient.UnicornMarrow))
@@ -307,10 +307,10 @@ public class SpawnCustomers : MonoBehaviour
             AchievementManager.Instance.Unlock("Slop_gobbler");
         }
 
-        audioSource.Play(); 
+        audioSource.Play();
 
-        currentCustomer.canMove = false; 
-        StartCoroutine(WaitAndSlideOff()); 
+        currentCustomer.canMove = false;
+        StartCoroutine(WaitAndSlideOff());
 
         dragDishObject.image.sprite = null;
         dragDishObject.order = null;
@@ -342,7 +342,7 @@ public class SpawnCustomers : MonoBehaviour
         textBoxImage.SetActive(false);
         StartCoroutine(currentCustomer.KYStimer(3));
 
-        if(finishedCustomers == MoveDayTime.instance.customerAmount)
+        if (finishedCustomers == MoveDayTime.instance.customerAmount)
         {
             print("day finished");
             MoveDayTime.instance.FinishDay();
@@ -374,4 +374,6 @@ public class SpawnCustomers : MonoBehaviour
 
 
 }
+
+
 
