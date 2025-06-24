@@ -32,3 +32,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 05267a27882fa23448fb4c54cd7c457b, type: 3}
   - {fileID: 21300000, guid: 4474e5edfcb897d47af424dae534f1dc, type: 3}
   moralityRequirement: -1
+  ingredientsToUnlock: 
+  customersToAdd:
+  - {fileID: 3208718606244779723, guid: 3d3c52ce9b54d0d4fafdc92a7beda87f, type: 3}
+  customersToRemove: []

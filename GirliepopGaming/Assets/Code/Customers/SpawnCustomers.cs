@@ -52,6 +52,7 @@ public class SpawnCustomers : MonoBehaviour
 
     private int _moralityScore;
 
+
     public int MoralityScore
     {
         get { return _moralityScore; }
@@ -61,6 +62,8 @@ public class SpawnCustomers : MonoBehaviour
             MoralityUI.Instance.UpdateMoralityDisplay(_moralityScore);
         }
     }
+
+    private List<GameObject> remainingCustomersForDay = new List<GameObject>();
 
     private float currentIntervalTime;
 

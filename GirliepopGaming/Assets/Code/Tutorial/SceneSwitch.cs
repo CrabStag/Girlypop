@@ -10,8 +10,11 @@ public class SceneSwitch : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
+        CustomerManager.Instance.InitializeCustomerPool();
         ChangeScene();
     }
+
+
 
     public void ChangeScene ()
     {
