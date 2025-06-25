@@ -26,3 +26,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 03af44172f5d1eb4f824fd2c709e7d1e, type: 3}
   moralityRequirement: 5
   ingredientsToUnlock: 0a000000
+  customersToAdd:
+  - {fileID: 7195645017706960323, guid: a1c3c3a308172954db7aa916aae23263, type: 3}
+  customersToRemove: []

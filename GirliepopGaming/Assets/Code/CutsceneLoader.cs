@@ -66,6 +66,11 @@ public class CutsceneLoader : MonoBehaviour
         {
             characterSprite.gameObject.SetActive(true);
             characterSprite.sprite = cutscene.cutsceneSprites[0];
+
+            if (SpawnCustomers.Instance.currentCustomer != null)
+            {
+                characterSprite.transform.position = SpawnCustomers.Instance.currentCustomer.transform.position;
+            }
         }
 
         text.gameObject.SetActive(true);

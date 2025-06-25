@@ -145,9 +145,9 @@ public class SpawnCustomers : MonoBehaviour
     Ingredient.Mandrake,
     Ingredient.MixedNuts
 };
-
-                    // Only keep the hintable ingredients the player has unlocked
-                    foreach (Ingredient ingr in hintableIngredients)
+                   
+                        // Only keep the hintable ingredients the player has unlocked
+                        foreach (Ingredient ingr in hintableIngredients)
                     {
                         if (unlockedIngredients.Contains(ingr))
                         {
@@ -329,6 +329,22 @@ public class SpawnCustomers : MonoBehaviour
         else
         {
             Debug.LogWarning("JudgeOrder: currentCustomer or currentOrder is null!");
+        }
+
+        // Morality penalties based on forbidden ingredients
+        if (dragDishObject.order != null)
+        {
+            if (dragDishObject.order.ingredient1 == Ingredient.Mandrake || dragDishObject.order.ingredient2 == Ingredient.Mandrake)
+            {
+                Debug.Log("Mandrake used! -2 Morality");
+                MoralityScore -= 2;
+            }
+
+            if (dragDishObject.order.ingredient1 == Ingredient.UnicornMarrow || dragDishObject.order.ingredient2 == Ingredient.UnicornMarrow)
+            {
+                Debug.Log("Unicorn Marrow used! -3 Morality");
+                MoralityScore -= 3;
+            }
         }
 
         audioSource.Play();

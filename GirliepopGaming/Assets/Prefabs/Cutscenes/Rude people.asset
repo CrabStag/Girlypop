@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb8c8fdae3fe2a4ab9d35d07ea66186, type: 3}
+  m_Name: Rude people
+  m_EditorClassIdentifier: 
+  cutsceneLines:
+  - Can I just say something crazy?
+  - I think you're so ugly.
+  - No offence, but like
+  - Humans are so grotesque to look at
+  - I wish I could fire you but...
+  - You're honestly way too good at doing all the work for me
+  cutsceneSprites:
+  - {fileID: 21300000, guid: 05267a27882fa23448fb4c54cd7c457b, type: 3}
+  - {fileID: 21300000, guid: 8b870cc5617ffd04986f3fe0c010b3a0, type: 3}
+  - {fileID: 21300000, guid: 05267a27882fa23448fb4c54cd7c457b, type: 3}
+  - {fileID: 21300000, guid: 8b870cc5617ffd04986f3fe0c010b3a0, type: 3}
+  - {fileID: 21300000, guid: 4474e5edfcb897d47af424dae534f1dc, type: 3}
+  - {fileID: 21300000, guid: 4474e5edfcb897d47af424dae534f1dc, type: 3}
+  moralityRequirement: -3
+  ingredientsToUnlock: 
+  customersToAdd:
+  - {fileID: 6290772043735235985, guid: 9b2c852693f7d7946894ab2d3c533d6d, type: 3}
+  - {fileID: 5575772345811248642, guid: 91f49b06c9f135f49b39312e4423152b, type: 3}
+  customersToRemove: []

@@ -13,19 +13,21 @@ MonoBehaviour:
   m_Name: OstaraBad5
   m_EditorClassIdentifier: 
   cutsceneLines:
-  - I have given you ample time, but your operations remain unethical.
-  - ' This is the last time you will see me, and my kin.'
-  - Everyone has been instructed to avoid you at all costs,
-  - and if that fails, attack you on sight.
-  - 'Do not touch our nurseries again. '
+  - You....
+  - I didn't want to believe it!
+  - But it's true! You and that pesky fairy have been robbing our nurseries!
+  - And putting our babies in DESSERT!!
+  - I am FILING A POLICE REPORT
+  - You will hear from my lawyers
   cutsceneSprites:
   - {fileID: 21300000, guid: 3c556868a1ff9a241ada3677bdae28d0, type: 3}
   - {fileID: 21300000, guid: 3c556868a1ff9a241ada3677bdae28d0, type: 3}
   - {fileID: 21300000, guid: 3c556868a1ff9a241ada3677bdae28d0, type: 3}
-  - {fileID: 21300000, guid: 3c556868a1ff9a241ada3677bdae28d0, type: 3}
+  - {fileID: 21300000, guid: a389cf44e784b794c9e3ea93a5f15169, type: 3}
+  - {fileID: 21300000, guid: a389cf44e784b794c9e3ea93a5f15169, type: 3}
   - {fileID: 21300000, guid: a389cf44e784b794c9e3ea93a5f15169, type: 3}
   moralityRequirement: -15
   ingredientsToUnlock: 
   customersToAdd: []
   customersToRemove:
-  - {fileID: 0}
+  - {fileID: 7299751825278060254, guid: 791384c1871228a4481a7915d7dcee1e, type: 3}

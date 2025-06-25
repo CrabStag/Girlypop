@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb8c8fdae3fe2a4ab9d35d07ea66186, type: 3}
+  m_Name: Aliens
+  m_EditorClassIdentifier: 
+  cutsceneLines:
+  - Did you hear???
+  - Some aliens landed a few days ago.
+  - Apparently they're "studying" our "brutish ways"
+  - Bunch of fucking hippies.
+  - They should go back to wherever the hell they came from, am i right?
+  cutsceneSprites:
+  - {fileID: 21300000, guid: 05267a27882fa23448fb4c54cd7c457b, type: 3}
+  - {fileID: 21300000, guid: 05267a27882fa23448fb4c54cd7c457b, type: 3}
+  - {fileID: 21300000, guid: 8b870cc5617ffd04986f3fe0c010b3a0, type: 3}
+  - {fileID: 21300000, guid: 8b870cc5617ffd04986f3fe0c010b3a0, type: 3}
+  - {fileID: 21300000, guid: 4474e5edfcb897d47af424dae534f1dc, type: 3}
+  moralityRequirement: 0
+  ingredientsToUnlock: 
+  customersToAdd:
+  - {fileID: 1514479000904868421, guid: e0a8a9081e2bdac49b790b072c908b8e, type: 3}
+  customersToRemove: []
