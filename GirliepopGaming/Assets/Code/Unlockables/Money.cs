@@ -16,7 +16,7 @@ public class Money : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             Debug.Log("Money instance initialized");
         }
-        else if (Instance != this)
+        else
         {
             Debug.Log("Duplicate Money instance destroyed");
             Destroy(gameObject);
@@ -48,5 +48,9 @@ public class Money : MonoBehaviour
         {
             moneyText.text = currentMoney.ToString();
         }
+    }
+    public void RefreshUI()
+    {
+        UpdateMoneyUI();
     }
 }
