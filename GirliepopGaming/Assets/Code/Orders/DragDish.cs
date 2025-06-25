@@ -25,13 +25,14 @@ public class DragDish : MonoBehaviour
         startPos = transform.position;
     }
 
-    private void OnMouseUpAsButton()
+    private void OnMouseUp()
     {
 
         if(inOtherCollider)
         {
 
             SpawnCustomers.Instance.JudgeOrder();
+            Destroy(gameObject);
         }
 
         if(!inOtherCollider)
