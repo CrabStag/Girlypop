@@ -86,7 +86,10 @@ public class SpawnCustomers : MonoBehaviour
     {
         currentIntervalTime = spawnInterval;
         audioSource = Camera.main.gameObject.transform.GetChild(1).GetComponent<AudioSource>();
+     
     }
+
+ 
 
     private void Update()
     {
@@ -260,6 +263,8 @@ public class SpawnCustomers : MonoBehaviour
                 audioSource.clip = happyCustomerSound;
                 audioSource.volume = happyVolume;
                 MoralityScore += 1;
+                Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
+                Money.Instance.AddMoney(5);
             }
             else
             {
@@ -267,6 +272,8 @@ public class SpawnCustomers : MonoBehaviour
                 audioSource.clip = angryCustomerSound;
                 audioSource.volume = angryVolume;
                 MoralityScore -= 1;
+                Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
+                Money.Instance.SubtractMoney(2);
             }
         }
 
@@ -278,6 +285,8 @@ public class SpawnCustomers : MonoBehaviour
                 audioSource.clip = happyCustomerSound;
                 audioSource.volume = happyVolume;
                 MoralityScore += 1;
+                Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
+                Money.Instance.AddMoney(5);
 
             }
 
@@ -287,6 +296,8 @@ public class SpawnCustomers : MonoBehaviour
                 audioSource.clip = angryCustomerSound;
                 audioSource.volume = angryVolume;
                 MoralityScore -= 1;
+                Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
+                Money.Instance.SubtractMoney(2);
 
             }
         }
