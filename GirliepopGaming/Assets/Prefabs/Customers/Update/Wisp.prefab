@@ -130,14 +130,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustomerName: Wisp
+  customerNameText: {fileID: 0}
   image: {fileID: 8032589144291775389}
   possibleOrders:
-  - {fileID: 11400000, guid: 42acf548ea8445c4dbb9d6ed8478bf94, type: 2}
-  - {fileID: 11400000, guid: 9eb5a2e5ca89ae24bab91e1b79b41d83, type: 2}
+  - {fileID: 11400000, guid: a01f7ed511887704fbbd75e650f555b7, type: 2}
+  - {fileID: 11400000, guid: f7af5997c10902944adafc77c7a8b7ba, type: 2}
   slideSpeed: 5
   PossibleGreetings:
   - Hi.... You look... Stressed. Sorry. Can I get
+  CustomerName: Wisp
   milkHints:
   - something with white elixir of the mother-beast
   jamHints:

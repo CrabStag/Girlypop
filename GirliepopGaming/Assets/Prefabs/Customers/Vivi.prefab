@@ -130,14 +130,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustomerName: Vivi
+  customerNameText: {fileID: 0}
   image: {fileID: 2786343544119904888}
   possibleOrders:
   - {fileID: 11400000, guid: e6fe9d25f31fd6c4c8790f461e51f0b2, type: 2}
-  - {fileID: 11400000, guid: 3d24838bb33dbf14d83fd2056cf1fa42, type: 2}
+  - {fileID: 11400000, guid: 5bbc9e6287fefff4487f90aa3859dc8b, type: 2}
   slideSpeed: 5
   PossibleGreetings:
   - Hey you!! I think I'm in the mood for
+  CustomerName: Vivi
   milkHints:
   - something with milk
   jamHints:

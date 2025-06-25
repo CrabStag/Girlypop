@@ -46,15 +46,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustomerName: Mao
+  customerNameText: {fileID: 0}
   image: {fileID: 2813486876896967413}
   possibleOrders:
-  - {fileID: 11400000, guid: 49b972fe8382c864aa115b324c704b26, type: 2}
-  - {fileID: 11400000, guid: bc2080dc55fbb824db646adee512eecd, type: 2}
+  - {fileID: 11400000, guid: 43b3265b05adfb242a17fab4bd5e2e26, type: 2}
+  - {fileID: 11400000, guid: c228028715c5ff0438a5c0213f46aae5, type: 2}
   slideSpeed: 5
   PossibleGreetings:
   - Did anyone follow me in here? No? Ok good... What, I gotta order? Uhh, okay..
     what have you got?
+  CustomerName: Mao
   milkHints:
   - Milk? yeah, add that in there.
   jamHints:

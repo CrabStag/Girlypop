@@ -46,10 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustomerName: Chui
+  customerNameText: {fileID: 0}
   image: {fileID: 8550773615290423250}
   possibleOrders:
-  - {fileID: 11400000, guid: a01f7ed511887704fbbd75e650f555b7, type: 2}
+  - {fileID: 11400000, guid: bc2080dc55fbb824db646adee512eecd, type: 2}
   - {fileID: 11400000, guid: 36b53ded0c3e8df4da40826ce1f5b95f, type: 2}
   slideSpeed: 5
   PossibleGreetings:
@@ -57,6 +57,7 @@ MonoBehaviour:
   - Hiiiiii gimme
   - Well, hey! You look good today! Hmm I'll order
   - Please don't mess up, I need this to go well right now. Can I please have
+  CustomerName: Chui
   milkHints:
   - something milky?
   jamHints:

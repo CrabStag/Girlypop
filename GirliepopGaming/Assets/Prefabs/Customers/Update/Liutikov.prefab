@@ -91,14 +91,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustomerName: Liutikov
+  customerNameText: {fileID: 0}
   image: {fileID: 0}
   possibleOrders:
-  - {fileID: 11400000, guid: d4927cfa758cbae4c9d2684ad61cdb91, type: 2}
+  - {fileID: 11400000, guid: 5bbc9e6287fefff4487f90aa3859dc8b, type: 2}
   - {fileID: 11400000, guid: 49b972fe8382c864aa115b324c704b26, type: 2}
   slideSpeed: 5
   PossibleGreetings:
   - Salutations! What a fine establishment you have here... I'm interested in the
+  CustomerName: Liutikov
   milkHints:
   - Milky items on your menu
   jamHints:

@@ -175,15 +175,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustomerName: Haku
+  customerNameText: {fileID: 0}
   image: {fileID: 5812762543689287804}
   possibleOrders:
-  - {fileID: 11400000, guid: a14cf4d746abd544d980cbbcdbaf8c80, type: 2}
-  - {fileID: 11400000, guid: 9eb5a2e5ca89ae24bab91e1b79b41d83, type: 2}
+  - {fileID: 11400000, guid: 42acf548ea8445c4dbb9d6ed8478bf94, type: 2}
+  - {fileID: 11400000, guid: 2aeb60a2bd30c33469f6437241004aeb, type: 2}
   slideSpeed: 5
   PossibleGreetings:
   - "Ooooh what a lovely establishment!! So you serve \u2018prepared food\u2019,
     right?? Then I\u2019d like to order"
+  CustomerName: Haku
   milkHints:
   - something milky?
   jamHints:

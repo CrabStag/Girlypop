@@ -133,7 +133,7 @@ MonoBehaviour:
   customerNameText: {fileID: 0}
   image: {fileID: 1767366484685332923}
   possibleOrders:
-  - {fileID: 11400000, guid: 5bbc9e6287fefff4487f90aa3859dc8b, type: 2}
+  - {fileID: 11400000, guid: 9300824bae33f08419f0779bfc2767d1, type: 2}
   slideSpeed: 5
   PossibleGreetings:
   - 'Hah, my disguise, it is flawless... Huh? My order? Oh. '

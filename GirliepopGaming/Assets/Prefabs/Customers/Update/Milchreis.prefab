@@ -175,14 +175,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustomerName: Milchreis
+  customerNameText: {fileID: 0}
   image: {fileID: 660489604193191080}
   possibleOrders:
-  - {fileID: 11400000, guid: c228028715c5ff0438a5c0213f46aae5, type: 2}
-  - {fileID: 11400000, guid: 9300824bae33f08419f0779bfc2767d1, type: 2}
+  - {fileID: 11400000, guid: 2aeb60a2bd30c33469f6437241004aeb, type: 2}
+  - {fileID: 11400000, guid: 9ee235835b4890448ba2fbdce97ec5b0, type: 2}
   slideSpeed: 5
   PossibleGreetings:
   - Salutations. I require a new test subject... Hmm. Yes, that will do. I'll have
+  CustomerName: Milchreis
   milkHints:
   - something including bovine lactate suspension
   jamHints:

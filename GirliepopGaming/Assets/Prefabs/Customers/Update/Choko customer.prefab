@@ -46,15 +46,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustomerName: Choko
+  customerNameText: {fileID: 0}
   image: {fileID: 4348309212746889644}
   possibleOrders:
-  - {fileID: 11400000, guid: 49b972fe8382c864aa115b324c704b26, type: 2}
-  - {fileID: 11400000, guid: 42acf548ea8445c4dbb9d6ed8478bf94, type: 2}
+  - {fileID: 11400000, guid: 3884d2e087fc54f48ad92671e564b8fd, type: 2}
+  - {fileID: 11400000, guid: 9ee235835b4890448ba2fbdce97ec5b0, type: 2}
+  - {fileID: 11400000, guid: 36b53ded0c3e8df4da40826ce1f5b95f, type: 2}
   slideSpeed: 5
   PossibleGreetings:
   - Hehhehehhh.. Heyyy.. Hmm.. You got any
   - Immm baked soo, bake me
+  CustomerName: Choko
   milkHints:
   - lactose including items?
   jamHints:

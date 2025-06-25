@@ -4617,7 +4617,7 @@ MonoBehaviour:
   - {fileID: 576854905}
   - {fileID: 62457207}
   - {fileID: 1790312227}
-  grownMushroomSprite: {fileID: 0}
+  grownMushroomSprite: {fileID: 21300000, guid: 9b22f08f83434604e94bb271245fd1d4, type: 3}
   mushroomSpriteRenderer: {fileID: 0}
   maxProgress: 160
   stepAmount: 20

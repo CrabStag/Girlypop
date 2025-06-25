@@ -95,7 +95,7 @@ MonoBehaviour:
   image: {fileID: 2235224000832358107}
   possibleOrders:
   - {fileID: 11400000, guid: a14cf4d746abd544d980cbbcdbaf8c80, type: 2}
-  - {fileID: 11400000, guid: 49b972fe8382c864aa115b324c704b26, type: 2}
+  - {fileID: 11400000, guid: 5b189e9c8da0f6e4394503d3827175a4, type: 2}
   slideSpeed: 5
   PossibleGreetings:
   - 'I LOVE HATRED AND CHAOS! GIMME '

@@ -46,14 +46,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustomerName: Shiro
+  customerNameText: {fileID: 0}
   image: {fileID: 0}
   possibleOrders:
-  - {fileID: 11400000, guid: 9eb5a2e5ca89ae24bab91e1b79b41d83, type: 2}
-  - {fileID: 11400000, guid: f7af5997c10902944adafc77c7a8b7ba, type: 2}
+  - {fileID: 11400000, guid: 4048026cdfe940c4c80712769097e74c, type: 2}
+  - {fileID: 11400000, guid: bc2080dc55fbb824db646adee512eecd, type: 2}
   slideSpeed: 5
   PossibleGreetings:
   - OH my GOD I'm STARVINGGGG, please get me
+  CustomerName: Shiro
   milkHints:
   - some MILK IN MY SYTEM. baked, that is.
   jamHints:

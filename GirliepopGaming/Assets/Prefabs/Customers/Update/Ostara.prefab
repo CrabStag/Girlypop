@@ -130,14 +130,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561ded26f517ea4fb8313b62727a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustomerName: Ostara
+  customerNameText: {fileID: 0}
   image: {fileID: 6268284330769610490}
   possibleOrders:
-  - {fileID: 11400000, guid: e6fe9d25f31fd6c4c8790f461e51f0b2, type: 2}
+  - {fileID: 11400000, guid: 9eb5a2e5ca89ae24bab91e1b79b41d83, type: 2}
   - {fileID: 11400000, guid: 3d24838bb33dbf14d83fd2056cf1fa42, type: 2}
   slideSpeed: 5
   PossibleGreetings:
   - 'I DON''T want to eat any sentient plantlife. So give me '
+  CustomerName: Ostara
   milkHints:
   - That ingredient obtained from the "cow"
   jamHints:
