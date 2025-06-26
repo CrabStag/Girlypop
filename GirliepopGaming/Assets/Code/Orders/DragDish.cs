@@ -32,7 +32,7 @@ public class DragDish : MonoBehaviour
         {
 
             SpawnCustomers.Instance.JudgeOrder();
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 
         if(!inOtherCollider)
