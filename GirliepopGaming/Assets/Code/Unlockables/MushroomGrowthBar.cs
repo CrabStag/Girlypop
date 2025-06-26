@@ -66,28 +66,56 @@ public class MushroomGrowthBar : MonoBehaviour
 
     private void CheckCompletion()
     {
+        Debug.Log("Checking mushroom completion");
         if (growthProgress >= maxProgress)
         {
             Debug.Log("Mushroom is fully grown!");
 
             if (mushroomGrownOverlay != null)
+            {
                 mushroomGrownOverlay.SetActive(true);
+            }
             else
+            {
                 Debug.LogWarning("MushroomGrownOverlay is not assigned!");
+            }
 
             if (mushText != null)
+            {
                 mushText.SetActive(false);
+            }
             else
-                Debug.LogWarning("Mushtext GameObject not assigned.");
+            {
+                Debug.LogWarning("MushText GameObject not assigned.");
+            }
 
-            AchievementManager.Instance.Unlock("MushroomFullyGrown");
+            if (AchievementManager.Instance != null)
+            {
+                AchievementManager.Instance.Unlock("MushroomFullyGrown");
+            }
+            else
+            {
+                Debug.LogWarning("AchievementManager.Instance is null!");
+            }
+
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.IsMushroomGrown = true;  // gamemanager script flag
+            }
+            else
+            {
+                Debug.LogError("GameManager.Instance is null! Cannot set IsMushroomGrown flag.");
+            }
 
             foreach (var segment in segments)
+            {
                 segment.gameObject.SetActive(false);
+            }
 
-            if (CutsceneLoader.instance != null && mushroomCutscene != null)
+            if (CutsceneLoader.instance != null && mushroomCutscene != null && !hasPlayedCutscene)
             {
                 CutsceneLoader.instance.PlayCutscene(mushroomCutscene);
+                hasPlayedCutscene = true; // prevent replaying cutscene multiple times
             }
         }
     }

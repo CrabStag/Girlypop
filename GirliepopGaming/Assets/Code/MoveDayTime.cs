@@ -12,10 +12,10 @@ public class MoveDayTime : MonoBehaviour
     [HideInInspector]
     public int customerAmount;
 
+    public EndOfDayUIManager uiManager; 
 
     public Transform dayEndPos;
-    public AudioSource musicSource;
-    public AudioClip endOfDayMusic;
+   
 
     public static MoveDayTime instance;
 
@@ -37,9 +37,28 @@ public class MoveDayTime : MonoBehaviour
 
     public void FinishDay()
     {
+        Debug.Log("FinishDay() called");
         print("yay");
+
+        if (dayEndPos == null)
+            Debug.LogError("dayEndPos is null!");
+        if (Camera.main == null)
+            Debug.LogError("Camera.main is null!");
+        if (uiManager == null)
+            Debug.LogError("uiManager is null!");
+        if (GameManager.Instance == null)
+            Debug.LogError("GameManager.Instance is null!");
+
         Camera.main.transform.position = dayEndPos.position;
-        musicSource.clip = endOfDayMusic;
-        musicSource.Play();
+
+        Debug.Log("Mushroom Shop Unlocked? " + GameManager.Instance.mushroomShopUnlocked);
+        if (GameManager.Instance.mushroomShopUnlocked)
+        {
+            uiManager.ShowShopBasement(); // show mushroom shop
+        }
+        else
+        {
+            uiManager.ShowNormalBasement(); // show normal end-of-day UI
+        }
     }
 }

@@ -86,10 +86,16 @@ public class SpawnCustomers : MonoBehaviour
     {
         currentIntervalTime = spawnInterval;
         audioSource = Camera.main.gameObject.transform.GetChild(1).GetComponent<AudioSource>();
-     
+
+        if (GameManager.Instance.IsMushroomGrown && !GameManager.Instance.mushroomShopUnlocked)
+        {
+            GameManager.Instance.mushroomShopUnlocked = true;
+        }
+
+
     }
 
- 
+
 
     private void Update()
     {
