@@ -3,18 +3,27 @@ using UnityEngine;
 public class MushroomGrowthBar : MonoBehaviour
 {
     public SpriteRenderer[] segments; // Array of SpriteRenderers (not UI Images)
-    public Sprite grownMushroomSprite;
+    public GameObject mushroomGrownOverlay;
     public SpriteRenderer mushroomSpriteRenderer; // The mushroom sprite renderer
     public int maxProgress = 160;
     public int stepAmount = 20; // How much each segment represents
 
     private int growthProgress = 0;
+    public GameObject mushText;
+
+    public Cutscene mushroomCutscene; //assignfield
+    private bool hasPlayedCutscene = false;
+
+    public AudioSource audioSource;   //assignfield     
+    public Animator animator;           //assignfield   
 
     private void Start()
     {
         growthProgress = PlayerPrefs.GetInt("MushroomGrowthProgress", 0);
         UpdateBar();
         CheckCompletion();
+
+        audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
     }
 
     public void AddProgress()
@@ -28,6 +37,16 @@ public class MushroomGrowthBar : MonoBehaviour
             PlayerPrefs.SetInt("MushroomGrowthProgress", growthProgress);
             UpdateBar();
             CheckCompletion();
+
+            //sound
+            if (audioSource != null)
+                audioSource.Play();
+
+            // Trigger animation
+            if (animator != null)
+            {
+                animator.SetTrigger("AddSegment");
+            }
         }
         else
         {
@@ -49,9 +68,29 @@ public class MushroomGrowthBar : MonoBehaviour
     {
         if (growthProgress >= maxProgress)
         {
-            mushroomSpriteRenderer.sprite = grownMushroomSprite;
-            gameObject.SetActive(false);
+            Debug.Log("Mushroom is fully grown!");
+
+            if (mushroomGrownOverlay != null)
+                mushroomGrownOverlay.SetActive(true);
+            else
+                Debug.LogWarning("MushroomGrownOverlay is not assigned!");
+
+            if (mushText != null)
+                mushText.SetActive(false);
+            else
+                Debug.LogWarning("Mushtext GameObject not assigned.");
+
             AchievementManager.Instance.Unlock("MushroomFullyGrown");
+
+            foreach (var segment in segments)
+                segment.gameObject.SetActive(false);
+
+            if (CutsceneLoader.instance != null && mushroomCutscene != null)
+            {
+                CutsceneLoader.instance.PlayCutscene(mushroomCutscene);
+            }
         }
     }
+
+
 }
