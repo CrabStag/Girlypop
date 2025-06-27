@@ -3444,8 +3444,8 @@ MonoBehaviour:
   customerLocations:
   - {fileID: 1838818097}
   startPos: {fileID: 980304125}
-  minCustomers: 5
-  maxCustomers: 5
+  minCustomers: 1
+  maxCustomers: 1
   dragDishObject: {fileID: 1797098346}
   chosenHintIngredient: 0
   currentCustomer: {fileID: 0}
@@ -4345,6 +4345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19fb70694e72c1f4484639ae4dd9f426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mushroomGrowth: 0
+  mushroomCutscenePlayed: 0
   IsMushroomGrown: 0
   mushroomShopUnlocked: 0
 --- !u!4 &418500978

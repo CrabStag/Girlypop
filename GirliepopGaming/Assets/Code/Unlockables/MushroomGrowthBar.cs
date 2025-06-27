@@ -17,9 +17,14 @@ public class MushroomGrowthBar : MonoBehaviour
     public AudioSource audioSource;   //assignfield     
     public Animator animator;           //assignfield   
 
+    public static MushroomGrowthBar instance;
+
     private void Start()
     {
-        growthProgress = PlayerPrefs.GetInt("MushroomGrowthProgress", 0);
+        growthProgress = GameManager.Instance.mushroomGrowth;
+        hasPlayedCutscene = GameManager.Instance.mushroomCutscenePlayed;
+
+        //growthProgress = PlayerPrefs.GetInt("MushroomGrowthProgress", 0);
         UpdateBar();
         CheckCompletion();
 
@@ -34,7 +39,9 @@ public class MushroomGrowthBar : MonoBehaviour
             Money.currentMoney -= stepAmount;
             Money.Instance.RefreshUI();
             growthProgress += stepAmount;
-            PlayerPrefs.SetInt("MushroomGrowthProgress", growthProgress);
+            //PlayerPrefs.SetInt("MushroomGrowthProgress", growthProgress);
+            GameManager.Instance.mushroomGrowth = growthProgress;
+            GameManager.Instance.mushroomCutscenePlayed = hasPlayedCutscene;
             UpdateBar();
             CheckCompletion();
 
