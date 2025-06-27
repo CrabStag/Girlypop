@@ -4385,8 +4385,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daacd3549d32c714c9024e0dd7e3a3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseIngredient: 11
-  toppingIngredient: 11
+  baseIngredient: 13
+  toppingIngredient: 13
   baseImage: {fileID: 977564395}
   toppingImage: {fileID: 40510325}
   ovenBaseImage: {fileID: 1754534127}
