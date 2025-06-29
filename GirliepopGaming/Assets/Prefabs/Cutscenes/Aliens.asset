@@ -16,7 +16,7 @@ MonoBehaviour:
   - Did you hear???
   - Some aliens landed a few days ago.
   - Apparently they're "studying" our "brutish ways"
-  - Bunch of fucking hippies.
+  - Bunch of stupid hippies.
   - They should go back to wherever the hell they came from, am i right?
   cutsceneSprites:
   - {fileID: 21300000, guid: 05267a27882fa23448fb4c54cd7c457b, type: 3}
@@ -24,7 +24,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8b870cc5617ffd04986f3fe0c010b3a0, type: 3}
   - {fileID: 21300000, guid: 8b870cc5617ffd04986f3fe0c010b3a0, type: 3}
   - {fileID: 21300000, guid: 4474e5edfcb897d47af424dae534f1dc, type: 3}
-  hasPlayed: 1
   moralityRequirement: 1
   ingredientsToUnlock: 
   customersToAdd:

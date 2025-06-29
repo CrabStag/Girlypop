@@ -157,7 +157,7 @@ MonoBehaviour:
   - something with that murmuring root
   mixedNutsHints:
   - something with the many nuts of the forest
-  GoodFeedback: Wow! I didn't think you had the brain capacity to understand !
+  GoodFeedback: Wow! I was worried you wouldn't have it!
   BadFeedback: Yeah.. Okay.
   targetPos: {fileID: 0}
   canMove: 1
