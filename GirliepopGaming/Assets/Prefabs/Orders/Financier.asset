@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Financier
   m_EditorClassIdentifier: 
   NameOfOrder: Ice cream sandwich
-  ingredient1: 1
-  ingredient2: 10
+  ingredient1: 2
+  ingredient2: 7
   image: {fileID: 21300000, guid: a52cb04da7ede174ea19c9533317eaa0, type: 3}
   newPopupCard: {fileID: 21300000, guid: 2b71f6317329f824685971b29e172a24, type: 3}
   regularPopupCard: {fileID: 21300000, guid: 35ec13855ec7ae44f93969effc702a00, type: 3}

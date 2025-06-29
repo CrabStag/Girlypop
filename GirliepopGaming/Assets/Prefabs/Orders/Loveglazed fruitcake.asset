@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Loveglazed fruitcake
   m_EditorClassIdentifier: 
   NameOfOrder: Loveglazed fruitcake
-  ingredient1: 7
-  ingredient2: 4
+  ingredient1: 8
+  ingredient2: 5
   image: {fileID: 21300000, guid: c79b264330965c948a0a8f02d174351a, type: 3}
   newPopupCard: {fileID: 21300000, guid: eaac45e16ea06a44bb500c0be9814e4e, type: 3}
   regularPopupCard: {fileID: 21300000, guid: 27415b3487535824fb27860d886bee38, type: 3}

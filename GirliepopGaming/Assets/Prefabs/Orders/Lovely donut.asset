@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Lovely donut
   m_EditorClassIdentifier: 
   NameOfOrder: Valentine's donut
-  ingredient1: 7
-  ingredient2: 5
+  ingredient1: 8
+  ingredient2: 3
   image: {fileID: 21300000, guid: 85764e1c137d1fa47a3e994fc52bbed4, type: 3}
   newPopupCard: {fileID: 21300000, guid: 22e844f5e3f9c564d8207be144aa4be1, type: 3}
   regularPopupCard: {fileID: 21300000, guid: c6bd2d80bbfed8f4d9fd987c93c42948, type: 3}

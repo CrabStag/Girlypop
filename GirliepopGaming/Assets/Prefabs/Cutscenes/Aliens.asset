@@ -24,7 +24,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8b870cc5617ffd04986f3fe0c010b3a0, type: 3}
   - {fileID: 21300000, guid: 8b870cc5617ffd04986f3fe0c010b3a0, type: 3}
   - {fileID: 21300000, guid: 4474e5edfcb897d47af424dae534f1dc, type: 3}
-  moralityRequirement: 0
+  hasPlayed: 1
+  moralityRequirement: 1
   ingredientsToUnlock: 
   customersToAdd:
   - {fileID: 1514479000904868421, guid: e0a8a9081e2bdac49b790b072c908b8e, type: 3}

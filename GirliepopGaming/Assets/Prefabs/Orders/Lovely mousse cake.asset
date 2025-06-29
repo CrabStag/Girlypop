@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Lovely mousse cake
   m_EditorClassIdentifier: 
   NameOfOrder: Lovely mousse cake
-  ingredient1: 7
-  ingredient2: 3
+  ingredient1: 8
+  ingredient2: 1
   image: {fileID: 21300000, guid: 7f2a0cbdc801b294793674aa5ad102ad, type: 3}
   newPopupCard: {fileID: 21300000, guid: be254a30993403a4b9438876e5a252e4, type: 3}
   regularPopupCard: {fileID: 21300000, guid: d19ce9a6e0117624ebebe62bf7170d82, type: 3}

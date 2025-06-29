@@ -19,17 +19,17 @@ public class Order : ScriptableObject
 public enum Ingredient
 {
     Milk,
-    Caramel,
-    Jam,
     Sugar,
-    Fruits,
+    Caramel,
     Choco,
+    Jam,
+    Fruits,
     Mandrake,
-    LoveEssence, 
-    CrystalMethite, 
-    GraveViola, 
     MixedNuts,
+    LoveEssence,
+    GraveViola,
+    CrystalMethite,
     UnicornMarrow,
     Poison,
-    None,
+    None 
 }

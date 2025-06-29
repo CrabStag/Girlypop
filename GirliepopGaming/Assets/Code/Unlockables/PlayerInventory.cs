@@ -17,12 +17,12 @@ public class PlayerInventory : MonoBehaviour
     {
 
         Debug.Log("PlayerInventory Awake called");
-        PlayerPrefs.DeleteAll();
+        // PlayerPrefs.DeleteAll();
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            LoadIngredients();
+            LoadStarterIngredients();
         }
         else
         {
@@ -41,7 +41,7 @@ public class PlayerInventory : MonoBehaviour
         {
             Debug.Log($"Ingredient unlocked: {ingredient}");
             OnIngredientUnlocked?.Invoke(ingredient);
-            SaveIngredients();
+           // SaveIngredients();
         }
     }
 
@@ -52,46 +52,48 @@ public class PlayerInventory : MonoBehaviour
 
     // ----------- Save/Load Ingredients (Optional) ------------
 
-    private const string SaveKey = "UnlockedIngredients";
+    // private const string SaveKey = "UnlockedIngredients";
 
-    private void SaveIngredients()
-    {
-        // Convert unlocked ingredients to comma-separated string
-        string saveString = string.Join(",", unlockedIngredients);
-        PlayerPrefs.SetString(SaveKey, saveString);
-        PlayerPrefs.Save();
-    }
+    // private void SaveIngredients()
+    //{
+    // Convert unlocked ingredients to comma-separated string
+    //  string saveString = string.Join(",", unlockedIngredients);
+    //    PlayerPrefs.SetString(SaveKey, saveString);
+    //  PlayerPrefs.Save();
+    //}
 
-    private void LoadIngredients()
+    // private void LoadIngredients()
+    // {
+    //    unlockedIngredients.Clear();
+
+    //    if (PlayerPrefs.HasKey(SaveKey))
+    //    {
+    //        string savedData = PlayerPrefs.GetString(SaveKey);
+    //        if (!string.IsNullOrEmpty(savedData))
+    //        {
+    //            string[] ingredients = savedData.Split(',');
+    //            foreach (string ingr in ingredients)
+    //           {
+    //               if (Enum.TryParse(ingr, out Ingredient ingredient))
+    //               {
+    //                   unlockedIngredients.Add(ingredient);
+    //               }
+    //  }
+    //  }
+    // }
+    private void LoadStarterIngredients()
     {
         unlockedIngredients.Clear();
 
-        if (PlayerPrefs.HasKey(SaveKey))
-        {
-            string savedData = PlayerPrefs.GetString(SaveKey);
-            if (!string.IsNullOrEmpty(savedData))
-            {
-                string[] ingredients = savedData.Split(',');
-                foreach (string ingr in ingredients)
-                {
-                    if (Enum.TryParse(ingr, out Ingredient ingredient))
-                    {
-                        unlockedIngredients.Add(ingredient);
-                    }
-                }
-            }
-        }
-        else
-        {
-           
-            AddIngredient(Ingredient.Milk);
-            AddIngredient(Ingredient.Sugar);
-            AddIngredient(Ingredient.Caramel);
-            AddIngredient(Ingredient.Choco);
-            AddIngredient(Ingredient.Jam);
-            AddIngredient(Ingredient.Fruits);
-            // Add any default starter ingredients
-        }
-        Debug.Log("Loaded Ingredients: " + string.Join(", ", unlockedIngredients));
+        // Add your starter ingredients here
+        AddIngredient(Ingredient.Milk);
+        AddIngredient(Ingredient.Sugar);
+        AddIngredient(Ingredient.Caramel);
+        AddIngredient(Ingredient.Choco);
+        AddIngredient(Ingredient.Jam);
+        AddIngredient(Ingredient.Fruits);
+
+        Debug.Log("Loaded starter ingredients: " + string.Join(", ", unlockedIngredients));
     }
+         
 }

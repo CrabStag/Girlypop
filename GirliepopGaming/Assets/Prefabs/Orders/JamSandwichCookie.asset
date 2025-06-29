@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: JamSandwichCookie
   m_EditorClassIdentifier: 
   NameOfOrder: a jam sandwich cookie
-  ingredient1: 2
-  ingredient2: 3
+  ingredient1: 4
+  ingredient2: 1
   image: {fileID: 21300000, guid: 4a9fe4ceeff904144a6620f3fb8f9cc6, type: 3}
   newPopupCard: {fileID: 21300000, guid: 1ff9a3c4641bda8408eccce99fbee208, type: 3}
   regularPopupCard: {fileID: 21300000, guid: 06c5e02cb0eecd5428a77e648b6f92d7, type: 3}

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
     public bool IsMushroomGrown = false;
     public bool mushroomShopUnlocked = false;
 
+    public HashSet<Cutscene> playedCutscenes = new HashSet<Cutscene>();
 
     private void Awake()
     {

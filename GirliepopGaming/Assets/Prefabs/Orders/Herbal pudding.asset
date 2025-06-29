@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Herbal pudding
   m_EditorClassIdentifier: 
   NameOfOrder: Herbal pudding
-  ingredient1: 1
+  ingredient1: 2
   ingredient2: 6
   image: {fileID: 21300000, guid: 7cdb0e3df05debd4babd8fe4b77a508f, type: 3}
   newPopupCard: {fileID: 21300000, guid: ec3389e60bf38024585e6686b03b4d4b, type: 3}

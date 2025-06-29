@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NameOfOrder: a roll cake
   ingredient1: 0
-  ingredient2: 3
+  ingredient2: 1
   image: {fileID: 21300000, guid: de2a0fbe9642959458f1e283a84f0a20, type: 3}
   newPopupCard: {fileID: 21300000, guid: 1457e3ac321662e46880dc804f91eebb, type: 3}
   regularPopupCard: {fileID: 21300000, guid: 32b1966672019e24b82a52be07c293c3, type: 3}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Petit fours
   m_EditorClassIdentifier: 
   NameOfOrder: Petit fours
-  ingredient1: 1
+  ingredient1: 2
   ingredient2: 9
   image: {fileID: 21300000, guid: f099ef79e4cc0074c8e9c273cc134abc, type: 3}
   newPopupCard: {fileID: 21300000, guid: 676b8230bac17894e9892d1e176b4b8f, type: 3}

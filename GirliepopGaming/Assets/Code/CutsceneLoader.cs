@@ -16,13 +16,15 @@ public class CutsceneLoader : MonoBehaviour
 
     private SpawnCustomers spawnCustomers;
 
+    //private HashSet<Cutscene> playedCutscenes = new HashSet<Cutscene>();
+
     private void Awake()
     {
     }
 
     private void Start()
     {
-        if (instance == null)
+        if (instance == null)  
         {
             instance = this;
         }
@@ -43,11 +45,18 @@ public class CutsceneLoader : MonoBehaviour
     {
         foreach (Cutscene scene in allCutscenes)
         {
+            //if (scene.hasPlayed) continue;
+            //if (playedCutscenes.Contains(scene)) continue;
+            if (GameManager.Instance.playedCutscenes.Contains(scene)) continue;
+
             if (scene.moralityRequirement != 0)
             {
                 if ((scene.moralityRequirement > 0 && spawnCustomers.MoralityScore >= scene.moralityRequirement) ||
                     (scene.moralityRequirement < 0 && spawnCustomers.MoralityScore <= scene.moralityRequirement))
                 {
+                    //scene.hasPlayed = true;
+                    //playedCutscenes.Add(scene);
+                    GameManager.Instance.playedCutscenes.Add(scene);
                     PlayCutscene(scene);
                     allCutscenes.Remove(scene);
                     print("cutscene found: " + scene.name);

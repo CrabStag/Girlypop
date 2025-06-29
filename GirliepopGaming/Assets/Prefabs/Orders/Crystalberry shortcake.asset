@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Crystalberry shortcake
   m_EditorClassIdentifier: 
   NameOfOrder: Crystalberry shortcake
-  ingredient1: 8
-  ingredient2: 4
+  ingredient1: 10
+  ingredient2: 5
   image: {fileID: 21300000, guid: fa842a4c961b8aa49933a958be80d07d, type: 3}
   newPopupCard: {fileID: 21300000, guid: 90a8c9e5cff84774d83e1c55ce43a809, type: 3}
   regularPopupCard: {fileID: 21300000, guid: b5a8af7092e034f428ecb9ee4385bb33, type: 3}

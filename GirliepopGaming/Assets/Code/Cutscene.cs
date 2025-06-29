@@ -9,6 +9,9 @@ public class Cutscene : ScriptableObject
     public string[] cutsceneLines;
     public Sprite[] cutsceneSprites;
 
+    //[HideInInspector]
+   // public bool hasPlayed = false;
+
     [Header("Set karma requirements for cutscene to pop up. Keep at 0 if not used for this cutscene")]
     public int moralityRequirement;
 

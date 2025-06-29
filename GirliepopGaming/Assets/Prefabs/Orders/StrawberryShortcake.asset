@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NameOfOrder: a slice of strawberry shortcake
   ingredient1: 0
-  ingredient2: 4
+  ingredient2: 5
   image: {fileID: 21300000, guid: 60fbd899ebda9a54d8141c9d26292d81, type: 3}
   newPopupCard: {fileID: 21300000, guid: 101d7aa8a94e29a4ba4f3912a6947bcc, type: 3}
   regularPopupCard: {fileID: 21300000, guid: c07d4ab6ac75166468e50e23c3234876, type: 3}

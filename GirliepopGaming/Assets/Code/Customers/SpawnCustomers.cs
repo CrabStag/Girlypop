@@ -50,6 +50,7 @@ public class SpawnCustomers : MonoBehaviour
     private int ingredientDecider;
     private int dishDifficulty;
 
+    [SerializeField]
     private int _moralityScore;
 
 
@@ -110,7 +111,7 @@ public class SpawnCustomers : MonoBehaviour
     private void SpawnCustomer()
     {
 
-       
+
 
         if (isCustomerActive) return;
 
@@ -151,9 +152,9 @@ public class SpawnCustomers : MonoBehaviour
     Ingredient.Mandrake,
     Ingredient.MixedNuts
 };
-                   
-                        // Only keep the hintable ingredients the player has unlocked
-                        foreach (Ingredient ingr in hintableIngredients)
+
+                    // Only keep the hintable ingredients the player has unlocked
+                    foreach (Ingredient ingr in hintableIngredients)
                     {
                         if (unlockedIngredients.Contains(ingr))
                         {
@@ -258,111 +259,122 @@ public class SpawnCustomers : MonoBehaviour
 
     public void JudgeOrder()
     {
-        if (dishDifficulty == 0)
-        {
-            bool isCorrect = dragDishObject.order.ingredient1 == chosenHintIngredient ||
-                             dragDishObject.order.ingredient2 == chosenHintIngredient;
 
-            if (isCorrect)
+
+       if (dragDishObject.order == null)
+        {
+            Debug.LogWarning("JudgeOrder called but dragDishObject.order is null!");
+            return;
+        }
+
+        Debug.Log($"Chosen hint ingredient: {chosenHintIngredient}");
+        Debug.Log($"Dish ingredients: {dragDishObject.order.ingredient1}, {dragDishObject.order.ingredient2}");
+         
+            if (dishDifficulty == 0)
             {
-                textBox.text = currentCustomer.GoodFeedback;
-                audioSource.clip = happyCustomerSound;
-                audioSource.volume = happyVolume;
-                MoralityScore += 1;
-                Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
-                Money.Instance.AddMoney(5);
+                bool isCorrect = dragDishObject.order.ingredient1 == chosenHintIngredient ||
+                                 dragDishObject.order.ingredient2 == chosenHintIngredient;
+
+                if (isCorrect)
+                {
+                    textBox.text = currentCustomer.GoodFeedback;
+                    audioSource.clip = happyCustomerSound;
+                    audioSource.volume = happyVolume;
+                    MoralityScore += 1;
+                    Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
+                    Money.Instance.AddMoney(5);
+                }
+                else
+                {
+                    textBox.text = currentCustomer.BadFeedback;
+                    audioSource.clip = angryCustomerSound;
+                    audioSource.volume = angryVolume;
+                    MoralityScore -= 1;
+                    Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
+                    Money.Instance.SubtractMoney(2);
+                }
+            }
+
+            if (dishDifficulty == 1)
+            {
+                if (dragDishObject.order == currentOrder)
+                {
+                    textBox.text = currentCustomer.GoodFeedback;
+                    audioSource.clip = happyCustomerSound;
+                    audioSource.volume = happyVolume;
+                    MoralityScore += 1;
+                    Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
+                    Money.Instance.AddMoney(5);
+
+                }
+
+                if (dragDishObject.order != currentOrder)
+                {
+                    textBox.text = currentCustomer.BadFeedback;
+                    audioSource.clip = angryCustomerSound;
+                    audioSource.volume = angryVolume;
+                    MoralityScore -= 1;
+                    Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
+                    Money.Instance.SubtractMoney(2);
+
+                }
+            }
+            if (currentCustomer.CustomerName == "Ostara" &&
+           (dragDishObject.order.ingredient1 == Ingredient.Mandrake || dragDishObject.order.ingredient2 == Ingredient.Mandrake))
+            {
+                AchievementManager.Instance.Unlock("Ostara_mandrake");
+            }
+
+            if (currentCustomer.CustomerName == "Alien Sana")
+            {
+                AchievementManager.Instance.Unlock("Sana_Alien");
+            }
+
+            if (currentCustomer.CustomerName == "PuddleFun" &&
+           (dragDishObject.order.ingredient1 == Ingredient.UnicornMarrow || dragDishObject.order.ingredient2 == Ingredient.UnicornMarrow))
+            {
+                AchievementManager.Instance.Unlock("Pony_Racism");
+            }
+
+            if (currentCustomer != null && currentOrder != null)
+            {
+                if (currentCustomer.CustomerName == "Sheep" && currentOrder.NameOfOrder == "Slop")
+                {
+                    Debug.Log("Slop Gobbler achievement unlocked!");
+                    AchievementManager.Instance.Unlock("Slop_gobbler");
+                }
             }
             else
             {
-                textBox.text = currentCustomer.BadFeedback;
-                audioSource.clip = angryCustomerSound;
-                audioSource.volume = angryVolume;
-                MoralityScore -= 1;
-                Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
-                Money.Instance.SubtractMoney(2);
+                Debug.LogWarning("JudgeOrder: currentCustomer or currentOrder is null!");
             }
-        }
 
-        if (dishDifficulty == 1)
-        {
-            if (dragDishObject.order == currentOrder)
+            // Morality penalties based on forbidden ingredients
+            if (dragDishObject.order != null)
             {
-                textBox.text = currentCustomer.GoodFeedback;
-                audioSource.clip = happyCustomerSound;
-                audioSource.volume = happyVolume;
-                MoralityScore += 1;
-                Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
-                Money.Instance.AddMoney(5);
+                if (dragDishObject.order.ingredient1 == Ingredient.Mandrake || dragDishObject.order.ingredient2 == Ingredient.Mandrake)
+                {
+                    Debug.Log("Mandrake used! -2 Morality");
+                    MoralityScore -= 2;
+                }
 
+                if (dragDishObject.order.ingredient1 == Ingredient.UnicornMarrow || dragDishObject.order.ingredient2 == Ingredient.UnicornMarrow)
+                {
+                    Debug.Log("Unicorn Marrow used! -3 Morality");
+                    MoralityScore -= 3;
+                }
             }
 
-            if (dragDishObject.order != currentOrder)
-            {
-                textBox.text = currentCustomer.BadFeedback;
-                audioSource.clip = angryCustomerSound;
-                audioSource.volume = angryVolume;
-                MoralityScore -= 1;
-                Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
-                Money.Instance.SubtractMoney(2);
+            audioSource.Play();
 
-            }
+            currentCustomer.canMove = false;
+            StartCoroutine(WaitAndSlideOff());
+
+            dragDishObject.image.sprite = null;
+            dragDishObject.order = null;
+            dragDishObject.transform.position = dragDishObject.startPos;
+
         }
-        if (currentCustomer.CustomerName == "Ostara" &&
-       (dragDishObject.order.ingredient1 == Ingredient.Mandrake || dragDishObject.order.ingredient2 == Ingredient.Mandrake))
-        {
-            AchievementManager.Instance.Unlock("Ostara_mandrake");
-        }
-
-        if (currentCustomer.CustomerName == "Alien Sana")
-        {
-            AchievementManager.Instance.Unlock("Sana_Alien");
-        }
-
-          if (currentCustomer.CustomerName == "PuddleFun" &&
-         (dragDishObject.order.ingredient1 == Ingredient.UnicornMarrow || dragDishObject.order.ingredient2 == Ingredient.UnicornMarrow))
-           {
-             AchievementManager.Instance.Unlock("Pony_Racism");
-                  }
-
-        if (currentCustomer != null && currentOrder != null)
-        {
-            if (currentCustomer.CustomerName == "Sheep" && currentOrder.NameOfOrder == "Slop")
-            {
-                Debug.Log("Slop Gobbler achievement unlocked!");
-                AchievementManager.Instance.Unlock("Slop_gobbler");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("JudgeOrder: currentCustomer or currentOrder is null!");
-        }
-
-        // Morality penalties based on forbidden ingredients
-        if (dragDishObject.order != null)
-        {
-            if (dragDishObject.order.ingredient1 == Ingredient.Mandrake || dragDishObject.order.ingredient2 == Ingredient.Mandrake)
-            {
-                Debug.Log("Mandrake used! -2 Morality");
-                MoralityScore -= 2;
-            }
-
-            if (dragDishObject.order.ingredient1 == Ingredient.UnicornMarrow || dragDishObject.order.ingredient2 == Ingredient.UnicornMarrow)
-            {
-                Debug.Log("Unicorn Marrow used! -3 Morality");
-                MoralityScore -= 3;
-            }
-        }
-
-        audioSource.Play();
-
-        currentCustomer.canMove = false;
-        StartCoroutine(WaitAndSlideOff());
-
-        dragDishObject.image.sprite = null;
-        dragDishObject.order = null;
-        dragDishObject.transform.position = dragDishObject.startPos;
-
-    }
 
     private List<Ingredient> GetUnlockedIngredients()
     {
@@ -418,8 +430,8 @@ public class SpawnCustomers : MonoBehaviour
 
 
 
-
 }
+ 
 
 
 
