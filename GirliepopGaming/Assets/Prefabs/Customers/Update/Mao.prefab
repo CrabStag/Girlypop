@@ -49,7 +49,7 @@ MonoBehaviour:
   customerNameText: {fileID: 0}
   image: {fileID: 2813486876896967413}
   defaultSprite: {fileID: 21300000, guid: 315b2ae9c930a2c48a1bc800d2b5096b, type: 3}
-  angrySprite: {fileID: 21300000, guid: 315b2ae9c930a2c48a1bc800d2b5096b, type: 3}
+  angrySprite: {fileID: 21300000, guid: 004dceaef65e5954198f6174a7464993, type: 3}
   possibleOrders:
   - {fileID: 11400000, guid: 43b3265b05adfb242a17fab4bd5e2e26, type: 2}
   - {fileID: 11400000, guid: c228028715c5ff0438a5c0213f46aae5, type: 2}
