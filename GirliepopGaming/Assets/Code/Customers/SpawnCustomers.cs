@@ -292,8 +292,9 @@ public class SpawnCustomers : MonoBehaviour
                     MoralityScore -= 1;
                     Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
                     Money.Instance.SubtractMoney(2);
-                }
+                    currentCustomer.SetAngry();
             }
+        }
 
             if (dishDifficulty == 1)
             {
@@ -316,8 +317,9 @@ public class SpawnCustomers : MonoBehaviour
                     MoralityScore -= 1;
                     Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
                     Money.Instance.SubtractMoney(2);
+                    currentCustomer.SetAngry();
 
-                }
+            }
             }
             if (currentCustomer.CustomerName == "Ostara" &&
            (dragDishObject.order.ingredient1 == Ingredient.Mandrake || dragDishObject.order.ingredient2 == Ingredient.Mandrake))

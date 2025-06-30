@@ -9,6 +9,11 @@ public class Customer : MonoBehaviour
     public TextMeshPro customerNameText;
     public SpriteRenderer image;
 
+    [Header("Sprites")]
+    public Sprite defaultSprite;
+    public Sprite angrySprite;
+    private bool isAngry = false;
+
     public List<Order> possibleOrders = new List<Order>();
     public float slideSpeed = 5;
 
@@ -35,7 +40,15 @@ public class Customer : MonoBehaviour
     [HideInInspector]
     public Transform targetPos;
 
-    public bool canMove = true; 
+    public bool canMove = true;
+
+    private void OnEnable()
+    {
+        // Always reset to default sprite when the customer is (re)spawned
+        image.sprite = defaultSprite;
+        isAngry = false;
+    }
+
 
     private void Start()
     {
@@ -52,11 +65,26 @@ public class Customer : MonoBehaviour
         }
     }
 
+    public void SetAngry()
+    {
+        if (angrySprite != null)
+        {
+            image.sprite = angrySprite;
+            isAngry = true;
+        }
+    }
+
     public void SlideToTarget()
     {
         Vector3 pos = transform.position;
         pos.x = Mathf.Lerp(transform.position.x, targetPos.position.x, slideSpeed * Time.deltaTime);
         transform.position = pos;
+    }
+
+    public void ResetToDefaultSprite()
+    {
+        image.sprite = defaultSprite;
+        isAngry = false;
     }
 
     public IEnumerator KYStimer(int interval)

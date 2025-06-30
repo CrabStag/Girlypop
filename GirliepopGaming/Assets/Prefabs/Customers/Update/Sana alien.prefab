@@ -177,6 +177,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerNameText: {fileID: 0}
   image: {fileID: 9012794198645768857}
+  defaultSprite: {fileID: 21300000, guid: 697bfe31c7e470844bdb5b47f6872d81, type: 3}
+  angrySprite: {fileID: 21300000, guid: 697bfe31c7e470844bdb5b47f6872d81, type: 3}
   possibleOrders:
   - {fileID: 11400000, guid: 9300824bae33f08419f0779bfc2767d1, type: 2}
   slideSpeed: 5

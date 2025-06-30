@@ -132,6 +132,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerNameText: {fileID: 0}
   image: {fileID: 8032589144291775389}
+  defaultSprite: {fileID: 21300000, guid: cc13e8c3f3148b043a0ea6a14c87c6f9, type: 3}
+  angrySprite: {fileID: 21300000, guid: cc13e8c3f3148b043a0ea6a14c87c6f9, type: 3}
   possibleOrders:
   - {fileID: 11400000, guid: a01f7ed511887704fbbd75e650f555b7, type: 2}
   - {fileID: 11400000, guid: f7af5997c10902944adafc77c7a8b7ba, type: 2}
