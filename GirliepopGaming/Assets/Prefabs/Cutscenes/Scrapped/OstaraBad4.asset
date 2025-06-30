@@ -17,7 +17,10 @@ MonoBehaviour:
   - 'This might as well be a declaration of war! '
   - 'How do you rest at night knowing you work for people who would do this? '
   cutsceneSprites:
-  - {fileID: 21300000, guid: a389cf44e784b794c9e3ea93a5f15169, type: 3}
-  - {fileID: 21300000, guid: a389cf44e784b794c9e3ea93a5f15169, type: 3}
-  - {fileID: 21300000, guid: a389cf44e784b794c9e3ea93a5f15169, type: 3}
-  moralityRequirement: -13
+  - {fileID: 21300000, guid: 0995a765be2547f469705c9d385c9ba3, type: 3}
+  - {fileID: 21300000, guid: 0995a765be2547f469705c9d385c9ba3, type: 3}
+  - {fileID: 21300000, guid: 0995a765be2547f469705c9d385c9ba3, type: 3}
+  moralityRequirement: -1
+  ingredientsToUnlock: 
+  customersToAdd: []
+  customersToRemove: []

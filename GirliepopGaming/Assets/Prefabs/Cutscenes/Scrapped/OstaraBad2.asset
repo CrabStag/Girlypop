@@ -19,8 +19,11 @@ MonoBehaviour:
   - Where we grow our sweet baby mandrakes?
   - " You wouldn\u2019t have anything to do with that, would you..? "
   cutsceneSprites:
-  - {fileID: 21300000, guid: 9b6e3913fb7d0d44f8fb9c7a6a9ed848, type: 3}
-  - {fileID: 21300000, guid: 3c556868a1ff9a241ada3677bdae28d0, type: 3}
-  - {fileID: 21300000, guid: 9b6e3913fb7d0d44f8fb9c7a6a9ed848, type: 3}
-  - {fileID: 21300000, guid: a389cf44e784b794c9e3ea93a5f15169, type: 3}
-  moralityRequirement: -9
+  - {fileID: 21300000, guid: 2f7a1b912f0aee94db6d26fbb2c0d46e, type: 3}
+  - {fileID: 21300000, guid: b0f32dad66ece8a4986298446e1c0185, type: 3}
+  - {fileID: 21300000, guid: 2f7a1b912f0aee94db6d26fbb2c0d46e, type: 3}
+  - {fileID: 21300000, guid: 0995a765be2547f469705c9d385c9ba3, type: 3}
+  moralityRequirement: -1
+  ingredientsToUnlock: 
+  customersToAdd: []
+  customersToRemove: []
