@@ -74,7 +74,7 @@ public class MushroomGrowthBar : MonoBehaviour
     private void CheckCompletion()
     {
         Debug.Log("Checking mushroom completion");
-        if (growthProgress >= maxProgress)
+        if (growthProgress >= maxProgress && !hasPlayedCutscene)
         {
             Debug.Log("Mushroom is fully grown!");
 
@@ -121,8 +121,10 @@ public class MushroomGrowthBar : MonoBehaviour
 
             if (CutsceneLoader.instance != null && mushroomCutscene != null && !hasPlayedCutscene)
             {
+                hasPlayedCutscene = true;
+                GameManager.Instance.mushroomCutscenePlayed = true;
+
                 CutsceneLoader.instance.PlayCutscene(mushroomCutscene);
-                hasPlayedCutscene = true; // prevent replaying cutscene multiple times
             }
         }
     }
