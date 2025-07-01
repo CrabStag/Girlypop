@@ -59,10 +59,10 @@ public class BakeButton : MonoBehaviour
         secondAudio.Play();
 
         KitchenDish.instance.BakeDish();
-        AchievementManager.Instance.Unlock("first_dish");
 
         if (isTutorial == false)
         {
+        AchievementManager.Instance.Unlock("first_dish");
             bowlBack.enabled = true;
             bowlFront.enabled = true;
             bowlCollider.enabled = true;

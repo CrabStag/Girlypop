@@ -16,6 +16,8 @@ public class CustomerManager : MonoBehaviour
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
+
+        InitializeCustomerPool();
     }
     public void InitializeCustomerPool()
     {

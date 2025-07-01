@@ -104,25 +104,28 @@ public class KitchenDish : MonoBehaviour
 
             if (foundOrder == false)
         {
-            counterDish.order = slopOrder;
-            SpawnCustomers.Instance.currentOrder = slopOrder; // <== Add this!
-
-            counterDish.image.sprite = slopOrder.image;
-
-            if (discoveredDishes.Contains(slopOrder))
+            if (!isTutorial)
             {
-                PopoutCard.instance.cardImage.sprite = slopOrder.regularPopupCard;
-            }
+                counterDish.order = slopOrder;
+                SpawnCustomers.Instance.currentOrder = slopOrder; // <== Add this!
 
-            if (!discoveredDishes.Contains(slopOrder))
-            {
-                discoveredDishes.Add(slopOrder);
-                PopoutCard.instance.cardImage.sprite = slopOrder.newPopupCard;
-            }
+                counterDish.image.sprite = slopOrder.image;
 
-            PopoutCard.instance.cardImage.SetNativeSize();
-            PopoutCard.instance.currentCoroutine = PopoutCard.instance.PopUp();
-            StartCoroutine(PopoutCard.instance.currentCoroutine);
+                if (discoveredDishes.Contains(slopOrder))
+                {
+                    PopoutCard.instance.cardImage.sprite = slopOrder.regularPopupCard;
+                }
+
+                if (!discoveredDishes.Contains(slopOrder))
+                {
+                    discoveredDishes.Add(slopOrder);
+                    PopoutCard.instance.cardImage.sprite = slopOrder.newPopupCard;
+                }
+
+                PopoutCard.instance.cardImage.SetNativeSize();
+                PopoutCard.instance.currentCoroutine = PopoutCard.instance.PopUp();
+                StartCoroutine(PopoutCard.instance.currentCoroutine);
+            }
         }
         baseIngredient = Ingredient.None;
         toppingIngredient = Ingredient.None;
