@@ -10,7 +10,30 @@ public class RemoveAchievementCover : MonoBehaviour
 
     private void Update()
     {
-        if (AchievementManager.Instance.IsAchievementUnlocked(achievementId))
+        bool isUnlocked = false;
+
+        // Check AchievementManager first
+        if (AchievementManager.Instance != null && AchievementManager.Instance.IsAchievementUnlocked(achievementId))
+        {
+            isUnlocked = true;
+        }
+        else
+        {
+            // Check RecipeAchievementTracker achievements
+            if (RecipeAchievementTracker.Instance != null)
+            {
+                foreach (var recipeAchievement in RecipeAchievementTracker.Instance.achievementsToTrack)
+                {
+                    if (recipeAchievement.achievementId == achievementId && recipeAchievement.unlocked)
+                    {
+                        isUnlocked = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (isUnlocked)
         {
             RevealAchievement();
         }

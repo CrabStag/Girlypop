@@ -5385,92 +5385,38 @@ MonoBehaviour:
     title: 
     description: 
     unlocked: 0
-    ingredientToTrack: 
-    recipesRequired: 0
   - id: Sana_Alien
     title: 
     description: 
     unlocked: 0
-    ingredientToTrack: 
-    recipesRequired: 0
   - id: all_recipes
     title: 
     description: 
     unlocked: 0
-    ingredientToTrack: 
-    recipesRequired: 0
   - id: morality_100
     title: 
     description: 
     unlocked: 0
-    ingredientToTrack: 
-    recipesRequired: 0
-  - id: Methite_recipes
-    title: 
-    description: 
-    unlocked: 0
-    ingredientToTrack: CrystalMethite
-    recipesRequired: 1
   - id: morality_-100
     title: 
     description: 
     unlocked: 0
-    ingredientToTrack: 
-    recipesRequired: 0
-  - id: Fruits_recipes
-    title: 
-    description: 
-    unlocked: 0
-    ingredientToTrack: 
-    recipesRequired: 0
-  - id: honey_recipes
-    title: 
-    description: 
-    unlocked: 0
-    ingredientToTrack: 
-    recipesRequired: 0
-  - id: Love_recipes
-    title: 
-    description: 
-    unlocked: 0
-    ingredientToTrack: 
-    recipesRequired: 0
   - id: Pony_Racism
     title: 
     description: 
     unlocked: 0
-    ingredientToTrack: 
-    recipesRequired: 0
-  - id: Slop_gobbler
-    title: 
-    description: 
-    unlocked: 0
-    ingredientToTrack: 
-    recipesRequired: 0
-  - id: Sugar_recipes
-    title: 
-    description: 
-    unlocked: 0
-    ingredientToTrack: 
-    recipesRequired: 0
-  - id: Viola_recipes
-    title: 
-    description: 
-    unlocked: 0
-    ingredientToTrack: 
-    recipesRequired: 0
   - id: first_dish
     title: 
     description: 
     unlocked: 0
-    ingredientToTrack: 
-    recipesRequired: 0
+  - id: slop_gobbler
+    title: 
+    description: 
+    unlocked: 0
   - id: MushroomFullyGrown
     title: 
     description: 
     unlocked: 0
-    ingredientToTrack: 
-    recipesRequired: 0
   achievementPopupPrefab: {fileID: 1104004177442634795, guid: 2763bd76a9f913a4ebb7d196a6083727, type: 3}
   popupParent: {fileID: 1760569311}
 --- !u!4 &591753673
@@ -9782,24 +9728,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achievementsToTrack:
-  - achievementId: Methite_recipes
-    ingredientToTrack: 8
+  - achievementName: Methite_recipes
+    achievementId: Methite_recipes
+    ingredientToTrack: 10
     requiredCount: 1
-  - achievementId: Fruits_recipes
-    ingredientToTrack: 4
+    unlocked: 0
+    achievementPopupPrefab: {fileID: 1104004177442634795, guid: 2763bd76a9f913a4ebb7d196a6083727, type: 3}
+    popupParent: {fileID: 1760569311}
+  - achievementName: Fruits_recipes
+    achievementId: Fruits_recipes
+    ingredientToTrack: 5
     requiredCount: 5
-  - achievementId: honey_recipes
-    ingredientToTrack: 1
+    unlocked: 0
+    achievementPopupPrefab: {fileID: 1104004177442634795, guid: 2763bd76a9f913a4ebb7d196a6083727, type: 3}
+    popupParent: {fileID: 1760569311}
+  - achievementName: honey_recipes
+    achievementId: honey_recipes
+    ingredientToTrack: 2
     requiredCount: 6
-  - achievementId: Love_recipes
-    ingredientToTrack: 7
+    unlocked: 0
+    achievementPopupPrefab: {fileID: 1104004177442634795, guid: 2763bd76a9f913a4ebb7d196a6083727, type: 3}
+    popupParent: {fileID: 1760569311}
+  - achievementName: Love_recipes
+    achievementId: Love_recipes
+    ingredientToTrack: 8
     requiredCount: 3
-  - achievementId: Sugar_recipes
-    ingredientToTrack: 7
+    unlocked: 0
+    achievementPopupPrefab: {fileID: 1104004177442634795, guid: 2763bd76a9f913a4ebb7d196a6083727, type: 3}
+    popupParent: {fileID: 1760569311}
+  - achievementName: Sugar_recipes
+    achievementId: Sugar_recipes
+    ingredientToTrack: 1
     requiredCount: 4
-  - achievementId: Viola_recipes
+    unlocked: 0
+    achievementPopupPrefab: {fileID: 1104004177442634795, guid: 2763bd76a9f913a4ebb7d196a6083727, type: 3}
+    popupParent: {fileID: 1760569311}
+  - achievementName: Viola_recipes
+    achievementId: Viola_recipes
     ingredientToTrack: 9
     requiredCount: 2
+    unlocked: 0
+    achievementPopupPrefab: {fileID: 1104004177442634795, guid: 2763bd76a9f913a4ebb7d196a6083727, type: 3}
+    popupParent: {fileID: 1760569311}
 --- !u!4 &968507492
 Transform:
   m_ObjectHideFlags: 0

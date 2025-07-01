@@ -3,19 +3,35 @@ using UnityEngine;
 
 public class RecipeAchievementTracker : MonoBehaviour
 {
+    public static RecipeAchievementTracker Instance;
+
     [System.Serializable]
     public class RecipeAchievement
     {
+        public string achievementName; // Just a name/ID for display or reference
         public string achievementId; // The ID used to unlock this achievement in AchievementManager
         public Ingredient ingredientToTrack; // The ingredient we want to track
         public int requiredCount; // How many recipes with this ingredient are needed
+        [HideInInspector]
+        public bool unlocked = false;  // Track unlock state internally
+
+        public GameObject achievementPopupPrefab; // assign in inspector
+        public Transform popupParent; // assign in inspector
+
     }
 
     public List<RecipeAchievement> achievementsToTrack = new List<RecipeAchievement>();
 
-    private void Update()
+    private void Awake()
     {
-        // Continuously check if achievements should be unlocked
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+
+    public void CheckAllAchievements()
+    {
         foreach (var achievement in achievementsToTrack)
         {
             CheckAchievementProgress(achievement);
@@ -24,9 +40,9 @@ public class RecipeAchievementTracker : MonoBehaviour
 
     void CheckAchievementProgress(RecipeAchievement achievement)
     {
-        int count = 0;
+        if (achievement.unlocked) return; // Already unlocked, skip
 
-        // Loop through discovered dishes
+        int count = 0;
         foreach (Order dish in KitchenDish.instance.discoveredDishes)
         {
             if (dish.ingredient1 == achievement.ingredientToTrack || dish.ingredient2 == achievement.ingredientToTrack)
@@ -35,10 +51,35 @@ public class RecipeAchievementTracker : MonoBehaviour
             }
         }
 
-        // Unlock achievement if condition met
+        Debug.Log($"Checking achievement {achievement.achievementName}: {count}/{achievement.requiredCount}");
+
         if (count >= achievement.requiredCount)
         {
-            AchievementManager.Instance.Unlock(achievement.achievementId);
+            achievement.unlocked = true;
+            OnAchievementUnlocked(achievement);
         }
     }
+    void OnAchievementUnlocked(RecipeAchievement achievement)
+    {
+        Debug.Log($"Achievement unlocked: {achievement.achievementName}!");
+        ShowAchievementPopup(achievement);
+
+    }
+    void ShowAchievementPopup(RecipeAchievement achievement)
+    {
+        if (achievement.achievementPopupPrefab == null || achievement.popupParent == null)
+        {
+            Debug.LogWarning("Popup prefab or popup parent not assigned!");
+            return;
+        }
+
+        GameObject popupGO = Instantiate(achievement.achievementPopupPrefab, achievement.popupParent);
+        AchievementPopup popup = popupGO.GetComponent<AchievementPopup>();
+
+        if (popup != null)
+        {
+            popup.Setup();
+        }
+    }
+
 }

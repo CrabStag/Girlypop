@@ -11,8 +11,7 @@ public class Achievement
     public string description;  // description text
     public bool unlocked = false;
 
-    public string ingredientToTrack;
-    public int recipesRequired;
+    
 }
 
 public class AchievementManager : MonoBehaviour

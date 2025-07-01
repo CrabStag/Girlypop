@@ -39,6 +39,7 @@ public class KitchenDish : MonoBehaviour
         else if (instance != this)
         {
             discoveredDishes = instance.discoveredDishes;
+            
             Destroy(instance.gameObject);
             instance = this;
         }
@@ -66,7 +67,7 @@ public class KitchenDish : MonoBehaviour
         bool foundOrder = false;
         foreach (Order order in allDishes)
         {
-            if(order.ingredient1 == baseIngredient && order.ingredient2 == toppingIngredient)
+            if (order.ingredient1 == baseIngredient && order.ingredient2 == toppingIngredient)
             {
                 foundOrder = true;
                 counterDish.order = order;
@@ -78,20 +79,30 @@ public class KitchenDish : MonoBehaviour
                     {
                         PopoutCard.instance.cardImage.sprite = order.regularPopupCard;
                     }
-
-                    if (!discoveredDishes.Contains(order))
+                    else
                     {
                         discoveredDishes.Add(order);
+                        Debug.Log($"New dish discovered: {order.NameOfOrder} with ingredients {order.ingredient1} and {order.ingredient2}");
+                        if (RecipeAchievementTracker.Instance == null)
+                        {
+                            Debug.LogError("RecipeAchievementTracker.Instance is null!");
+                        }
+                        else
+                        {
+                            RecipeAchievementTracker.Instance.CheckAllAchievements();
+                        }
                         PopoutCard.instance.cardImage.sprite = order.newPopupCard;
                     }
+
                     PopoutCard.instance.cardImage.SetNativeSize();
                     PopoutCard.instance.currentCoroutine = PopoutCard.instance.PopUp();
                     StartCoroutine(PopoutCard.instance.currentCoroutine);
                 }
+
             }
         }
 
-        if (foundOrder == false)
+            if (foundOrder == false)
         {
             counterDish.order = slopOrder;
             SpawnCustomers.Instance.currentOrder = slopOrder; // <== Add this!
