@@ -125,6 +125,7 @@ public class MushroomGrowthBar : MonoBehaviour
                 GameManager.Instance.mushroomCutscenePlayed = true;
 
                 CutsceneLoader.instance.PlayCutscene(mushroomCutscene);
+                CutsceneLoader.instance.allCutscenes.Remove(mushroomCutscene);
             }
         }
     }
