@@ -100,6 +100,11 @@ public class KitchenDish : MonoBehaviour
                 }
 
             }
+
+            if(discoveredDishes.Count + 1 == allDishes.Count + 1)
+            {
+                AchievementManager.Instance.Unlock("all_recipes");
+            }
         }
 
             if (foundOrder == false)
