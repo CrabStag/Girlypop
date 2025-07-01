@@ -93,6 +93,6 @@ public class CutsceneLoader : MonoBehaviour
         characterSprite.gameObject.SetActive(false);
         text.gameObject.SetActive(false);
 
-        CheckCutsceneReqs();
+        //CheckCutsceneReqs();
     }
 }
