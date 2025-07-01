@@ -3435,7 +3435,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Slop: {fileID: 11400000, guid: c0c5608dc9242e54491e40f824f2189d, type: 2}
   possibleCustomers:
-  - {fileID: 7299751825278060254, guid: 791384c1871228a4481a7915d7dcee1e, type: 3}
+  - {fileID: 1038314485669522967, guid: 6c08e05918e0dc74d87b5bcca9d42bd9, type: 3}
+  - {fileID: 6961865301247357514, guid: 0e62e384eafa5ba4c86b85f78d9766e2, type: 3}
+  - {fileID: 4516823662085309918, guid: 61004bbfa8a7a594db11d8b87c84381b, type: 3}
   customerLocations:
   - {fileID: 1838818097}
   startPos: {fileID: 980304125}
@@ -5409,8 +5411,8 @@ MonoBehaviour:
     title: 
     description: 
     unlocked: 0
-    ingredientToTrack: 
-    recipesRequired: 0
+    ingredientToTrack: CrystalMethite
+    recipesRequired: 1
   - id: morality_-100
     title: 
     description: 

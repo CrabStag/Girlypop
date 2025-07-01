@@ -5,7 +5,7 @@ public class Money : MonoBehaviour
 {
     public static Money Instance;
 
-    public static int currentMoney = 20;
+    public static int currentMoney = 160;
     public TextMeshProUGUI moneyText;  // Assign in inspector
 
     private void Awake()

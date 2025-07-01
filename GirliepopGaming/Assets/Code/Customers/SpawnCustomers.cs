@@ -280,7 +280,7 @@ public class SpawnCustomers : MonoBehaviour
                     textBox.text = currentCustomer.GoodFeedback;
                     audioSource.clip = happyCustomerSound;
                     audioSource.volume = happyVolume;
-                    MoralityScore += 1;
+                    MoralityScore += 5;
                     Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
                     Money.Instance.AddMoney(5);
                 }
@@ -289,7 +289,7 @@ public class SpawnCustomers : MonoBehaviour
                     textBox.text = currentCustomer.BadFeedback;
                     audioSource.clip = angryCustomerSound;
                     audioSource.volume = angryVolume;
-                    MoralityScore -= 1;
+                    MoralityScore -= 5;
                     Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
                     Money.Instance.SubtractMoney(2);
                     currentCustomer.SetAngry();
@@ -303,7 +303,7 @@ public class SpawnCustomers : MonoBehaviour
                     textBox.text = currentCustomer.GoodFeedback;
                     audioSource.clip = happyCustomerSound;
                     audioSource.volume = happyVolume;
-                    MoralityScore += 1;
+                    MoralityScore += 5;
                     Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
                     Money.Instance.AddMoney(5);
 
@@ -314,7 +314,7 @@ public class SpawnCustomers : MonoBehaviour
                     textBox.text = currentCustomer.BadFeedback;
                     audioSource.clip = angryCustomerSound;
                     audioSource.volume = angryVolume;
-                    MoralityScore -= 1;
+                    MoralityScore -= 5;
                     Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
                     Money.Instance.SubtractMoney(2);
                     currentCustomer.SetAngry();
@@ -324,7 +324,7 @@ public class SpawnCustomers : MonoBehaviour
             if (currentCustomer.CustomerName == "Ostara" &&
            (dragDishObject.order.ingredient1 == Ingredient.Mandrake || dragDishObject.order.ingredient2 == Ingredient.Mandrake))
             {
-                AchievementManager.Instance.Unlock("Ostara_mandrake");
+            AchievementManager.Instance.Unlock("Ostara_mandrake");
             }
 
             if (currentCustomer.CustomerName == "Alien Sana")
@@ -350,9 +350,16 @@ public class SpawnCustomers : MonoBehaviour
             {
                 Debug.LogWarning("JudgeOrder: currentCustomer or currentOrder is null!");
             }
-
-            // Morality penalties based on forbidden ingredients
-            if (dragDishObject.order != null)
+            if (MoralityScore >= 100)
+                {
+            AchievementManager.Instance.Unlock("morality_100");
+                }
+        if (MoralityScore <= -100)
+        {
+            AchievementManager.Instance.Unlock("morality_-100");
+        }
+        // Morality penalties based on forbidden ingredients
+        if (dragDishObject.order != null)
             {
                 if (dragDishObject.order.ingredient1 == Ingredient.Mandrake || dragDishObject.order.ingredient2 == Ingredient.Mandrake)
                 {
