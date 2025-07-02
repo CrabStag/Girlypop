@@ -10,6 +10,7 @@ public class SpawnCustomers : MonoBehaviour
     public static SpawnCustomers Instance;
 
     public List<GameObject> possibleCustomers;
+
     public List<Transform> customerLocations;
     public Transform startPos;
 
@@ -88,6 +89,8 @@ public class SpawnCustomers : MonoBehaviour
         currentIntervalTime = spawnInterval;
         audioSource = Camera.main.gameObject.transform.GetChild(1).GetComponent<AudioSource>();
 
+        SetCustomers();
+
         if (GameManager.Instance.IsMushroomGrown && !GameManager.Instance.mushroomShopUnlocked)
         {
             GameManager.Instance.mushroomShopUnlocked = true;
@@ -126,7 +129,11 @@ public class SpawnCustomers : MonoBehaviour
         if (isCustomerActive == false)
         {
             customerNameText.text = ""; // Clear old name BEFORE spawning new customer
-            currentCustomer = Instantiate(possibleCustomers[Random.Range(0, possibleCustomers.Count)], startPos.position, Quaternion.identity).GetComponent<Customer>();
+
+            int customerPicker = Random.Range(0, possibleCustomers.Count);
+            print(customerPicker);
+            currentCustomer = Instantiate(possibleCustomers[customerPicker], startPos.position, Quaternion.identity).GetComponent<Customer>();
+            possibleCustomers.RemoveAt(customerPicker);
             dishDifficulty = Random.Range(0, 2);
             customerNameText.text = currentCustomer.CustomerName;  // Set name immediately after spawn
 
@@ -375,6 +382,9 @@ public class SpawnCustomers : MonoBehaviour
             }
 
             audioSource.Play();
+        //SetCustomers();
+
+        //possibleCustomers.Remove(currentCustomer.gameObject);
 
             currentCustomer.canMove = false;
             StartCoroutine(WaitAndSlideOff());
@@ -437,7 +447,27 @@ public class SpawnCustomers : MonoBehaviour
         return validOrders;
     }
 
+    public void SetCustomers()
+    {
+        possibleCustomers.Clear();
 
+        foreach (GameObject customer in CustomerManager.Instance.availableCustomers)
+        {
+            possibleCustomers.Add(customer);
+        }
+    }
+
+    public void AddCustomer(GameObject customer)
+    {
+        if (!possibleCustomers.Contains(customer))
+            possibleCustomers.Add(customer);
+    }
+
+    public void RemoveCustomer(GameObject customer)
+    {
+        if (possibleCustomers.Contains(customer))
+            possibleCustomers.Remove(customer);
+    }
 
 }
  
