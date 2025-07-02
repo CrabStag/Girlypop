@@ -287,7 +287,7 @@ public class SpawnCustomers : MonoBehaviour
                     textBox.text = currentCustomer.GoodFeedback;
                     audioSource.clip = happyCustomerSound;
                     audioSource.volume = happyVolume;
-                    MoralityScore += 50;
+                    MoralityScore += 5;
                     Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
                     Money.Instance.AddMoney(5);
                 }
@@ -296,7 +296,7 @@ public class SpawnCustomers : MonoBehaviour
                     textBox.text = currentCustomer.BadFeedback;
                     audioSource.clip = angryCustomerSound;
                     audioSource.volume = angryVolume;
-                    MoralityScore -= 50;
+                    MoralityScore -= 5;
                     Debug.Log("Money.Instance is " + (Money.Instance == null ? "null" : "not null"));
                     Money.Instance.SubtractMoney(2);
                     currentCustomer.SetAngry();
