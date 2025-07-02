@@ -73,6 +73,10 @@ public class CutsceneDialogue : MonoBehaviour
         {
             textObject.text = string.Empty;
             index = 0;
+<<<<<<< .merge_file_a08424
+            executeOnFinish.Invoke();
+=======
+>>>>>>> .merge_file_a28592
 
             if (CutsceneLoader.instance.currentCutscene != null)
             {
@@ -84,21 +88,35 @@ public class CutsceneDialogue : MonoBehaviour
                 // Add customers from cutscene
                 foreach (GameObject customerPrefab in CutsceneLoader.instance.currentCutscene.customersToAdd)
                 {
+<<<<<<< .merge_file_a08424
+                    if (!SpawnCustomers.Instance.possibleCustomers.Contains(customerPrefab))
+                    {
+                        SpawnCustomers.Instance.possibleCustomers.Add(customerPrefab);
+=======
                     if (!CustomerManager.Instance.allCustomers.Contains(customerPrefab))
                     {
                         CustomerManager.Instance.allCustomers.Add(customerPrefab);
+>>>>>>> .merge_file_a28592
                     }
                 }
 
                 // Remove customers from cutscene
                 foreach (GameObject customerPrefab in CutsceneLoader.instance.currentCutscene.customersToRemove)
                 {
+<<<<<<< .merge_file_a08424
+                    if (SpawnCustomers.Instance.possibleCustomers.Contains(customerPrefab))
+                    {
+                        SpawnCustomers.Instance.possibleCustomers.Remove(customerPrefab);
+                    }
+                }
+=======
                     if (CustomerManager.Instance.allCustomers.Contains(customerPrefab))
                     {
                         CustomerManager.Instance.allCustomers.Remove(customerPrefab);
                     }
                 }
             executeOnFinish.Invoke();
+>>>>>>> .merge_file_a28592
             }
         }
     }
