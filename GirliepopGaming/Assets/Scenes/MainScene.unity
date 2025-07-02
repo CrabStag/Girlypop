@@ -3578,12 +3578,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Slop: {fileID: 11400000, guid: c0c5608dc9242e54491e40f824f2189d, type: 2}
-  possibleCustomers: []
+  possibleCustomers:
+  - {fileID: 8200267579570923670, guid: c9814ad7536184a4bb472c6bc087ae36, type: 3}
+  - {fileID: 5095265221710866056, guid: 4212f7a1a5332b04b904d519b49b556c, type: 3}
+  - {fileID: 5020634070743321029, guid: 44ec55031ddb5744e97df401db05ab87, type: 3}
+  - {fileID: 1879605597836586160, guid: f6354a82d7a16e84d966daea987569cb, type: 3}
+  - {fileID: 7299751825278060254, guid: 791384c1871228a4481a7915d7dcee1e, type: 3}
   customerLocations:
   - {fileID: 1838818097}
   startPos: {fileID: 980304125}
-  minCustomers: 2
-  maxCustomers: 2
+  minCustomers: 5
+  maxCustomers: 5
   dragDishObject: {fileID: 1797098346}
   chosenHintIngredient: 0
   currentCustomer: {fileID: 0}
@@ -3638,6 +3643,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: db65366680021d04bb9ef03e0935fc86, type: 2}
   - {fileID: 11400000, guid: 21c5306cdad2b0541809218fa2e69a56, type: 2}
   - {fileID: 11400000, guid: d7ab14e0e4c36ed43978d75722dc0bab, type: 2}
+  - {fileID: 11400000, guid: bee95da754143b54d988345db36e6799, type: 2}
+  - {fileID: 11400000, guid: 8cba8950fe8f8dc40b726c0328db7e1a, type: 2}
+  - {fileID: 11400000, guid: 668d22875a6145242b101ec14600a810, type: 2}
+  - {fileID: 11400000, guid: 97a8eb41847afec448ba1d4288f5e2d6, type: 2}
   characterSprite: {fileID: 1838818100}
   text: {fileID: 830932223}
   currentCutscene: {fileID: 0}
