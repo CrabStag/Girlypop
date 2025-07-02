@@ -73,7 +73,6 @@ public class CutsceneDialogue : MonoBehaviour
         {
             textObject.text = string.Empty;
             index = 0;
-            executeOnFinish.Invoke();
 
             if (CutsceneLoader.instance.currentCutscene != null)
             {
@@ -85,20 +84,21 @@ public class CutsceneDialogue : MonoBehaviour
                 // Add customers from cutscene
                 foreach (GameObject customerPrefab in CutsceneLoader.instance.currentCutscene.customersToAdd)
                 {
-                    if (!SpawnCustomers.Instance.possibleCustomers.Contains(customerPrefab))
+                    if (!CustomerManager.Instance.allCustomers.Contains(customerPrefab))
                     {
-                        SpawnCustomers.Instance.possibleCustomers.Add(customerPrefab);
+                        CustomerManager.Instance.allCustomers.Add(customerPrefab);
                     }
                 }
 
                 // Remove customers from cutscene
                 foreach (GameObject customerPrefab in CutsceneLoader.instance.currentCutscene.customersToRemove)
                 {
-                    if (SpawnCustomers.Instance.possibleCustomers.Contains(customerPrefab))
+                    if (CustomerManager.Instance.allCustomers.Contains(customerPrefab))
                     {
-                        SpawnCustomers.Instance.possibleCustomers.Remove(customerPrefab);
+                        CustomerManager.Instance.allCustomers.Remove(customerPrefab);
                     }
                 }
+            executeOnFinish.Invoke();
             }
         }
     }

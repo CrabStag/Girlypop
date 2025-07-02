@@ -3578,8 +3578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Slop: {fileID: 11400000, guid: c0c5608dc9242e54491e40f824f2189d, type: 2}
-  possibleCustomers:
-  - {fileID: 1038314485669522967, guid: 6c08e05918e0dc74d87b5bcca9d42bd9, type: 3}
+  possibleCustomers: []
   customerLocations:
   - {fileID: 1838818097}
   startPos: {fileID: 980304125}
@@ -3600,7 +3599,7 @@ MonoBehaviour:
   happyVolume: 0.1
   angryCustomerSound: {fileID: 8300000, guid: cdc9d5774f0c79a4196ae7dc9f92e21d, type: 3}
   angryVolume: 0.15
-  _moralityScore: 0
+  _moralityScore: 1
 --- !u!1 &349023543
 GameObject:
   m_ObjectHideFlags: 0
@@ -5137,72 +5136,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502913762}
   m_CullTransparentMesh: 1
---- !u!1 &523956574
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 523956576}
-  - component: {fileID: 523956575}
-  m_Layer: 0
-  m_Name: CustomerManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &523956575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523956574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d67f2fef4ce74d46b4fffe231dd7e97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allCustomers:
-  - {fileID: 1601354090900792653, guid: 3d3c52ce9b54d0d4fafdc92a7beda87f, type: 3}
-  - {fileID: 5282757137430041710, guid: 9b2c852693f7d7946894ab2d3c533d6d, type: 3}
-  - {fileID: 3310938809512587230, guid: 1036319d0ba3cb14ca21a94bd8e93b55, type: 3}
-  - {fileID: 7808994799987434720, guid: c9814ad7536184a4bb472c6bc087ae36, type: 3}
-  - {fileID: 1085555221625543291, guid: 91f49b06c9f135f49b39312e4423152b, type: 3}
-  - {fileID: 1190362301839994506, guid: 4212f7a1a5332b04b904d519b49b556c, type: 3}
-  - {fileID: 5084678317555769803, guid: 44ec55031ddb5744e97df401db05ab87, type: 3}
-  - {fileID: 8861598503097343008, guid: f6354a82d7a16e84d966daea987569cb, type: 3}
-  - {fileID: 7987220439056677881, guid: d711f6cd131f1e840897bf0f2f6e38c7, type: 3}
-  - {fileID: 1163725366703110549, guid: d93e91331e4f50041be53404cfc74631, type: 3}
-  - {fileID: 5268045015997840003, guid: 3acb6ae7b17dc62429c73ed486954e04, type: 3}
-  - {fileID: 3976016217141446184, guid: 8549967fcfeb92c4d852e12c7597d172, type: 3}
-  - {fileID: 1652329390178805157, guid: 61004bbfa8a7a594db11d8b87c84381b, type: 3}
-  - {fileID: 1201870604327685839, guid: 1d49aa8cddd82a149bc66bb6b53d5960, type: 3}
-  - {fileID: 6468037168216714201, guid: 791384c1871228a4481a7915d7dcee1e, type: 3}
-  - {fileID: 1123679705215877192, guid: 6c08e05918e0dc74d87b5bcca9d42bd9, type: 3}
-  - {fileID: 6706810692947008039, guid: e0a8a9081e2bdac49b790b072c908b8e, type: 3}
-  - {fileID: 5948157863711925391, guid: 4dcc3f4d9093ea54eb50210c06fc4921, type: 3}
-  - {fileID: 4943681487769773412, guid: 0e62e384eafa5ba4c86b85f78d9766e2, type: 3}
-  - {fileID: 3773635588879399766, guid: a1c3c3a308172954db7aa916aae23263, type: 3}
-  availableCustomers: []
---- !u!4 &523956576
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523956574}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.02, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &557441444 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8934587476138444259, guid: dd2c568437aa1b34e955f71932668702, type: 3}
@@ -21671,6 +21604,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075018683}
   m_CullTransparentMesh: 1
+--- !u!1 &2075502342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2075502344}
+  - component: {fileID: 2075502343}
+  m_Layer: 0
+  m_Name: CustomerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2075502343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075502342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d67f2fef4ce74d46b4fffe231dd7e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allCustomers:
+  - {fileID: 3208718606244779723, guid: 3d3c52ce9b54d0d4fafdc92a7beda87f, type: 3}
+  - {fileID: 6290772043735235985, guid: 9b2c852693f7d7946894ab2d3c533d6d, type: 3}
+  - {fileID: 4175705810312544089, guid: 1036319d0ba3cb14ca21a94bd8e93b55, type: 3}
+  availableCustomers: []
+--- !u!4 &2075502344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075502342}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2094737240
 GameObject:
   m_ObjectHideFlags: 0
@@ -22273,9 +22255,9 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 811249961}
   - {fileID: 202062733}
+  - {fileID: 2075502344}
   - {fileID: 418500978}
   - {fileID: 577445192}
-  - {fileID: 523956576}
   - {fileID: 279878632}
   - {fileID: 2126126173}
   - {fileID: 114730473}
