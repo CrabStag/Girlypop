@@ -169,6 +169,8 @@ public class SpawnCustomers : MonoBehaviour
                         }
                     }
 
+                 
+
                     if (availableHintIngredients.Count == 0)
                     {
                         dishDifficulty = 1;
@@ -272,6 +274,54 @@ public class SpawnCustomers : MonoBehaviour
         {
             Debug.LogWarning("JudgeOrder called but dragDishObject.order is null!");
             return;
+        }
+
+        if (currentCustomer != null && dragDishObject.order != null)
+        {
+            if (currentCustomer.CustomerName == "Sheep" && dragDishObject.order.NameOfOrder == "Slop")
+            {
+                Debug.Log("Sheep loves Slop! Forcing positive reaction.");
+
+                textBox.text = currentCustomer.GoodFeedback;
+                audioSource.clip = happyCustomerSound;
+                audioSource.volume = happyVolume;
+                MoralityScore += 1;
+                Money.Instance.AddMoney(5);
+                audioSource.Play();
+
+                AchievementManager.Instance.Unlock("Slop_gobbler");
+
+                currentCustomer.canMove = false;
+                StartCoroutine(WaitAndSlideOff());
+
+                dragDishObject.image.sprite = null;
+                dragDishObject.order = null;
+                dragDishObject.transform.position = dragDishObject.startPos;
+
+                return; // prevent further judgment logic from running
+            }
+        }
+
+        if (dragDishObject.order != null && dragDishObject.order.NameOfOrder == "Slop" && currentCustomer.CustomerName != "Sheep")
+        {
+            Debug.Log($"{currentCustomer.CustomerName} hates Slop! Forcing negative reaction.");
+
+            textBox.text = currentCustomer.BadFeedback;
+            audioSource.clip = angryCustomerSound;
+            audioSource.volume = angryVolume;
+            MoralityScore -= 1;
+            Money.Instance.SubtractMoney(2);
+            audioSource.Play();
+
+            currentCustomer.SetAngry();
+            currentCustomer.canMove = false;
+            StartCoroutine(WaitAndSlideOff());
+
+            dragDishObject.image.sprite = null;
+            dragDishObject.order = null;
+            dragDishObject.transform.position = dragDishObject.startPos;
+
+            return; // Prevent further judgment
         }
 
         Debug.Log($"Chosen hint ingredient: {chosenHintIngredient}");

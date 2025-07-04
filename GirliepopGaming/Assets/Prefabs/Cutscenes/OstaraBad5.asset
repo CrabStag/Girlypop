@@ -20,13 +20,13 @@ MonoBehaviour:
   - I am FILING A POLICE REPORT
   - You will hear from my lawyers
   cutsceneSprites:
-  - {fileID: 21300000, guid: 3c556868a1ff9a241ada3677bdae28d0, type: 3}
-  - {fileID: 21300000, guid: 3c556868a1ff9a241ada3677bdae28d0, type: 3}
-  - {fileID: 21300000, guid: 3c556868a1ff9a241ada3677bdae28d0, type: 3}
-  - {fileID: 21300000, guid: a389cf44e784b794c9e3ea93a5f15169, type: 3}
-  - {fileID: 21300000, guid: a389cf44e784b794c9e3ea93a5f15169, type: 3}
-  - {fileID: 21300000, guid: a389cf44e784b794c9e3ea93a5f15169, type: 3}
-  moralityRequirement: -1
+  - {fileID: 21300000, guid: dba9f6773a1fef44586d8a7b9a593701, type: 3}
+  - {fileID: 21300000, guid: dba9f6773a1fef44586d8a7b9a593701, type: 3}
+  - {fileID: 21300000, guid: dba9f6773a1fef44586d8a7b9a593701, type: 3}
+  - {fileID: 21300000, guid: 970271fa68aa6f044ac5f59c1ab1d796, type: 3}
+  - {fileID: 21300000, guid: 970271fa68aa6f044ac5f59c1ab1d796, type: 3}
+  - {fileID: 21300000, guid: 970271fa68aa6f044ac5f59c1ab1d796, type: 3}
+  moralityRequirement: -30
   ingredientsToUnlock: 
   customersToAdd: []
   customersToRemove:

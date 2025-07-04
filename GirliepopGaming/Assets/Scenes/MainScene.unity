@@ -3587,8 +3587,8 @@ MonoBehaviour:
   customerLocations:
   - {fileID: 1838818097}
   startPos: {fileID: 980304125}
-  minCustomers: 5
-  maxCustomers: 5
+  minCustomers: 1
+  maxCustomers: 1
   dragDishObject: {fileID: 1797098346}
   chosenHintIngredient: 0
   currentCustomer: {fileID: 0}
