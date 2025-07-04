@@ -24,7 +24,7 @@ public class CutsceneLoader : MonoBehaviour
 
     private void Start()
     {
-        if (instance == null)  
+        if (instance == null)
         {
             instance = this;
         }
@@ -93,11 +93,28 @@ public class CutsceneLoader : MonoBehaviour
         characterSprite.gameObject.SetActive(false);
         text.gameObject.SetActive(false);
 
-        CustomerManager.Instance.SetCustomers();
-        spawnCustomers.SetCustomers();
+        if (currentCutscene != null)
+        {
+            foreach (GameObject customer in currentCutscene.customersToAdd)
+            {
+                if (!CustomerManager.Instance.allCustomers.Contains(customer))
+                {
+                    CustomerManager.Instance.allCustomers.Add(customer);
+                }
+                CustomerManager.Instance.AddCustomer(customer);
+            }
 
-        spawnCustomers.IsThisActive = true;
+            foreach (GameObject customer in currentCutscene.customersToRemove)
+            {
+                CustomerManager.Instance.RemoveCustomer(customer);
+            }
 
-        //CheckCutsceneReqs();
+            CustomerManager.Instance.SetCustomers();
+            spawnCustomers.SetCustomers();
+
+            spawnCustomers.IsThisActive = true;
+
+            //CheckCutsceneReqs();
+        }
     }
 }
